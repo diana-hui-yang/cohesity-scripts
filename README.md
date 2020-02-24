@@ -19,5 +19,7 @@ When run the script without any options, it displays the script usage
 
 # Basic parameter
 -o: oracle instance
+
 -m: Mount prefix
+
 -n: number of mounts 
