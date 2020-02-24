@@ -2,7 +2,9 @@ Warning: this code is provided on a best effort basis and is not in any way offi
 
 # Download the script
 curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/backup-ora-all.bash
+
 curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/backup-ora-arch.bash
+
 curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/backup-ora-full.bash
 
 # rman-cohesity
