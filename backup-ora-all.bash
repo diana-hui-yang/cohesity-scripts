@@ -254,7 +254,7 @@ while [ $i -le $num ]; do
 done
 echo "backup INCREMENTAL LEVEL $level CUMULATIVE database filesperset=1;" >> $rmanfiled
 echo "sql 'alter system switch logfile';" >> $rmanfiled
-echo "backup archivelog all archivelog until time 'sysdate-5' delete input;" >> $rmanfilea
+echo "backup archivelog all archivelog until time 'sysdate-1' delete input;" >> $rmanfilea
 i=1
 j=1
 while [ $i -le $num ]; do
