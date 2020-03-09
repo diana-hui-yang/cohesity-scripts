@@ -29,8 +29,8 @@ Basic parameter
 ## Backup exmaple
 
 ### Full backup example
-./backup-ora-coh-sbt.bash -o orcl -a no -i 0 -f vip-list -v orasbt1 -p 4 -e 30
+./backup-ora-coh-dedup.bash -o orcl -a no -i 0 -f vip-list -v orasbt1 -p 4 -e 30
 ### Cumulative backup example
-./backup-ora-coh-sbt.bash -o orcl -a no -i 1 -f vip-list -v orasbt1 -p 3 -e 30
+./backup-ora-coh-dedup.bash -o orcl -a no -i 1 -f vip-list -v orasbt1 -p 3 -e 30
 ### Archive log backup example
-./backup-ora-coh-sbt.bash -o orcl -a yes -f vip-list -v orasbt1 -p 2 -e 30
+./backup-ora-coh-dedup.bash -o orcl -a yes -f vip-list -v orasbt1 -p 2 -e 30
