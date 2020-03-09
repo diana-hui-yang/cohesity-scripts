@@ -4,8 +4,10 @@ Warning: this code is provided on a best effort basis and is not in any way offi
 
 ## Download the script
 
-`- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/backup-ora-coh-nfs.bash
-- chmod 750 backup-ora-coh-nfs.bash`
+'
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/backup-ora-coh-nfs.bash
+- chmod 750 backup-ora-coh-nfs.bash
+'
 
 ## Description
 
@@ -15,7 +17,7 @@ backup-ora-coh-nfs.bash have full, incremental, and archive logs backup options.
 When run the script without any options, it displays the script usage
 
 Basic parameter
-- -o: oracle instance
+- -o: Oracle instance
 - -m: Mount prefix (for example: if the mount is /coh/ora1, the prefix is /coh/ora)
 - -n: number of mounts (If this number is 3, mount point /coh/ora1, /coh/ora2, /coh/ora3 wil be used as Oracle backup target)
 - -p: Number of Oracle channels
