@@ -3,7 +3,7 @@ Warning: this code is provided on a best effort basis and is not in any way offi
 
 ## Download the script
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/backup-ora-coh-sbt.bash
-- chmod 750 backup-ora-coh-nfs.bash
+- chmod 750 backup-ora-coh-sbt.bash
 
 ## Description
 The scripts uses Cohesity Source-side dedup library to backup Oracle databases. The backup format is backupset. backup-ora-coh-sbt.bash has full, incremental, and archive logs backup options. It also supports recvoery catalog.
