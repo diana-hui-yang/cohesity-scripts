@@ -21,3 +21,12 @@ Basic parameter
 - -p: Number of Oracle channels
 - -a: Archive only or not
 - -i: If not archive only, it is full or incremental backup. 0 is full backup, and 1 is cumulative incremental backup
+- -e: Backup retention
+
+## Backup Example
+### Full backup example
+./backup-ora-coh-nfs.bash -o orcl -a no -i 0 -m /coh/ora -n 4 -p 6 -e 30
+### Cumulative backup example
+./backup-ora-coh-nfs.bash -o orcl -a no -i 1 -m /coh/ora -n 4 -p 3 -e 30
+### Archive log backup example
+./backup-ora-coh-nfs.bash -o orcl -a yes -m /coh/ora -n 4 -p 2 -e 30
