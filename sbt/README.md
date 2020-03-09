@@ -1,26 +1,30 @@
+# Cohesity Oracle Backup Sample Script using souce-side dedupe library (sbt_tape)
 Warning: this code is provided on a best effort basis and is not in any way officially supported or sanctioned by Cohesity. The code in this repository is provided as-is and the author accepts no liability for damages resulting from its use.
 
-Download the script
-curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/backup-ora-all.bash
+## Download the script
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/backup-ora-coh-sbt.bash
+- chmod 750 backup-ora-coh-nfs.bash
 
-curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/backup-ora-arch.bash
-
-curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/backup-ora-full.bash
-
-rman-cohesity
-The scripts can utilize mutiple mount points to backup Oracle databases.
-
-backup-ora-full.bash does full backup only.
-
-backup-ora-arch.bash does archive logs backup.
-
-backup-ora-all.bash have full, incremental, and archive logs backup options. It also supports recvoery catalog.
+## Description
+The scripts uses Cohesity Source-side dedup library to backup Oracle databases. The backup format is backupset. backup-ora-coh-sbt.bash has full, incremental, and archive logs backup options. It also supports recvoery catalog.
 
 When run the script without any options, it displays the script usage
 
 Basic parameter
--o: oracle instance
 
--m: Mount prefix
+- -o: Oracle instance
+- -f: The file lists Cohesity Cluster VIPs
+- -v: Cohesity View that is configured to be the target for Oracle backup
+- -p: Number of Oracle channels
+- -a: Archive only or not
+- -i: If not archive only, it is full or incremental backup. 0 is full backup, and 1 is cumulative incremental backup
+- -e: Backup Retention
 
--n: number of mounts
+## VIP file content example
+- 10.19.2.6
+- 10.19.2.7
+- 10.19.2.8
+- 10.19.2.9
+
+## Full Backup exmaple
+./backup-ora-coh-sbt.bash -o orcl -a no -i 0 -f vip-list -v orasbt1 -p 4 -e 30
