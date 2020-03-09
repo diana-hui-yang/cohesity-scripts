@@ -26,5 +26,11 @@ Basic parameter
 - 10.19.2.8
 - 10.19.2.9
 
-## Full Backup exmaple
+## Backup exmaple
+
+### Full backup example
 ./backup-ora-coh-sbt.bash -o orcl -a no -i 0 -f vip-list -v orasbt1 -p 4 -e 30
+### Cumulative backup example
+./backup-ora-coh-sbt.bash -o orcl -a no -i 1 -f vip-list -v orasbt1 -p 3 -e 30
+### Archive log backup example
+./backup-ora-coh-sbt.bash -o orcl -a yes -f vip-list -v orasbt1 -p 2 -e 30
