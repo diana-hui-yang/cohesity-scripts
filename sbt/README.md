@@ -12,7 +12,7 @@ When run the script without any options, it displays the script usage
 
 Basic parameter
 
-- -o: Oracle instance
+- -o: Oracle instance or database
 - -f: The file lists Cohesity Cluster VIPs
 - -v: Cohesity View that is configured to be the target for Oracle backup
 - -s: The directory where libsbt_6_linux-x86_64.so is in
