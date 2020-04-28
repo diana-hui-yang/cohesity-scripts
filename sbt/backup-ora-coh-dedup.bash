@@ -27,7 +27,7 @@ echo " -f : file that has vip list"
 echo " -v : Cohesity view"
 echo " -s : Cohesity SBT library home"
 echo " -p : number of channels (Optional, default is 4)"
-echo " -e : Retention time (days to retain the backups, Optional when doing archivelog backup)"
+echo " -e : Retention time (days to retain the backups)"
 echo " -l : Archive logs retain days (days to retain the local archivelogs before deleting them. default is 1 day)"
 }
 
