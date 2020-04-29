@@ -35,3 +35,13 @@ Basic parameter
 ./backup-ora-coh-dedup.bash -o orcl -a no -i 1 -f vip-list -s /u01/app/coheisty -v orasbt1 -p 3 -e 30
 ### Archive log backup example
 ./backup-ora-coh-dedup.bash -o orcl -a yes -f vip-list -s /u01/app/coheisty -v orasbt1 -p 2 -e 30
+
+
+## Note
+RMAN "delete obsolete" command is used in this script to delete expired backups. Be default, it is commmented out. Please check Oracle Bug report and apply the necessary fixes before you uncomment that line. 
+
+"Oracle Bug 29633753  delete obsolete removes backup created inside recovery window of read only datafiles in nocatalog mode"
+
+
+The other option to control retention is by using NFS mount. 
+
