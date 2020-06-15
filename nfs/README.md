@@ -11,8 +11,8 @@ Warning: this code is provided on a best effort basis and is not in any way offi
 
 ## Description
 
-The scripts can utilize mutiple mount points to backup Oracle databases. backup-ora-coh-nfs.bash script uses Oracle backupset and  backuo-ora-coh-oim.bash uses Oracle incremental merge.
-They support full, incremental, and archive logs backup options. They also supports recvoery catalog.
+The scripts can utilize mutiple mount points to backup Oracle databases. backup-ora-coh-nfs.bash script uses Oracle backupset and  backuo-ora-coh-oim.bash uses Oracle incremental merge. backuo-ora-coh-oim.bash should be used with Cohesity snapshot feature as a complete backup solution. 
+Both support full, incremental, and archive logs backup options. They also supports recvoery catalog.
 
 When run the script without any options, it displays the script usage
 
@@ -34,10 +34,19 @@ backup-ora-coh-oim.bash Basic parameter
 - -t: If not archive only, it is full or incremental backup. 
 - -e: Backup retention
 
-## Backup Example
+## backup-ora-coh-nfs.bash Backup Example
 ### Full backup example
 ./backup-ora-coh-nfs.bash -o orcl -a no -i 0 -m /coh/ora -n 4 -p 6 -e 30
 ### Cumulative backup example
 ./backup-ora-coh-nfs.bash -o orcl -a no -i 1 -m /coh/ora -n 4 -p 3 -e 30
 ### Archive log backup example
 ./backup-ora-coh-nfs.bash -o orcl -a yes -m /coh/ora -n 4 -p 2 -e 30
+
+
+## backup-ora-coh-oim.bash Backup Example
+### Full backup example
+./backup-ora-coh-oim.bash -o orcl -a no -t full -m /coh/ora -n 4 -p 6 -e 3
+### Cumulative backup example
+./backup-ora-coh-oim.bash -o orcl -a no -t incre -m /coh/ora -n 4 -p 3 -e 3
+### Archive log backup example
+./backup-ora-coh-oim.bash -o orcl -a yes -m /coh/ora -n 4 -p 2 -e 3
