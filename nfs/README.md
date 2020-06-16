@@ -11,7 +11,7 @@ Warning: this code is provided on a best effort basis and is not in any way offi
 - chmod 750 backup-ora-coh-oim.bash
 - chmod 750 nfs-mount.bash
 
-## Description
+## Backup scripts Description
 
 The backup scripts can utilize mutiple mount points to backup Oracle databases. backup-ora-coh-nfs.bash script uses Oracle backupset and  backuo-ora-coh-oim.bash uses Oracle incremental merge. backuo-ora-coh-oim.bash should be used with Cohesity snapshot feature as a complete backup solution. 
 Both support full, incremental, and archive logs backup options. They also supports recvoery catalog.
@@ -54,7 +54,9 @@ backup-ora-coh-oim.bash Basic parameter
 ./backup-ora-coh-oim.bash -o orcl -a yes -m /coh/ora -n 4 -p 2 -e 3
 
 
-nfs-mount parameter
+
+## NFS mount script Description
+### nfs-mount script parameter
 
 - -f: The file lists Cohesity Cluster VIPs
 - -v: Cohesity View that is configured to be the target for Oracle backup
