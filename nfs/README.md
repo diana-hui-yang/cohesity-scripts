@@ -54,3 +54,19 @@ backup-ora-coh-oim.bash Basic parameter
 ./backup-ora-coh-oim.bash -o orcl -a yes -m /coh/ora -n 4 -p 2 -e 3
 
 
+nfs-mount parameter
+
+- -f: The file lists Cohesity Cluster VIPs
+- -v: Cohesity View that is configured to be the target for Oracle backup
+- -m: Mount prefix (for example: if the mount is /coh/ora1, the prefix is /coh/ora)
+
+## VIP file content example
+- 10.19.2.6
+- 10.19.2.7
+- 10.19.2.8
+- 10.19.2.9
+
+## nfs-mount.bash exmaple (requires root privilege)
+./nfs-mount.bash -f vip-list  -v ora -m /coh/ora
+
+
