@@ -202,7 +202,7 @@ do
       export PATH=$PATH:$ORACLE_HOME/bin
       k=1
    fi
-   echo orasidintab is $orasidintab
+#   echo orasidintab is $orasidintab
 done
 
 if [[ $k -eq 0 ]]
