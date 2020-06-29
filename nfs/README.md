@@ -11,6 +11,7 @@ Warning: this code is provided on a best effort basis and is not in any way offi
 - chmod 750 backup-ora-coh-nfs.bash
 - chmod 750 backup-ora-coh-oim.bash
 - chmod 750 nfs-mount.bash
+- chmod 750 prepare-restore.bash
 
 ## Backup scripts Description
 
