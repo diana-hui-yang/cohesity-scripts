@@ -7,6 +7,7 @@ Warning: this code is provided on a best effort basis and is not in any way offi
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs.bash
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-oim.bash
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/nfs-mount.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/prepare-restore.bash
 - chmod 750 backup-ora-coh-nfs.bash
 - chmod 750 backup-ora-coh-oim.bash
 - chmod 750 nfs-mount.bash
