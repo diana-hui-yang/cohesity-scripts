@@ -3,9 +3,9 @@ Warning: this code is provided on a best effort basis and is not in any way offi
 
 ## Download the script
 
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs.bash
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/backup-ora-coh-dedup.bash
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/delete-ora-expired.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs/backup-ora-coh-nfs.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/backup-ora-coh-dedup/backup-ora-coh-dedup.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/delete-ora-expired/delete-ora-expired.bash
 - chmod 750 backup-ora-coh-nfs.bash
 - chmod 750 backup-ora-coh-dedup.bash
 - chmod 750 delete-ora-expired.bash
