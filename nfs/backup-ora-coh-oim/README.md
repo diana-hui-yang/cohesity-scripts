@@ -5,7 +5,7 @@ Download the script
 ## Backup scripts Description
 
 The backup scripts can utilize mutiple mount points to backup Oracle databases. backuo-ora-coh-oim.bash uses Oracle incremental merge. backuo-ora-coh-oim.bash should be used with Cohesity snapshot feature as a complete backup solution. 
-Both support full, incremental, and archive logs backup options. They also supports recvoery catalog.
+It supports full, incremental, and archive logs backup options. It also supports recvoery catalog.
 
 When run the script without any options, it displays the script usage
 
