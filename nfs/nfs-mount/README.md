@@ -1,7 +1,6 @@
 ## Download the script
 
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/nfs-mount/nfs-mount.bash
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/prepare-restore/prepare-restore.bash
 - chmod 750 nfs-mount.bash
 
 ## NFS mount script Description
