@@ -6,7 +6,7 @@
 
 ## Backup scripts Description
 
-The backup scripts can utilize mutiple mount points to backup Oracle databases. backup-ora-coh-nfs.bash script uses Oracle backupset.
+backup-ora-coh-nfs.bash can utilize mutiple mount points to backup Oracle databases. The backup files are in Oracle backupset format.
 It supports full, incremental, and archive logs backup options. It also supports recvoery catalog.
 
 When run the script without any options, it displays the script usage
