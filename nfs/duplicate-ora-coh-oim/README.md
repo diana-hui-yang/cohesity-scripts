@@ -22,10 +22,18 @@ duplicate-ora-coh-oim.bash Basic parameter
 - -o : ORACLE_HOME (Optional, default is current environment)"
 - -c : pluggable database (if this input is empty, it is CDB database restore"
 
+### ora_file example
+set newname for database to "'/oradata/restore/cdb1res';"
+set until time \"to_date("'2020-07-03 21:40:00','YYYY/MM/DD HH24:MI:SS'")\";
+
+### ora_spfile example
+Set db_unique_name='cdb1res'
+set db_create_file_dest='/oradata/restore/cdb1res'
+
 ## duplicate-ora-coh-nfs.bash Backup Example
 ### Duplicate a traditional Oracle database or CDB database example
-./duplicate-ora-coh-nfs.bash  -b $oracle_source_server -s $oracle_source_database -t $oracle_target_database -f $ora_pfile -i $ora_spfile -m  $oracle_mount_prefix -n $number_of_mount
+./duplicate-ora-coh-nfs.bash  -b oracle-01 -s cdb1 -t cdb1res -f ora_pfile -i ora_spfile -m  /coh/oraoim -n 4
 
 ### Duplicate a PDB database to a CDB example
-./duplicate-ora-coh-nfs.bash -b $oracle_source_server -s $oracle_source_database -t $oracle_target_database -f ${ora_pfile} -m  $oracle_mount_prefix -n $number_of_mount -c $oracle_pluggable_database
+./duplicate-ora-coh-nfs.bash -b oracle-01 -s cdb1 -t cdb2 -f ora_pfile -m  /coh/oraoim -n 4 -c cohpdb1
 
