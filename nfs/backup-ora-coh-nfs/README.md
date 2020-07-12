@@ -20,15 +20,6 @@ backup-ora-coh-nfs.bash Basic parameter
 - -i: If not archive only, it is full or incremental backup. 0 is full backup, and 1 is cumulative incremental backup
 - -e: Backup retention
 
-backup-ora-coh-oim.bash Basic parameter
-- -o: Oracle instance
-- -m: Mount prefix (for example: if the mount is /coh/ora1, the prefix is /coh/ora)
-- -n: number of mounts (If this number is 3, mount point /coh/ora1, /coh/ora2, /coh/ora3 wil be used as Oracle backup target)
-- -p: Number of Oracle channels
-- -a: Archive only or not
-- -t: If not archive only, it is full or incremental backup. 
-- -e: Backup retention
-
 ## backup-ora-coh-nfs.bash Backup Example
 ### Full backup example
 ./backup-ora-coh-nfs.bash -o orcl -a no -i 0 -m /coh/ora -n 4 -p 6 -e 30
