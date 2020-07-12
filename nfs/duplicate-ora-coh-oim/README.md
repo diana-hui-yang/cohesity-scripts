@@ -4,7 +4,7 @@
 - chmod 750 deduplicate-ora-coh-oim.bash
 
 ## Oracle duplicate scripts Description
-This Oracle duplicate script can duplicate Oracle database using the backup files backed up by backup-ora-coh-oim.bash script. It can duplicate Oracle database on the same server of the original Oracle database or an alternate server. It can duplicate CDB database or a PDB database to another CDB. The script by itself can only duplicate the database using the backup files that were backed up in less than 2 day. When duplicating the Oracle database from the backup fileslonger than 2 days and/or the backup files from Cohesity snapshot, prepare-restore.bash should run first before this script. 
+This Oracle duplicate script can duplicate Oracle database using the backup files backed up by **backup-ora-coh-oim.bash** script. It can duplicate Oracle database on the same server of the original Oracle database or an alternate server. It can duplicate CDB database or a PDB database to another CDB. The script by itself can only duplicate the database using the backup files that were backed up in less than 2 day. When duplicating the Oracle database from the backup fileslonger than 2 days and/or the backup files from Cohesity snapshot, prepare-restore.bash should run first before this script. 
 
 When run the script without any options, it displays the script usage
 
