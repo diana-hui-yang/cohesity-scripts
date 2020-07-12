@@ -4,6 +4,7 @@
 - chmod 750 prepare-restore.bash
 
 ## prepare-restore.bash script Description
+This script mount Oracle Cohesity copy view on a server for restore purpose. The user needs to have mount/umount privilege. It uses a python script copyView.py which can be downloaded from https://github.com/bseltz-cohesity/scripts/tree/master/python/cloneView. 
 
 ### prepare-restore.bash script parameter
 
