@@ -1,7 +1,7 @@
 ## Download the script
 
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/duplicate-ora-coh-oim/duplicate-ora-coh-oim.bash
-- chmod 750 deduplicate-ora-coh-oim.bash
+- chmod 750 duplicate-ora-coh-oim.bash
 
 ## Oracle duplicate scripts Description
 This Oracle duplicate script can duplicate Oracle database using the backup files backed up by **backup-ora-coh-oim.bash** script. It can duplicate Oracle database on the same server of the original Oracle database or an alternate server. It can duplicate CDB database or a PDB database to another CDB. **prepare-restore** script needs to run first before this script on an alternate server. **prepare-restore** mounts the view that has the backup data on Cohesity to the alternate server. 
