@@ -8,7 +8,7 @@ This Oracle duplicate script can duplicate Oracle database using the backup file
 
 When run the script without any options, it displays the script usage
 
-duplicate-ora-coh-oim.bash Basic parameter
+duplicate-ora-coh-oim.bash basic parameter
 - -r : RMAN login (example: \"rman auxiliary / \", optional)"
 - -b : backup host" 
 - -a : target host (Optional, default is localhost)"
