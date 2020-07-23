@@ -4,6 +4,7 @@ cohesity_user=oraadmin
 cohesity_domain=sa.corp.cohesity.com
 cohesity_cluster=10.19.2.70
 cohesity_job="snap im"
+oracle_host=orawest2
 oracle_database=cohcdbb
 backup_type=incre
 archive_backup_only=no
@@ -15,7 +16,7 @@ view=oraim
 
 # backup-ora-coh-oim.bash script does Oracle backup, export three variables (host, backup_dir and backup_time), and create catalog bash
  script
-/home/oracle1/scripts/oim/rman/backup-ora-coh-oim.bash -o $oracle_database -t $backup_type -a $archive_backup_only -m $oracle_mount_pre
+/home/oracle1/scripts/oim/rman/backup-ora-coh-oim.bash -h $oracle_host -o $oracle_database -t $backup_type -a $archive_backup_only -m $oracle_mount_pre
 fix -n $number_of_mount -e $retention
 
 if [ $? -ne 0 ]; then
