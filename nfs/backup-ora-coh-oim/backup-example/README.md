@@ -21,7 +21,7 @@ THis script does full backup. It can be used when there is a need to start a new
 ## cohraca-incre.bash
 This script does incremental backup of Oracle database cohcdbb. It does full backup when running the first time. After that it is incremental backup and  a full 
 backup is built since it uses Oracle incremental merge. It can be scheduled to run a day or few times a day. Oracle database cohraca is a RAC database running on 
-a three-nodes RAC cluster
+a three-nodes RAC cluster. The host input is required when Oracle database is a RAC database.
 
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-oim/backup-example/cohraca-incre.bash
 - chmod 750 cohraca-incre.bash
