@@ -10,5 +10,5 @@ Warning: this code is provided on a best effort basis and is not in any way offi
 ## Download OIM installation script
 This script will download all RMAN shell scripts and Cohesity Python scripts that are necessary to do Oracle Incremental Merge backup and restore. 
 - cd <script directory>
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/sbr-download.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/sbt-download.bash
 - chmod 750 sbt-download.bash
