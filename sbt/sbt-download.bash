@@ -1,4 +1,5 @@
 mkdir rman coh
+
 cd rman
 curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/backup-ora-coh-dedup/backup-ora-coh-dedup.bash
 curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/restore-ora-coh-dedup/restore-ora-coh-dedup.bash
