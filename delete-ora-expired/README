@@ -1,5 +1,0 @@
-
-## Download the script
-
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/delete-ora-expired/delete-ora-expired.bash
-- chmod 750 delete-ora-expired.bash
