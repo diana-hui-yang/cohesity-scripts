@@ -22,12 +22,10 @@ point_in_time="2020-08-02 12:00:00"
 sleep 5
 
 # clone the view again
-/home/oracle1/scripts/dedup/coh/cloneView.py -s $cohesity_cluster -u $cohesity_user -d $cohesity_domain -j "${cohesity_job}" -v ${original_view} -n
-${clone_view} -w
+/home/oracle1/scripts/dedup/coh/cloneView.py -s $cohesity_cluster -u $cohesity_user -d $cohesity_domain -j "${cohesity_job}" -v ${original_view} -n ${clone_view} -w
 
 sleep 5
 
 # Oracle restore
-/home/oracle1/scripts/dedup/rman/restore-ora-coh-sbt.bash -i $oracle_instance -t "${point_in_time}" -l $restore_controlfile -j $vip_file -v $view
--s $sbt_code -f $force
+/home/oracle1/scripts/dedup/rman/restore-ora-coh-sbt.bash -i $oracle_instance -t "${point_in_time}" -l $restore_controlfile -j $vip_file -v $view -s $sbt_code -f $force
 
