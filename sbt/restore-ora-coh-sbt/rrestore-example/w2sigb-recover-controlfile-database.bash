@@ -28,6 +28,6 @@ ${clone_view} -w
 sleep 5
 
 # Oracle restore
-/home/oracle1/scripts/dedup/rman/restore-ora-coh-dedup.bash -i $oracle_instance -t "${point_in_time}" -l $restore_controlfile -j $vip_file -v $view
+/home/oracle1/scripts/dedup/rman/restore-ora-coh-sbt.bash -i $oracle_instance -t "${point_in_time}" -l $restore_controlfile -j $vip_file -v $view
 -s $sbt_code -f $force
 
