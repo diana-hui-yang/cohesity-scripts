@@ -1,10 +1,10 @@
 mkdir rman coh
 
 cd rman
-curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/backup-ora-coh-dedup/backup-ora-coh-dedup.bash
-curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/restore-ora-coh-dedup/restore-ora-coh-dedup.bash
-chmod 750 backup-ora-coh-dedup.bash
-chmod 750 restore-ora-coh-dedup.bash
+curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/backup-ora-coh-sbt/backup-ora-coh-sbt.bash
+curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/restore-ora-coh-sbt/restore-ora-coh-sbt.bash
+chmod 750 backup-ora-coh-sbt.bash
+chmod 750 restore-ora-coh-sbt.bash
 cd ../coh
 curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/nfs-mount/nfs-mount.bash
 curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/delete-ora-expired/delete-ora-expired.bash
