@@ -7,13 +7,13 @@ cohesity_job="snap sbt"
 oracle_database=w2sigb
 archive_backup_only=no
 incremental_level=0
-vip_file=/home/oracle1/scripts/sbt/vip-list
+vip_file=/home/oracle/scripts/sbt/vip-list
 view=ora_sbt
 sbt_code=/u01/app/cohesity
 retention=7
 
 # backup-ora-coh-oim.bash script does Oracle backup
-/home/oracle1/scripts/sbt/rman/backup-ora-coh-sbt.bash -o $oracle_database -a $archive_backup_only -i $incremental_level -f $vip_file -v $view -s $sbt_code -e $retention
+/home/oracle/scripts/sbt/rman/backup-ora-coh-sbt.bash -o $oracle_database -a $archive_backup_only -i $incremental_level -f $vip_file -v $view -s $sbt_code -e $retention
 
 if [ $? -ne 0 ]; then
   echo "SBT full backup failed at " `/bin/date '+%Y%m%d%H%M%S'`
@@ -25,7 +25,7 @@ fi
 sleep 30
 
 # Protect the view
-/home/oracle1/scripts/dedup/coh/backupNow.py -v $cohesity_cluster -u $cohesity_user -d $cohesity_domain -j "${cohesity_job}" -k 3 -w
+/home/oracle/scripts/dedup/coh/backupNow.py -v $cohesity_cluster -u $cohesity_user -d $cohesity_domain -j "${cohesity_job}" -k 3 -w
 
 if [ $? -ne 0 ]; then
   echo "Cohesity snapshot failed at " `/bin/date '+%Y%m%d%H%M%S'`
