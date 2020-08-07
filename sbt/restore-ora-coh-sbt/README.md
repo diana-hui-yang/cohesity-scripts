@@ -1,6 +1,6 @@
 ## Download the script
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/restore-ora-coh-dedup/restore-ora-coh-dedup.bash
-- chmod 750 restore-ora-coh-dedup.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/restore-ora-coh-sbt/restore-ora-coh-sbt.bash
+- chmod 750 restore-ora-coh-sbt.bash
 
 ## Description
 The scripts restores database uses Cohesity Source-side dedup library, and from the backup files created by script backup-ora-coh-dedup.
@@ -35,13 +35,13 @@ Optional Parameter
 ## Restore exmaple
 
 ### Restore database validate example
-- ./restore-ora-coh-dedup.bash -i orcl -j vip-list -v orasbt1 -s /u01/app/coheisty
+- ./restore-ora-coh-sbt.bash -i orcl -j vip-list -v orasbt1 -s /u01/app/coheisty
 ### Restore database assuming controlfile are stil intact
-- ./restore-ora-coh-dedup.bash -i orcl -j vip-list -v orasbt1 -s /u01/app/coheisty -f yes
+- ./restore-ora-coh-sbt.bash -i orcl -j vip-list -v orasbt1 -s /u01/app/coheisty -f yes
 ### Restore controlfile, then database
 Note: before running this commaand, several prepare steps should be done first.
 init file should be created, adump directory should be created, a restore Cohesity view should be used, a read-only mount of production view on this server. 
 Check the scripts example in restore-example directory for for details
-- ./restore-ora-coh-dedup.bash  -i orcl -t "2020-08-02 12:00:00" -l yes -j vip-list -v orasbt1 -s /u01/app/coheisty -f yes
+- ./restore-ora-coh-sbt.bash  -i orcl -t "2020-08-02 12:00:00" -l yes -j vip-list -v orasbt1 -s /u01/app/coheisty -f yes
 
 
