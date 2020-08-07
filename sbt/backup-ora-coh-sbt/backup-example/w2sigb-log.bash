@@ -8,10 +8,10 @@ oracle_database=w2sigb
 archive_backup_only=yes
 vip_file=/home/oracle1/scripts/dedup/vip-list
 view=ora_sbt
-dedup_code_directory=/u01/app/cohesity
+sbt_code=/u01/app/cohesity
 retention=7
 
-/home/oracle1/scripts/dedup/rman/backup-ora-coh-dedup.bash -o $oracle_database -a $archive_backup_only -f $vip_file -v $view -s $dedup_
+/home/oracle1/scripts/dedup/rman/backup-ora-coh-sbt.bash -o $oracle_database -a $archive_backup_only -f $vip_file -v $view -s $sbt_
 code_directory -e $retention
 
 if [ $? -ne 0 ]; then
