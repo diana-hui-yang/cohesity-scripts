@@ -11,8 +11,7 @@ view=ora_sbt
 sbt_code=/u01/app/cohesity
 retention=7
 
-/home/oracle1/scripts/dedup/rman/backup-ora-coh-sbt.bash -o $oracle_database -a $archive_backup_only -f $vip_file -v $view -s $sbt_
-code_directory -e $retention
+/home/oracle1/scripts/dedup/rman/backup-ora-coh-sbt.bash -o $oracle_database -a $archive_backup_only -f $vip_file -v $view -s $sbt_code -e $retention
 
 if [ $? -ne 0 ]; then
   echo "SBT full backup failed at " `/bin/date '+%Y%m%d%H%M%S'`
