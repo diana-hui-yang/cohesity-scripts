@@ -9,12 +9,11 @@ archive_backup_only=no
 incremental_level=0
 vip_file=/home/oracle1/scripts/sbt/vip-list
 view=ora_sbt
-dedup_code=/u01/app/cohesity
+sbt_code=/u01/app/cohesity
 retention=7
 
 # backup-ora-coh-oim.bash script does Oracle backup
-/home/oracle1/scripts/dedup/rman/backup-ora-coh-sbt.bash -o $oracle_database -a $archive_backup_only -i $incremental_level -f $vip_fi
-le -v $view -s $dedup_code -e $retention
+/home/oracle1/scripts/dedup/rman/backup-ora-coh-sbt.bash -o $oracle_database -a $archive_backup_only -i $incremental_level -f $vip_file -v $view -s $sbt_code -e $retention
 
 if [ $? -ne 0 ]; then
   echo "SBT full backup failed at " `/bin/date '+%Y%m%d%H%M%S'`
