@@ -8,7 +8,7 @@ Warning: this code is provided on a best effort basis and is not in any way offi
 - chmod 750 restore-ora-coh-sbt.bash
 
 ## Download sbt scripts installation script
-This script will download all RMAN shell scripts and Cohesity Python scripts that are necessary to do Oracle backup and restore using Cohesity sbt library
+This script will download all RMAN shell scripts and Cohesity Python scripts that are necessary to do Oracle backup and restore using Cohesity sbt library. Here is the content of installation script
 - cd <script directory>
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/sbt-download.bash
 - chmod 750 sbt-download.bash
