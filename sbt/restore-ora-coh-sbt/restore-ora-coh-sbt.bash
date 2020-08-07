@@ -413,7 +413,7 @@ while [ $j -le $parallel ]; do
 	    echo "IP $ip can be connected"
 	      	
             if [[ $j -lt $parallel ]]; then
-	           allocate_database[$j]="allocate CHANNEL c$j TYPE 'SBT_TAPE' PARMS 'SBT_LIBRARY=$sbtname,SBT_PARMS=(mount_path=$ip:/$view,vips=$ip,gflag-name=sbt_use_grpc,gflag-value=true)';"
+	       allocate_database[$j]="allocate CHANNEL c$j TYPE 'SBT_TAPE' PARMS 'SBT_LIBRARY=$sbtname,SBT_PARMS=(mount_path=$ip:/$view,vips=$ip,gflag-name=sbt_use_grpc,gflag-value=true)';"
                unallocate[$j]="release channel c$j;"
             fi
             i=$[$i+1]
