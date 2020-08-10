@@ -3,7 +3,7 @@
 - chmod 750 restore-ora-coh-sbt.bash
 
 ## Description
-The scripts restores database uses Cohesity Source-side dedup library, and from the backup files created by script backup-ora-coh-dedup.
+The scripts restores database uses Cohesity Source-side dedup library, and from the backup files created by script backup-ora-coh-sbt.bash
 
 When run the script without any options, it displays the script usage
 
