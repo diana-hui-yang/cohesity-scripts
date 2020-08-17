@@ -22,7 +22,7 @@
 #################################################################
 
 function show_usage {
-echo "usage: backup-ora-coh-sbt.bash -r <RMAN login> -h <host> -o <Oracle_DB_Name> -a <archive only> -i <incremental level> -f <vip file> -v <view> -s <sbt home> -p <number of channels> -e <retention> -l <archive log keep days> -z <section size> -m <ORACLE_HOME> w <yes/no>"
+echo "usage: backup-ora-coh-sbt.bash -r <RMAN login> -h <host> -o <Oracle_DB_Name> -a <archive only> -i <incremental level> -f <vip file> -v <view> -s <sbt home> -p <number of channels> -e <retention> -l <archive log keep days> -z <section size> -m <ORACLE_HOME> -w <yes/no>"
 echo " -r : RMAN login (example: \"rman target /\", optional)"
 echo " -h : host (scanname is required if it is RAC. optional if it is standalone.)" 
 echo " -o : ORACLE_DB_NAME (Need to have an entry of this database in /etc/oratab. If it is RAC, it is db_unique_name)" 
