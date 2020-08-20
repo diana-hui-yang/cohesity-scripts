@@ -14,9 +14,11 @@ curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/
 curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/backupNow/backupNow.py
 curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/cloneView/cloneView.py
 curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/cloneDirectory/cloneDirectory.py
+curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/deleteView/deleteView.py
 chmod +x nfs-mount.bash
 chmod +x delete-ora-expired.bash
 chmod +x backupNow.py
 chmod +x cloneView.py
 chmod +x cloneDirectory.py
+chmod +x deleteView.py
 cd ..
