@@ -9,14 +9,23 @@ When run the script without any options, it displays the script usage
 
 Basic parameter
 
-- -o: Oracle instance or database
+- -o: ORACLE_DB_NAME (Need to have an entry of this database in /etc/oratab. If it is RAC, it is db_unique_name)
 - -f: The file lists Cohesity Cluster VIPs
 - -v: Cohesity View that is configured to be the target for Oracle backup
-- -s: The directory where libsbt_6_linux-x86_64.so is in
-- -p: Number of Oracle channels
-- -a: Archive only or not
+- -s: Cohesity SBT library name including directoy or just directory (default name is libsbt_6_and_7_linux-x86_64.so)
+- -a: arch (archivelog backup only, optional. default is database backup)
 - -i: If not archive only, it is full or incremental backup. 0 is full backup, and 1 is cumulative incremental backup
-- -e: Backup Retention
+- -e: Retention time (days to retain the backups, apply only after uncomment "Delete obsolete" in this script)
+
+Optional parameter
+- -r : RMAN login (example: "rman target /", optional)
+- -h : host (scanname is required if it is RAC. optional if it is standalone.)
+- -p : number of channels (Optional, default is 4)
+- -l : Archive logs retain days (days to retain the local archivelogs before deleting them. default is 1 day)
+- -m : ORACLE_HOME (default is in /etc/oratab, optional.)
+- -z : section size in GB (Optional, default is no section size)
+- -w : yes means preview rman backup scripts
+
 
 ## VIP file content example
 - 10.19.2.6
