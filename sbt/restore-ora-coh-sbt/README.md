@@ -12,7 +12,7 @@ Basic parameter
 - -i : Oracle instance name. If it is not RAC, it is the same as DB name. If it is RAC, it is the instance name like cohcdba2
 - -j : file that has vip list
 - -v : Cohesity view
-- -s : Cohesity SBT library home
+- -s : Cohesity SBT library name including directoy or just directory (default name is libsbt_6_and_7_linux-x86_64.so)
 - -f : yes means force. It will restore Oracle database. Without it, it will just run RMAN validate (Optional)
 
 Optional Parameter
