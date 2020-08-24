@@ -20,9 +20,10 @@ Basic parameter
 
 Optional Parameter
 
-- -l : yes means complete restore including control file, no means not restoring controlfile
 - -p : number of channels (default is 4), optional
 - -o : ORACLE_HOME (default is current environment), optional
+- -c : Source pluggable database (if this input is empty, it is standardalone or CDB database restore)
+- -e : Target pluggable database (if this input is empty, it is standardalone or CDB database restore)
 - -w : yes means preview rman backup scripts 
 
 ## VIP file content example
@@ -39,5 +40,5 @@ set until time \"to_date("'2020-08-09 19:30:00','YYYY/MM/DD HH24:MI:SS'")\";
 
 ### duplidate none CDB database example
 - ./duplicate-ora-coh-sbt.bash -r "rman auxiliary / catalog <user>/<password>@orawest2/catalog" -b orawest2 -d w2sigb -t w2sigc -j vip-list -v ora_sbt -s /u01/app/cohesity -f dup-set-w2sigc.ora
-### duplidate PFB database
-- ./duplicate-ora-coh-sbt.bash -r "rman auxiliary / catalog <user>/<password>@orawest2/catalog" -b orawest2 -d cohcdbb -t cohcdbc -c orapdb1 -j vip-list -v ora_sbt -s /u01/app/cohesity -f dup-set-cohcdbc.ora
+### duplidate PDB database
+- ./duplicate-ora-coh-sbt.bash -r "rman auxiliary / catalog <user>/<password>@orawest2/catalog" -b orawest2 -d cohcdbb -t cohcdbc -c orapdb1 -e orapdb1c -j vip-list -v ora_sbt -s /u01/app/cohesity -f dup-set-cohcdbc.ora
