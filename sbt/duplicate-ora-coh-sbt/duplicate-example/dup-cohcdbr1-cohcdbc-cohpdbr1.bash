@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rmanlogin="rman auxiliary / target sys/fr*shst8rt@orawest2:1522/cohcdbr1"
+rmanlogin="rman auxiliary / target <user>/<passwd>@<oracle connection string>"
 prod_host=oracle-01
 source_db=cohcdbr1
 source_pdb=cohpdbr1
