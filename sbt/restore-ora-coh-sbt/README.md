@@ -20,6 +20,7 @@ Optional Parameter
 - -r : RMAN login (example: \"rman target / \"), optional
 - -h : backup host (default is current host), optional
 - -d : Oracle database name. only required for RAC. If it is RAC, it is the database name like cohcdba
+- -c : File contains restore location setting, example: set newname for database to '/oradata/restore/orcl/%b';
 - -t : Point in Time (format example: "2019-01-27 13:00:00"), optional
 - -l : yes means complete restore including control file, no means not restoring controlfile
 - -p : number of channels (default is 4), optional
@@ -36,11 +37,11 @@ Optional Parameter
 
 ### Restore database validate example
 - ./restore-ora-coh-sbt.bash -i orcl -j vip-list -v orasbt1 -s /u01/app/coheisty
-### Restore database assuming controlfile are stil intact
+### Restore database assuming controlfile are still intact
 - ./restore-ora-coh-sbt.bash -i orcl -j vip-list -v orasbt1 -s /u01/app/coheisty -f yes
 ### Restore controlfile, then database
 Note: before running this commaand, several prepare steps should be done first.
-init file should be created, adump directory should be created, a restore Cohesity view should be used, a read-only mount of production view on this server. 
+init file should be created, adump directory should be created. 
 Check the scripts example in restore-example directory for for details
 - ./restore-ora-coh-sbt.bash  -i orcl -t "2020-08-02 12:00:00" -l yes -j vip-list -v orasbt1 -s /u01/app/coheisty -f yes
 
