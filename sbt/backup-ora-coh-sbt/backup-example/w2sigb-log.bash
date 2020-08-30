@@ -8,10 +8,11 @@ oracle_database=w2sigb
 archive_backup_only=yes
 vip_file=/home/oracle/scripts/sbt/vip-list
 view=ora_sbt
+directory=$view/orawest/w2sigb
 sbt_code=/u01/app/cohesity
 retention=7
 
-/home/oracle/scripts/sbt/rman/backup-ora-coh-sbt.bash -o $oracle_database -a $archive_backup_only -f $vip_file -v $view -s $sbt_code -e $retention
+/home/oracle/scripts/sbt/rman/backup-ora-coh-sbt.bash -o $oracle_database -a $archive_backup_only -f $vip_file -v $directory -s $sbt_code -e $retention
 
 if [ $? -ne 0 ]; then
   echo "SBT full backup failed at " `/bin/date '+%Y%m%d%H%M%S'`
