@@ -8,7 +8,7 @@ oracle_database=w2sigb
 host=orawest
 archive_backup_only=yes
 vip_file=/home/oracle/scripts/sbt/vip-list
-view=ora_sbt
+view=orasbt1
 sbt_code=/u01/app/cohesity
 retention=7
 
