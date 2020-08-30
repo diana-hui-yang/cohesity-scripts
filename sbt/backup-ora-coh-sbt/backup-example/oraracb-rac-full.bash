@@ -9,13 +9,13 @@ oracle_database=oraracb
 archive_backup_only=no
 incremental_level=0
 vip_file=/home/oracle/scripts/sbt/vip-list
-view=ora_sbt
+view=orasbt1
 directory=$view/orawest/w2sigb
 sbt_code=/u01/app/cohesity
 retention=7
 
 # backup-ora-coh-oim.bash script does Oracle backup
-/home/oracle/scripts/sbt/rman/backup-ora-coh-sbt.bash -h $scanname -o $oracle_database -a $archive_backup_only -i $incremental_level -f $vip_file -v $directory -s $sbt_code -e $retention
+/home/oracle/scripts/sbt/rman/backup-ora-coh-sbt.bash -h $scanname -o $oracle_database -a $archive_backup_only -i $incremental_level -f $vip_file -v $view/$scanname/$oracle_database -s $sbt_code -e $retention
 
 if [ $? -ne 0 ]; then
   echo "SBT full backup failed at " `/bin/date '+%Y%m%d%H%M%S'`
