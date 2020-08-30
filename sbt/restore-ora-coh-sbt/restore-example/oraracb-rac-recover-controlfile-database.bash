@@ -13,5 +13,5 @@ force=yes
 point_in_time="2020-08-02 12:00:00"
 
 # Oracle restore
-/home/oracle/scripts/sbt/rman/restore-ora-coh-sbt.bash -h $scanname -i $oracle_instance -d $oracle_db -t "${point_in_time}" -l $restore_controlfile -j $vip_file -v $view/$scanname/$oracle_instance -s $sbt_code -f $force
+/home/oracle/scripts/sbt/rman/restore-ora-coh-sbt.bash -h $scanname -i $oracle_instance -d $oracle_db -t "${point_in_time}" -l $restore_controlfile -j $vip_file -v $view/$scanname/$oracle_db -s $sbt_code -f $force
 
