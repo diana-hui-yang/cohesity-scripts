@@ -10,7 +10,6 @@ archive_backup_only=no
 incremental_level=0
 vip_file=/home/oracle/scripts/sbt/vip-list
 view=orasbt1
-directory=$view/orawest/w2sigb
 sbt_code=/u01/app/cohesity
 retention=7
 
