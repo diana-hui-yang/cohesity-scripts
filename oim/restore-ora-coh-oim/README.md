@@ -1,6 +1,6 @@
-Download the script
-curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oim/restore-ora-coh-oim/restore-ora-coh-oim.bash
-chmod 750 restore-ora-coh-oim.bash
+## Download the script
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oim/restore-ora-coh-oim/restore-ora-coh-oim.bash
+- chmod 750 restore-ora-coh-oim.bash
 Description
 The scripts restores database the backup files created by script backup-ora-coh-oim.bash
 
