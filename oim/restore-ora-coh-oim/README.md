@@ -3,7 +3,7 @@
 - chmod 750 restore-ora-coh-oim.bash
 
 ## Description
-The scripts restores database the backup files created by script backup-ora-coh-oim.bash
+The scripts restores database from the backup files created by script backup-ora-coh-oim.bash
 
 When run the script without any options, it displays the script usage
 
