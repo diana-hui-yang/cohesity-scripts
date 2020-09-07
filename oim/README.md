@@ -6,8 +6,10 @@ Warning: this code is provided on a best effort basis and is not in any way offi
 
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oim/backup-ora-coh-oim/backup-ora-coh-oim.bash
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oim/duplicate-ora-coh-oim/duplicate-ora-coh-oim.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oim/duplicate-ora-coh-oim/restore-ora-coh-oim.bash
 - chmod 750 backup-ora-coh-oim.bash
 - chmod 750 deduplicate-ora-coh-oim.bash
+- chmod 750 restore-ora-coh-oim.bash
 
 ## Download OIM installation script
 This script will download all RMAN shell scripts and Cohesity Python scripts that are necessary to do Oracle Incremental Merge backup and restore. 
