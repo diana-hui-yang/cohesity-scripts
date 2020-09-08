@@ -13,9 +13,11 @@ curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/
 curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/backupNow/backupNow.py
 curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/cloneView/cloneView.py
 curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/cloneDirectory/cloneDirectory.py
-chmod +x nfs-mount.bash
-chmod +x prepare-restore.bash
-chmod +x backupNow.py
-chmod +x cloneView.py
-chmod +x cloneDirectory.py
+curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/easyScript/storePassword/python/storePassword.py
+chmod 750 nfs-mount.bash
+chmod 750 prepare-restore.bash
+chmod 750 backupNow.py
+chmod 750 cloneView.py
+chmod 750 cloneDirectory.py
+chmod 750 storePassword.py
 cd ..
