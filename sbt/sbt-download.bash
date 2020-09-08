@@ -11,5 +11,7 @@ chmod 750 delete-ora-expired.bash
 cd ../coh
 curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/pyhesity.py
 curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/backupNow/backupNow.py
-chmod +x backupNow.py
+curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/easyScript/storePassword/python/storePassword.py
+chmod 750 backupNow.py
+chmod 750 storePassword.py
 cd ..
