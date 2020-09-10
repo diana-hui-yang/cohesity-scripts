@@ -31,6 +31,7 @@ Set db_unique_name='cdb1res'
 set db_create_file_dest='/oradata/restore/cdb1res'
 
 ## duplicate-ora-coh-nfs.bash Backup Example
+Note: before running this commaand, several prepare steps should be done first. init file should be created, adump directory should be created, and database should be started in nomount mode
 ### Duplicate a traditional Oracle database or CDB database example
 ./duplicate-ora-coh-nfs.bash  -b oracle-01 -s cdb1 -t cdb1res -f ora_file -i ora_spfile -m  /coh/oraoim -n 4
 
