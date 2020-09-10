@@ -7,7 +7,7 @@ The scripts clone database uses Cohesity Source-side dedup library, and from the
 
 When run the script without any options, it displays the script usage
 
-Basic parameter
+Required parameters
 
 - -r : RMAN login (example: "rman auxiliary / target <user>/<password>@<source db connection> or rman auxiliary / catalog <user>/<password>@<catalog>")
 - -b : backup host
@@ -18,12 +18,13 @@ Basic parameter
 - -v : Cohesity view
 - -s : Cohesity SBT library home
 
-Optional Parameter
+Optional Parameters
 
+- -a : target host (Optional, default is localhost)
+- -i : File contains new setting to spfile. example: SET DB_CREATE_FILE_DEST +DGROUP3"
 - -p : number of channels (default is 4), optional
 - -o : ORACLE_HOME (default is current environment), optional
 - -c : Source pluggable database (if this input is empty, it is standardalone or CDB database restore)
-- -e : Target pluggable database (if this input is empty, it is standardalone or CDB database restore)
 - -w : yes means preview rman backup scripts 
 
 ## VIP file content example
