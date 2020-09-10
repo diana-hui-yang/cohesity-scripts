@@ -15,3 +15,4 @@ curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/easyScr
 chmod 750 backupNow.py
 chmod 750 storePassword.py
 cd ..
+
