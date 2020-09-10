@@ -7,7 +7,7 @@ The scripts restores database uses Cohesity Source-side dedup library, and from 
 
 When run the script without any options, it displays the script usage
 
-Basic parameter
+Required parameters
 
 - -i : Oracle instance name. If it is not RAC, it is the same as DB name. If it is RAC, it is the instance name like cohcdba2
 - -j : file that has vip list
@@ -15,7 +15,7 @@ Basic parameter
 - -s : Cohesity SBT library name including directoy or just directory (default name is libsbt_6_and_7_linux-x86_64.so)
 - -f : yes means force. It will restore Oracle database. Without it, it will just run RMAN validate (Optional)
 
-Optional Parameter
+Optional Parameters
 
 - -r : RMAN login (example: \"rman target / \"), optional
 - -h : backup host (default is current host), optional
