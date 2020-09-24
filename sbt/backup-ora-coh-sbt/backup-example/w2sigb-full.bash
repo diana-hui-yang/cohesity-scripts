@@ -9,7 +9,7 @@ host=orawest
 archive_backup_only=no
 incremental_level=0
 vip_file=/home/oracle/scripts/sbt/vip-list
-view=orasbt1
+view=orasbt1/$host/$oracle_database
 sbt_code=/u01/app/cohesity
 retention=7
 
