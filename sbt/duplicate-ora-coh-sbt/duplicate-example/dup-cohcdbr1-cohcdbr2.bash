@@ -5,7 +5,7 @@ prod_host=oracle-01
 source_db=cohcdbr1
 target_oraclesid=cohcdbr2
 vip_file=/home/oracle/scripts/sbt/vip-list
-view=ora_sbt
+view=ora_sbt/$prod_host/$source_db
 sbt_code=/u01/app/cohesity
 ora_set=/home/oracle/scripts/sbt/dup-set-cohcdbr2.ora
 
