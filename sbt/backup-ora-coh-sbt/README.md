@@ -13,7 +13,8 @@ Required parameters
 - -o : ORACLE_DB_NAME (Need to have an entry of this database in /etc/oratab. If it is RAC, it is db_unique_name)
 - -a : yes (yes means archivelog backup only, no means database backup plus archivelog backup)
 - -i : If not archive only, it is full or incremental backup. 0 is full backup, and 1 is cumulative incremental backup
-- -f : The file lists Cohesity Cluster VIPs
+- -c : Cohesity Cluster DNS name. It precedes Cohesity VIPs
+- -f : The file lists Cohesity Cluster VIPs. This file is NOT used if Cohesity Cluster name is provided
 - -v : Cohesity View that is configured to be the target for Oracle backup
 - -s : Cohesity SBT library name including directoy or just directory (default name is libsbt_6_and_7_linux-x86_64.so)
 - -e : Retention time (days to retain the backups, apply only after uncomment "Delete obsolete" in this script)
@@ -22,9 +23,9 @@ Optional parameters
 - -r : RMAN login (example: "rman target /", optional)
 - -p : number of channels (Optional, default is 4)
 - -l : Archive logs retain days (days to retain the local archivelogs before deleting them. default is 1 day)
-- -m : ORACLE_HOME (default is in /etc/oratab, optional.)
+- -m : ORACLE_HOME (provide ORACLE_HOME if the database is not in /etc/oratab. Otherwise, it is optional.)
 - -z : section size in GB (Optional, default is no section size)
-- -w : yes means preview rman backup scripts
+- -w : yes means print rman backup scripts only. The RMAN script is not executed
 
 
 ## VIP file content example
@@ -37,10 +38,16 @@ Optional parameters
 
 ### Full backup example
 ./backup-ora-coh-sbt.bash -o orcl -a no -i 0 -f vip-list -s /u01/app/coheisty -v orasbt1 -p 4 -e 30
+or
+./backup-ora-coh-sbt.bash -o orcl -i 0 -c cohesity_cluster -s /u01/app/coheisty -v orasbt1 -p 4 -e 30
 ### Cumulative backup example
 ./backup-ora-coh-sbt.bash -o orcl -a no -i 1 -f vip-list -s /u01/app/coheisty -v orasbt1 -p 3 -e 30
+or
+./backup-ora-coh-sbt.bash -o orcl -i 1 -c cohesity_cluster -s /u01/app/coheisty -v orasbt1 -p 3 -e 30
 ### Archive log backup example
 ./backup-ora-coh-sbt.bash -o orcl -a yes -f vip-list -s /u01/app/coheisty -v orasbt1 -p 2 -e 30
+or
+./backup-ora-coh-sbt.bash -o orcl -a yes -c cohesity_cluster -s /u01/app/coheisty -v orasbt1 -p 2 -e 30
 
 ## Backup to directory "orawest/orcl" under view "orasbt1" exmaple
 The directory needs to created first by mounting the view "orasbt1" on a Unix server through nfs. The following example uses the directory "orawest/orcl" (host is orawest, the database is orcl) under view "orasbt1". 
