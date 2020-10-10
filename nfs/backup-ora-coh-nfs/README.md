@@ -35,9 +35,16 @@ When run the script without any options, it displays the script usage
 ### Archive log backup example
 ./backup-ora-coh-nfs.bash -o orcl -a yes -m /coh/ora -n 4 -p 2 -e 30
 
+## Backup-ora-coh-nfs.bash RAC database backup Example
 ### Full backup example for RAC database
 ./backup-ora-coh-nfs.bash -h orascan -o orarac -a no -i 0 -m /coh/ora -n 4 -p 6 -e 30
-### Cumulative backup example
+### Cumulative backup example for RAC database
 ./backup-ora-coh-nfs.bash  -h orascan -o orarac -a no -i 1 -m /coh/ora -n 4 -p 3 -e 30
-### Archive log backup example
+### Archive log backup example for RAC database
 ./backup-ora-coh-nfs.bash  -h orascan -o orarac -a yes -m /coh/ora -n 4 -p 2 -e 30
+
+Note
+RMAN "delete obsolete" command is used in this script to delete expired backups. Be default, it is commmented out. Please check Oracle Bug report and apply the necessary fixes before you uncomment that line.
+
+"Oracle Bug 29633753 delete obsolete removes backup created inside recovery window of read only datafiles in nocatalog mode"
+
