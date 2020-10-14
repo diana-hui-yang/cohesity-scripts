@@ -1,9 +1,5 @@
 #!/bin/bash
 
-cohesity_user=oraadmin
-cohesity_domain=sa.corp.cohesity.com
-cohesity_cluster=10.19.2.70
-cohesity_job="snap sbt"
 scanname=orascan1
 oracle_database=oraracb
 archive_backup_only=yes
