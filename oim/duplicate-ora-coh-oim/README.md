@@ -4,7 +4,7 @@
 - chmod 750 duplicate-ora-coh-oim.bash
 
 ## Oracle duplicate scripts Description
-This Oracle duplicate script can duplicate Oracle database using the backup files backed up by **backup-ora-coh-oim.bash** script. It can duplicate Oracle database on the same server of the original Oracle database or an alternate server. It can duplicate CDB database or a PDB database to another CDB. **prepare-restore** script needs to run first before this script on an alternate server. **prepare-restore** mounts the view that has the backup data on Cohesity to the alternate server. 
+This Oracle duplicate script can duplicate Oracle database using the backup files backed up by **backup-ora-coh-oim.bash** script. It can duplicate Oracle database on the same server of the original Oracle database or an alternate server. It can duplicate CDB database or a PDB database to another CDB.
 
 When run the script without any options, it displays the script usage
 
@@ -33,8 +33,8 @@ set db_create_file_dest='/oradata/restore/cdb1res'
 ## duplicate-ora-coh-nfs.bash Backup Example
 Note: before running this commaand, several prepare steps should be done first. init file should be created, adump directory should be created, and database should be started in nomount mode
 ### Duplicate a traditional Oracle database or CDB database example
-./duplicate-ora-coh-nfs.bash  -b oracle-01 -s cdb1 -t cdb1res -f ora_file -i ora_spfile -m  /coh/oraoim -n 4
+./duplicate-ora-coh-oim.bash  -b oracle-01 -s cdb1 -t cdb1res -f ora_file -i ora_spfile -m  /coh/oraoim -n 4
 
 ### Duplicate a PDB database to a CDB example
-./duplicate-ora-coh-nfs.bash -b oracle-01 -s cdb1 -t cdb2 -f ora_file -m  /coh/oraoim -n 4 -c cohpdb1
+./duplicate-ora-coh-oim.bash -b oracle-01 -s cdb1 -t cdb2 -f ora_file -m  /coh/oraoim -n 4 -c cohpdb1
 
