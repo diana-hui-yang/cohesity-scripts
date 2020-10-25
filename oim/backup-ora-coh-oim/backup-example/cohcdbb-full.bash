@@ -44,19 +44,3 @@ fi
 # RMAN catalog the snapshot backup file
 /home/oracle1/scripts/oim/rman/log/${host}/${oracle_database}_catalog.${backup_time}.bash
 
-if [ $? -ne 0 ]; then
-  echo "RMAN catalog snapshot backup files failed at " `/bin/date '+%Y%m%d%H%M%S'`
-  exit 1
-else
-  echo "RMAN catalog snapshot backup files finished at " `/bin/date '+%Y%m%d%H%M%S'`
-fi
-
-# Protect the view
-/home/oracle1/scripts/oim/coh/backupNow.py -v $cohesity_cluster -u $cohesity_user -d $cohesity_domain -j "${cohesity_job}" -k 3 -w
-
-if [ $? -ne 0 ]; then
-  echo "Cohesity snapshot failed at " `/bin/date '+%Y%m%d%H%M%S'`
-  exit 1
-else
-  echo "Cohesity snapshot finished at " `/bin/date '+%Y%m%d%H%M%S'`
-fi
