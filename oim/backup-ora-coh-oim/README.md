@@ -1,10 +1,12 @@
 ## Download the script
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oim/backup-ora-coh-oim/backup-ora-coh-oim.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oim/backup-ora-coh-oim/sbackup-ora-coh-oim.bash
 - chmod 750 backup-ora-coh-oim.bash
+- chmod 750 sbackup-ora-coh-oim.bash
 
 ## Backup scripts Description
 
-backuo-ora-coh-oim.bash can utilize mutiple mount points to backup Oracle databases. It uses Oracle incremental merge. The backup is incremental and the result is full backup after the merge. It should be used with Cohesity snapshot feature as a complete backup solution. Cohesity Remote adapter will run Cohesity snapshow after the backup is done. When using cron job to schedule the job, Cohesity python snapshot script should be used. It can be downloaded from this link https://github.com/bseltz-cohesity/scripts/tree/master/python/backupNow
+backuo-ora-coh-oim.bash can utilize mutiple mount points to backup Oracle databases. It uses Oracle incremental merge. The backup is incremental and the result is full backup after the merge. It should be used with Cohesity snapshot feature as a complete backup solution. Cohesity Remote adapter will run Cohesity snapshow after the backup is done. 
 This script supports full, incremental, and archive logs backup options. It also supports recvoery catalog.
 
 When run the script without any options, it displays the script usage
