@@ -2,12 +2,14 @@
 ## Download the script
 
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs/backup-ora-coh-nfs.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs/sbackup-ora-coh-nfs.bash
 - chmod 750 backup-ora-coh-nfs.bash
+- chmod 750 sbackup-ora-coh-nfs.bash
 
 ## Backup scripts Description
 
-backup-ora-coh-nfs.bash can utilize mutiple mount points to backup Oracle databases. The backup files are in Oracle backupset format.
-It supports full, incremental, and archive logs backup options. It also supports recvoery catalog.
+Both backup-ora-coh-nfs.bash and sbackup-ora-coh-nfs.bash can utilize mutiple mount points to backup Oracle databases. The backup files are in Oracle backupset format.
+It supports full, incremental, and archive logs backup options. It also supports recvoery catalog. backup-ora-coh-nfs.bash supports Linux and sbackup-ora-coh-nfs.bash supports Solaris.
 
 When run the script without any options, it displays the script usage
 
