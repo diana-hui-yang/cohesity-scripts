@@ -6,7 +6,7 @@
 
 ## Backup scripts Description
 
-backuo-ora-coh-oim.bash can utilize mutiple mount points to backup Oracle databases. It uses Oracle incremental merge. The backup is incremental and the result is full backup after the merge. It should be used with Cohesity snapshot feature as a complete backup solution. Cohesity Remote adapter will run Cohesity snapshow after the backup is done. 
+backuo-ora-coh-oim.bash and sbackuo-ora-coh-oim.bash can utilize mutiple mount points to backup Oracle databases. It uses Oracle incremental merge. The backup is incremental and the result is full backup after the merge. It should be used with Cohesity snapshot feature as a complete backup solution. backup-ora-coh-oim.bash supports Linux and sbackup-ora-coh-oim.bash supports Solaris. Cohesity Remote adapter will run Cohesity snapshow after the backup is done. 
 This script supports full, incremental, and archive logs backup options. It also supports recvoery catalog.
 
 When run the script without any options, it displays the script usage
