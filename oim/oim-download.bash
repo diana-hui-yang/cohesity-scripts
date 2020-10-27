@@ -13,6 +13,7 @@ curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nf
 curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/prepare-restore/prepare-restore.bash
 curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/pyhesity.py
 curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/backupNow/backupNow.py
+curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/backupNow/DeleteView.py
 curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/cloneView/cloneView.py
 curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/cloneDirectory/cloneDirectory.py
 curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/easyScript/storePassword/python/storePassword.py
