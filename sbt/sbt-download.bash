@@ -8,7 +8,10 @@ chmod 750 backup-ora-coh-sbt.bash
 chmod 750 duplicate-ora-coh-sbt.bash
 chmod 750 restore-ora-coh-sbt.bash
 chmod 750 delete-ora-expired.bash
-cd ../coh
+mkdir config
+touch vip-list
+mkdir lib
+cd ../../coh
 curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/pyhesity.py
 curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/backupNow/backupNow.py
 curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/easyScript/storePassword/python/storePassword.py
