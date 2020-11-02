@@ -9,18 +9,23 @@ This Oracle duplicate script can duplicate Oracle database using the backup file
 When run the script without any options, it displays the script usage
 
 duplicate-ora-coh-oim.bash basic parameter
-- -r : RMAN login (example: \"rman auxiliary / \", optional)"
+
+Required Parameters
 - -b : backup host" 
-- -a : target host (Optional, default is localhost)"
-- -s : Source Oracle database" 
+- -s : Source Oracle_DB_Name, If Source is not a RAC database, it is the same as Instance name. If it is RAC, it is DB name, not instance name" 
 - -t : Target Oracle database"
-- -f : File contains duplicate settting, example: set newname for database to '/oradata/restore/orcl/%b'; "
-- -i : File contains new setting to spfile. example: SET DB_CREATE_FILE_DEST +DGROUP3"
 - -m : mount-prefix (like /coh/ora)"
 - -n : number of mounts"
+
+Optional Parameters
+- -r : RMAN login (example: \"rman auxiliary / \", optional)"
+- -a : target host (Optional, default is localhost)"
+- -i : File contains new setting to spfile. example: SET DB_CREATE_FILE_DEST +DGROUP3, Provide full path"
 - -p : number of channels (Optional, default is same as the number of mounts4)"
 - -o : ORACLE_HOME (Optional, default is current environment)"
 - -c : pluggable database (if this input is empty, it is CDB database restore"
+- -w : yes means preview rman duplicate scripts"
+
 
 ### ora_file example (File contains duplicate settting)
 set newname for database to "'/oradata/restore/cdb1res';"
