@@ -13,22 +13,23 @@ Required parameters
 - -o : ORACLE_DB_NAME (Need to have an entry of this database in /etc/oratab. If it is RAC, it is db_unique_name)
 - -a : yes (yes means archivelog backup only, no means database backup plus archivelog backup)
 - -i : If not archive only, it is full or incremental backup. 0 is full backup, and 1 is cumulative incremental backup
-- -c : Cohesity Cluster DNS name. It precedes Cohesity VIPs
-- -f : The file lists Cohesity Cluster VIPs. This file is NOT used if Cohesity Cluster name is provided
 - -v : Cohesity View that is configured to be the target for Oracle backup
-- -s : Cohesity SBT library name including directoy or just directory (default name is libsbt_6_and_7_linux-x86_64.so)
 - -e : Retention time (days to retain the backups, apply only after uncomment "Delete obsolete" in this script)
 
 Optional parameters
 - -r : RMAN login (example: "rman target /", optional)
+- -c : Catalog connection (example: "<dbuser>/<dbpass>@<catalog connection string>", optional)
+- -n : Rac nodes connectons strings that will be used to do backup (example: "<rac1-node connection string,ora2-node connection string>")
 - -p : number of channels (Optional, default is 4)
+- -f : The file lists Cohesity Cluster VIPs (default name is vip-list and default directory is config)
+- -s : Cohesity SBT library name including directoy or just directory (default name is libsbt_6_and_7_linux-x86_64.so, default directory is lib)
 - -l : Archive logs retain days (days to retain the local archivelogs before deleting them. default is 1 day)
 - -m : ORACLE_HOME (provide ORACLE_HOME if the database is not in /etc/oratab. Otherwise, it is optional.)
 - -z : section size in GB (Optional, default is no section size)
 - -w : yes means print rman backup scripts only. The RMAN script is not executed
 
 
-## VIP file content example
+## vip-list file content example
 - 10.19.2.6
 - 10.19.2.7
 - 10.19.2.8
