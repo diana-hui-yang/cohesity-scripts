@@ -3,9 +3,9 @@
 scanname=orascan1
 oracle_database=oraracb
 archive_backup_only=yes
-vip_file=/home/oracle/scripts/sbt/vip-list
 view=orasbt1/$scanname/$oracle_database
-sbt_code=/u01/app/cohesity
 retention=7
+cohesity_name="cohesity"
 
-/home/oracle/scripts/sbt/rman/backup-ora-coh-sbt.bash -h $scanname -o $oracle_database -a $archive_backup_only -f $vip_file -v $view/$scanname/$oracle_database -s $sbt_code -e $retention
+
+/home/oracle/scripts/sbt/rman/backup-ora-coh-sbt.bash -h $scanname -o $oracle_database -a $archive_backup_only -y "${cohesity_name}" -v $view/$scanname/$oracle_database -e $retention
