@@ -32,27 +32,21 @@ Optional parameters
 ## Backup to Cohesity view "orasbt1" exmaple
 
 ### Full backup example
-./backup-ora-coh-sbt.bash -o orcl -a no -i 0 -f vip-list -s /u01/app/coheisty -v orasbt1 -p 4 -e 30
-or
-./backup-ora-coh-sbt.bash -o orcl -i 0 -c cohesity_cluster -s /u01/app/coheisty -v orasbt1 -p 4 -e 30
+./backup-ora-coh-sbt.bash -o orcl -i 0 -y cohesity_name -v orasbt1 -p 4 -e 30
 ### Cumulative backup example
-./backup-ora-coh-sbt.bash -o orcl -a no -i 1 -f vip-list -s /u01/app/coheisty -v orasbt1 -p 3 -e 30
-or
-./backup-ora-coh-sbt.bash -o orcl -i 1 -c cohesity_cluster -s /u01/app/coheisty -v orasbt1 -p 3 -e 30
+./backup-ora-coh-sbt.bash -o orcl -i 1 -y cohesity_name -v orasbt1 -p 3 -e 30
 ### Archive log backup example
-./backup-ora-coh-sbt.bash -o orcl -a yes -f vip-list -s /u01/app/coheisty -v orasbt1 -p 2 -e 30
-or
-./backup-ora-coh-sbt.bash -o orcl -a yes -c cohesity_cluster -s /u01/app/coheisty -v orasbt1 -p 2 -e 30
+./backup-ora-coh-sbt.bash -o orcl -a yes -y cohesity_name -v orasbt1 -p 2 -e 30
 
 ## Backup to directory "orawest/orcl" under view "orasbt1" exmaple
 The directory needs to created first by mounting the view "orasbt1" on a Unix server through nfs. The following example uses the directory "orawest/orcl" (host is orawest, the database is orcl) under view "orasbt1". 
 
 ### Full backup example
-./backup-ora-coh-sbt.bash -o orcl -a no -i 0 -f vip-list -s /u01/app/coheisty -v orasbt1/orawest/orcl -p 4 -e 30
+./backup-ora-coh-sbt.bash -o orcl -i 0 -y cohesity_name -v orasbt1/orawest/orcl -p 4 -e 30
 ### Cumulative backup example
-./backup-ora-coh-sbt.bash -o orcl -a no -i 1 -f vip-list -s /u01/app/coheisty -v orasbt1/orawest/orcl -p 3 -e 30
+./backup-ora-coh-sbt.bash -o orcl -i 1 -y cohesity_name -v orasbt1/orawest/orcl -p 3 -e 30
 ### Archive log backup example
-./backup-ora-coh-sbt.bash -o orcl -a yes -f vip-list -s /u01/app/coheisty -v orasbt1/orawest/orcl -p 2 -e 30
+./backup-ora-coh-sbt.bash -o orcl -a yes -y cohesity_name -v orasbt1/orawest/orcl -p 2 -e 30
 
 
 ## Note
