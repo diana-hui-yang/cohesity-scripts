@@ -11,6 +11,7 @@ Required parameters
 
 - -h : host (scanname is required if it is RAC. optional if it is standalone.)
 - -o : ORACLE_DB_NAME (Need to have an entry of this database in /etc/oratab. If it is RAC, it is db_unique_name)
+- -y : Cohesity Cluster DNS name
 - -a : yes (yes means archivelog backup only, no means database backup plus archivelog backup)
 - -i : If not archive only, it is full or incremental backup. 0 is full backup, and 1 is cumulative incremental backup
 - -v : Cohesity View that is configured to be the target for Oracle backup
@@ -27,13 +28,6 @@ Optional parameters
 - -m : ORACLE_HOME (provide ORACLE_HOME if the database is not in /etc/oratab. Otherwise, it is optional.)
 - -z : section size in GB (Optional, default is no section size)
 - -w : yes means print rman backup scripts only. The RMAN script is not executed
-
-
-## vip-list file content example
-- 10.19.2.6
-- 10.19.2.7
-- 10.19.2.8
-- 10.19.2.9
 
 ## Backup to Cohesity view "orasbt1" exmaple
 
