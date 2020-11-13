@@ -9,7 +9,7 @@ When run the script without any options, it displays the script usage
 
 Required parameters
 
-- -r : Target connection (example: "<dbuser>/<dbpass>@<target db connection>")
+- -r : Target connection (example: "dbuser/dbpass@target db connection")
 - -b : backup host
 - -d : Source Oracle_DB_Name, If Source is not a RAC database, it is the same as Instance name. If it is RAC, it is DB name, not instance name
 - -t : Target Oracle instance name. If it is not RAC, it is the same as DB name. If it is RAC, it is the instance name like cohcdba2
@@ -18,7 +18,7 @@ Required parameters
 
 Optional Parameters
 
-- -e : Catalog connection (example: "<dbuser>/<dbpass>@<catalog connection string>", optional)
+- -e : Catalog connection (example: "dbuser/dbpass@catalog connection string", optional)
 - -a : target host (Optional, default is localhost)
 - -i : File contains new setting to spfile. example: SET DB_CREATE_FILE_DEST +DGROUP3"
 - -p : number of channels (default is 4), optional
