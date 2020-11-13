@@ -35,14 +35,14 @@ set until time \"to_date("'2020-08-09 19:30:00','YYYY/MM/DD HH24:MI:SS'")\";
 ## duplicate exmaple
 
 ### duplidate none CDB database example
-- ./duplicate-ora-coh-sbt.bash -e "user/password@orawest2/catalog" -b orawest2 -d w2sigb -t w2sigc -y cohesity -v ora_sbt -f dup-set-w2sigc.ora
+- ./duplicate-ora-coh-sbt.bash -r "user/password@orawest2:/w2sigb" -b orawest2 -d w2sigb -t w2sigc -y cohesity -v ora_sbt -f dup-set-w2sigc.ora
 ### duplidate PDB database
-- ./duplicate-ora-coh-sbt.bash -e "user/password@orawest2/catalog" -b orawest2 -d cohcdbb -t cohcdbc -c orapdb1 -e orapdb1c -y cohesity -v ora_sbt -f dup-set-cohcdbc.ora
+- ./duplicate-ora-coh-sbt.bash -r "user/password@orawest2:/cohcdbb" -b orawest2 -d cohcdbb -t cohcdbc -c orapdb1 -e orapdb1c -y cohesity -v ora_sbt -f dup-set-cohcdbc.ora
   
 ## duplicate exmaple from directory "orawest/orcl" under view "orasbt1" exmaple
 The following example uses the directory "orawest/orcl" (host is orawest, the database is orcl) under view "orasbt1". You can mount the view to a Unix server to verify the backup files are in this directory.
 
 ### duplidate none CDB database example
-- ./duplicate-ora-coh-sbt.bash -e "user/password@orawest2/catalog" -b orawest2 -d w2sigb -t w2sigc -y cohesity -v ora_sbt/orawest/orcl -f dup-set-w2sigc.ora
+- ./duplicate-ora-coh-sbt.bash -e "user/password@orawest2:/catalog" -b orawest2 -d w2sigb -t w2sigc -y cohesity -v ora_sbt/orawest/orcl -f dup-set-w2sigc.ora
 ### duplidate PDB database
-- ./duplicate-ora-coh-sbt.bash -e "user/password@orawest2/catalog" -b orawest2 -d cohcdbb -t cohcdbc -c orapdb1 -e orapdb1c -y cohesity -v ora_sbt/orawest/orcl -f dup-set-cohcdbc.ora
+- ./duplicate-ora-coh-sbt.bash -r "user/password@orawest2:/cohcdbb" -b orawest2 -d cohcdbb -t cohcdbc -c orapdb1 -e orapdb1c -y cohesity -v ora_sbt/orawest/orcl -f dup-set-cohcdbc.ora
