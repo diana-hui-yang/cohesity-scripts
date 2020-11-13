@@ -19,7 +19,7 @@ Required parameters
 
 Optional parameters
 - -r : RMAN login (example: "rman target /", optional)
-- -c : Catalog connection (example: "<dbuser>/<dbpass>@<catalog connection string>", optional)
+- -c : Catalog connection (example: "dbuser/dbpass@catalog connection string", optional)
 - -n : Rac nodes connectons strings that will be used to do backup (example: "<rac1-node connection string,ora2-node connection string>")
 - -p : number of channels (Optional, default is 4)
 - -f : The file lists Cohesity Cluster VIPs (default name is vip-list and default directory is config)
