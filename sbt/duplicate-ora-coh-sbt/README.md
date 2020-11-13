@@ -9,17 +9,16 @@ When run the script without any options, it displays the script usage
 
 Required parameters
 
-- -r : RMAN login (example: "rman auxiliary / target <user>/<password>@<source db connection> or rman auxiliary / catalog <user>/<password>@<catalog>")
+- -r : Target connection (example: "<dbuser>/<dbpass>@<target db connection>")
 - -b : backup host
 - -d : Source Oracle_DB_Name, If Source is not a RAC database, it is the same as Instance name. If it is RAC, it is DB name, not instance name
 - -t : Target Oracle instance name. If it is not RAC, it is the same as DB name. If it is RAC, it is the instance name like cohcdba2
 - -f : File contains duplicate setting, example: set until time "to_date("'2020-08-09 19:30:00','YYYY/MM/DD HH24:MI:SS'")";
-- -j : file that has vip list
 - -v : Cohesity view
-- -s : Cohesity SBT library home
 
 Optional Parameters
 
+- -e : Catalog connection (example: "<dbuser>/<dbpass>@<catalog connection string>", optional)
 - -a : target host (Optional, default is localhost)
 - -i : File contains new setting to spfile. example: SET DB_CREATE_FILE_DEST +DGROUP3"
 - -p : number of channels (default is 4), optional
