@@ -18,7 +18,7 @@ Required parameters
 - -e : Retention time (days to retain the backups, apply only after uncomment "Delete obsolete" in this script)
 
 Optional parameters
-- -r : Target connection (example: "<dbuser>/<dbpass>@<target connection string> as sysbackup", optional if it is local backup)
+- -r : Target connection (example: "dbuser/dbpass@target connection string as sysbackup", optional if it is local backup)
 - -c : Catalog connection (example: "dbuser/dbpass@catalog connection string", optional)
 - -n : Rac nodes connectons strings that will be used to do backup (example: "<rac1-node connection string,ora2-node connection string>")
 - -p : number of channels (Optional, default is 4)
