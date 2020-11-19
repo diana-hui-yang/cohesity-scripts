@@ -20,7 +20,7 @@ Required parameters
 Optional parameters
 - -r : Target connection (example: "dbuser/dbpass@target connection string as sysbackup", optional if it is local backup)
 - -c : Catalog connection (example: "dbuser/dbpass@catalog connection string", optional)
-- -n : Rac nodes connectons strings that will be used to do backup (example: "<rac1-node connection string,ora2-node connection string>")
+- -n : RAC nodes connectons strings that will be used to do backup (example: "rac1-node connection string,ora2-node connection string")
 - -p : number of channels (Optional, default is 4)
 - -f : The file lists Cohesity Cluster VIPs (default name is vip-list and default directory is config)
 - -s : Cohesity SBT library name including directoy or just directory (default name is libsbt_6_and_7_linux-x86_64.so, default directory is lib)
