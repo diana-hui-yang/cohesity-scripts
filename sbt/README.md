@@ -17,4 +17,4 @@ This script will download all RMAN shell scripts and Cohesity Python scripts tha
 You can also copy the content of sbt-download.bash script directly on your unix server
   
 ## Download SBT library
-SBT library needs to be downloaded from Cohesity support site. Here is the link http://downloads.cohesity.com/oracle_sbt/RPC-Library/6.4.1-and-above/libsbt_6_and_7_linux-x86_64.so. When you click it first, it 
+SBT library needs to be downloaded from Cohesity support site. Here is the link http://downloads.cohesity.com/oracle_sbt/RPC-Library/6.4.1-and-above/libsbt_6_and_7_linux-x86_64.so. When you click it first, it may ask you to login. Once you login, click this link again. It will download the library to your computer. 
