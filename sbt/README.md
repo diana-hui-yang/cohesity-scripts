@@ -13,11 +13,10 @@ Warning: this code is provided on a best effort basis and is not in any way offi
 
 ## Download all SBT related scripts
 ### Linux
-This linux-sbt-download.bash script will download all RMAN shell scripts for Linux and Cohesity Python scripts that are necessary to do Oracle backup and restore using Cohesity sbt library. Here is the content of installation script
+This linux-sbt-download.bash script will download all RMAN shell scripts for Linux and Cohesity Python scripts that are necessary to do Oracle backup and restore using Cohesity sbt library. You can copy the content of linux-sbt-download.bash script directly on your unix server. You can also download it first.
 - cd <script directory>
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/linux-sbt-download.bash
 - chmod 750 linux-sbt-download.bash
-You can also copy the content of linux-sbt-download.bash script directly on your unix server
 
 ## Download SBT library
 SBT library needs to be downloaded from Cohesity support site. 
