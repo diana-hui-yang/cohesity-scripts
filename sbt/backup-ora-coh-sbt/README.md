@@ -12,8 +12,8 @@ Required parameters
 - -h : host (scanname is required if it is RAC. optional if it is standalone.)
 - -o : ORACLE_DB_NAME (Need to have an entry of this database in /etc/oratab. If it is RAC, it is db_unique_name)
 - -y : Cohesity Cluster DNS name
-- -a : yes (yes means archivelog backup only, no means database backup plus archivelog backup)
-- -i : If not archive only, it is full or incremental backup. 0 is full backup, and 1 is cumulative incremental backup
+- -a : archivelog only backup (yes means archivelog backup only, no menas database backup plus archivelog backup, default is no)
+- -i : If not archivelog only backup, it is full or incremental backup. 0 is full backup, and 1 is cumulative incremental backup
 - -v : Cohesity View that is configured to be the target for Oracle backup
 - -e : Retention time (days to retain the backups, apply only after uncomment "Delete obsolete" in this script)
 
