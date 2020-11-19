@@ -10,28 +10,22 @@ When run the script without any options, it displays the script usage
 Required parameters
 
 - -i : Oracle instance name. If it is not RAC, it is the same as DB name. If it is RAC, it is the instance name like cohcdba2
-- -j : file that has vip list
+- -d : Source Oracle_DB_Name, only required if it is RAC. It is DB name, not instance name
+- -y : Cohesity Cluster DNS name
 - -v : Cohesity view
-- -s : Cohesity SBT library name including directoy or just directory (default name is libsbt_6_and_7_linux-x86_64.so)
 - -f : yes means force. It will restore Oracle database. Without it, it will just run RMAN validate (Optional)
 
 Optional Parameters
 
-- -r : RMAN login (example: \"rman target / \"), optional
 - -h : backup host (default is current host), optional
-- -d : Oracle database name. only required for RAC. If it is RAC, it is the database name like cohcdba
 - -c : File contains restore location setting, example: set newname for database to '/oradata/restore/orcl/%b';
 - -t : Point in Time (format example: "2019-01-27 13:00:00"), optional
 - -l : yes means complete restore including control file, no means not restoring controlfile
 - -p : number of channels (default is 4), optional
+- -j : The file lists Cohesity Cluster VIPs (default name is vip-list and default directory is config)
+- -s : Cohesity SBT library name including directoy or just directory (default name is libsbt_6_and_7_linux-x86_64.so, default directory is lib)
 - -o : ORACLE_HOME (default is current environment), optional
 - -w : yes means preview rman backup scripts 
-
-## VIP file content example
-- 10.19.2.6
-- 10.19.2.7
-- 10.19.2.8
-- 10.19.2.9
 
 ## Restore exmaple
 
