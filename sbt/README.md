@@ -21,4 +21,4 @@ This linux-sbt-download.bash script will download all RMAN shell scripts to run 
 ## Download SBT library
 SBT library needs to be downloaded from Cohesity support site. 
 ### Linux
-Here is the linux sbt library link http://downloads.cohesity.com/oracle_sbt/RPC-Library/6.4.1-and-above/libsbt_6_and_7_linux-x86_64.so. When you click it first, it may ask you to login. Once you login, click this link again. It will download the library to your computer. Copy this sbt library file to the lib directory in the script directory. 
+Here is the linux sbt library link http://downloads.cohesity.com/oracle_sbt/RPC-Library/6.4.1-and-above/libsbt_6_and_7_linux-x86_64.so. When you click it first, it may ask you to login. Once you login, click this link again. It will download the library to your computer. Copy this sbt library file to the lib directory in the script directory on the Oracle server.
