@@ -265,11 +265,11 @@ if [[ ! -z $ora_spfile ]]; then
      if [[ ${db_create_location:0:1} != "+" ]]; then
        echo "new db_create_location is a directory"
        if [[ ! -d ${db_create_location} ]]; then
-         echo "${db_create_location}/data does not exist, create it"
+         echo "${db_create_location} does not exist, create it"
          mkdir -p ${db_create_location}
 
          if [ $? -ne 0 ]; then
-            echo "create new directory ${db_create_location}/fra failed"
+            echo "create new directory ${db_create_location} failed"
             exit 1
          fi
        fi
