@@ -2,6 +2,7 @@
 ## Download the script
 
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs/backup-ora-coh-nfs.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs/backup-ora-coh-nfs-webex.bash
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs/sbackup-ora-coh-nfs.bash
 - chmod 750 backup-ora-coh-nfs.bash
 - chmod 750 sbackup-ora-coh-nfs.bash
