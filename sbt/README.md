@@ -13,12 +13,14 @@ Warning: this code is provided on a best effort basis and is not in any way offi
 
 ## Download all SBT related scripts
 ### Linux
-This linux-sbt-download.bash script will download all RMAN shell scripts to run on Linux servers and Cohesity Python scripts that are necessary to do Oracle backup and restore using Cohesity sbt library. You can copy the content of linux-sbt-download.bash script directly on your unix server. You can also download it first.
-- cd <script directory>
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/linux-sbt-download.bash
-- chmod 750 linux-sbt-download.bash
+linux-sbt-download script will download all RMAN shell scripts to run on Linux servers and Cohesity Python scripts that are necessary to do Oracle backup and restore using Cohesity sbt library. 
+### AIX
+aix-sbt-download script will download all RMAN shell scripts to run on AIX servers and Cohesity Python scripts that are necessary to do Oracle backup and restore using Cohesity sbt library. 
 
 ## Download SBT library
 SBT library needs to be downloaded from Cohesity support site. 
 ### Linux
-Here is the linux sbt library link http://downloads.cohesity.com/oracle_sbt/RPC-Library/6.4.1-and-above/libsbt_6_and_7_linux-x86_64.so. When you click it first, it may ask you to login. Once you login, click this link again. It will download the library to your computer. Copy this sbt library file to the lib directory in the script directory on the Oracle server.
+Here is the linux sbt library link http://downloads.cohesity.com/oracle_sbt/RPC-Library/6.4.1-and-above/libsbt_6_and_7_linux-x86_64.so. When you click it first, it may ask you to login. Once you login, click this link again. It will download the library to your computer. Copy this sbt library file to the lib directory in the script directory on the Oracle server ("<top directory>/rman/lib").
+### AIX
+Here is the AIX sbt installer script http://downloads.cohesity.com/oracle_sbt/RPC-Library/6.4.1-and-above/AIX/cohesity_plugin_sbt_0.0.0-master_aix_powerpc_installer. The installation command is
+cohesity_plugin_sbt_0.0.0-master_aix_powerpc_installer -- -d "<top directory>/rman/lib"
