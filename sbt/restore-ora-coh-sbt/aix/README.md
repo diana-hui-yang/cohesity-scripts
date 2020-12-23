@@ -30,25 +30,25 @@ Optional Parameters
 ## Restore exmaple
 
 ### Restore database validate example when sbt library is in lib directory under the script directory
-- ./restore-ora-coh-sbt.bash -i orcl -y cohesity -v orasbt1
+- ./aix-restore-ora-coh-sbt.bash -i orcl -y cohesity -v orasbt1
 ### Restore database assuming controlfile are still intact when sbt library is in directory /u01/app/cohesity
-- ./restore-ora-coh-sbt.bash -i orcl -y cohesity -v orasbt1 -s /u01/app/coheisty -f yes
+- ./aix-restore-ora-coh-sbt.bash -i orcl -y cohesity -v orasbt1 -s /u01/app/coheisty -f yes
 ### Restore controlfile, then database
 Note: before running this commaand, several prepare steps should be done first.
 init file should be created, adump directory should be created. 
 Check the scripts example in restore-example directory for more details
-- ./restore-ora-coh-sbt.bash  -i orcl -t "2020-08-02 12:00:00" -l yes -y cohesity -v orasbt1 -f yes
+- ./aix-restore-ora-coh-sbt.bash  -i orcl -t "2020-08-02 12:00:00" -l yes -y cohesity -v orasbt1 -f yes
 
 ## Restore exmaple from directory "orawest/orcl" under view "orasbt1" exmaple
 The following example uses the directory "orawest/orcl" (host is orawest, the database is orcl) under view "orasbt1". You can mount the view to a Unix server to verify the backup files are in this directory.
 
 ### duplidate none CDB database example
 ### Restore database validate example when sbt library is in lib directory under the script directory
-- ./restore-ora-coh-sbt.bash -i orcl -y cohesity -v orasbt1/orawest/orcl
+- ./aix-restore-ora-coh-sbt.bash -i orcl -y cohesity -v orasbt1/orawest/orcl
 ### Restore database assuming controlfile are still intact when sbt library is in directory /u01/app/cohesity
-- ./restore-ora-coh-sbt.bash -i orcl -y cohesity -v orasbt1/orawest/orcl -s /u01/app/coheisty -f yes
+- ./aix-restore-ora-coh-sbt.bash -i orcl -y cohesity -v orasbt1/orawest/orcl -s /u01/app/coheisty -f yes
 ### Restore controlfile, then database
 Note: before running this commaand, several prepare steps should be done first.
 init file should be created, adump directory should be created. 
 Check the scripts example in restore-example directory for for details
-- ./restore-ora-coh-sbt.bash  -i orcl -t "2020-08-02 12:00:00" -l yes -y cohesity -v orasbt1/orawest/orcl -f yes
+- ./aix-restore-ora-coh-sbt.bash  -i orcl -t "2020-08-02 12:00:00" -l yes -y cohesity -v orasbt1/orawest/orcl -f yes
