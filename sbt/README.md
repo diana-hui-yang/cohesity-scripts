@@ -10,12 +10,14 @@ Warning: this code is provided on a best effort basis and is not in any way offi
 - chmod 750 duplicate-ora-coh-sbt.bash
 - chmod 750 restore-ora-coh-sbt.bash
 
+## AIX Prerequisite 
+GNU package: bash, gawk, python, mpfr, findutils
 
 ## Download all SBT related scripts
 ### Linux
 linux-sbt-download script will download all RMAN shell scripts to run on Linux servers and Cohesity Python scripts that are necessary to do Oracle backup and restore using Cohesity sbt library. 
 ### AIX
-aix-sbt-download script will download all RMAN shell scripts to run on AIX servers and Cohesity Python scripts that are necessary to do Oracle backup and restore using Cohesity sbt library. 
+aix-sbt-download script will download all RMAN shell scripts to run on AIX servers and Cohesity Python scripts that are necessary to do Oracle backup and restore using Cohesity sbt library.
 
 ## Download SBT library
 SBT library needs to be downloaded from Cohesity support site. 
