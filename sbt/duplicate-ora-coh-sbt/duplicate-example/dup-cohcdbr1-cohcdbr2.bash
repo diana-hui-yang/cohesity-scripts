@@ -1,14 +1,13 @@
 #!/bin/bash
 
-rmanlogin="rman auxiliary / target <user>/<passwd>@<oracle connection string>"
-prod_host=oracle-01
+targetconnect="sys/fr*shst8rt@orawest2:/cohcdbr1"
+prod_host=orawest2
 source_db=cohcdbr1
 target_oraclesid=cohcdbr2
-vip_file=/home/oracle/scripts/sbt/vip-list
-view=ora_sbt/$prod_host/$source_db
-sbt_code=/u01/app/cohesity
-ora_set=/home/oracle/scripts/sbt/dup-set-cohcdbr2.ora
-
+view=ora_sbt/orawest2/cohcdbr1
+ora_set=/home/oracle1/scripts/sbt/dup-set-cohcdbr2.ora
+cohesity_name="sac01-ftdcoh"
+#catalogconnect="rman/fr8shst8rt@orawest:/catalog"
 
 echo start Oracle duplication
-/home/oracle/scripts/sbt/rman/duplicate-ora-coh-sbt.bash -r "${rmanlogin}" -b ${prod_host} -d ${source_db} -t ${target_oraclesid} -f ${ora_set} -j $vip_file -v $view -s $sbt_code
+/home/oracle1/scripts/sbt/rman/duplicate-ora-coh-sbt.bash -r "${targetconnect}" -y "${cohesity_name}" -b ${prod_host} -d ${source_db} -t ${target_oraclesid} -f ${ora_set} -v $view
