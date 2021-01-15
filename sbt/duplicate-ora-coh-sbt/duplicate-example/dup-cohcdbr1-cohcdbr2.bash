@@ -1,7 +1,7 @@
 #!/bin/bash
 
-targetconnect="sys/fr*shst8rt@orawest2:/cohcdbr1"
-prod_host=orawest2
+targetconnect="<user>/<passwd>@oracle-01/cohcdbr1"
+prod_host=oracle-01
 source_db=cohcdbr1
 target_oraclesid=cohcdbr2
 view=ora_sbt/orawest2/cohcdbr1
