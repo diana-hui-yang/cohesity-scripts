@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #catalogconnect="<user>/<passwd>@orawest:/catalog"
-targetconnect="<user>/<passwd>@orawest2/cohcdbr1"
+targetconnect="<user>/<passwd>@oracle-01/cohcdbr1"
 prod_host=oracle-01
 source_db=cohcdbr1
 source_pdb=cohpdbr2
