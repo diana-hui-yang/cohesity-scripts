@@ -21,3 +21,5 @@ The linux sbt library link is http://downloads.cohesity.com/oracle_sbt/RPC-Libra
 The AIX sbt installer script link is http://downloads.cohesity.com/oracle_sbt/RPC-Library/6.4.1-and-above/AIX/cohesity_plugin_sbt_0.0.0-master_aix_powerpc_installer. The installation is in http://downloads.cohesity.com/oracle_sbt/RPC-Library/6.4.1-and-above/AIX/instructions.txt. The installation command is
 
 - cohesity_plugin_sbt_0.0.0-master_aix_powerpc_installer -- -d \<top directory\>/rman/lib
+- ln -s \<top directory\>/rman/lib/lib* $ORACLE_HOME/lib
+- export LIBPATH=$ORACLE_HOME/lib:$LIBPATH
