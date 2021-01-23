@@ -26,7 +26,6 @@
 # 12/18/20 Diana Yang   Add option to backup the archive logs more than once
 # 12/17/20 Diana Yang   Modify it to work on AIX server
 # 01/21/21 Diana Yang   Check the sbt library in ORACLE_HOME/lib directory
-# 01/22/21 Diana Yang   Add four threads per channel if there are more than 4 Cohesity nodes
 #
 #################################################################
 
