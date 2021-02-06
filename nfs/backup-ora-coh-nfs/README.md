@@ -2,7 +2,7 @@
 ## Download the script
 
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs/backup-ora-coh-nfs.bash
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs/backup-ora-coh-nfs-webex.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs/backup-ora-coh-nfs-mount.bash
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs/sbackup-ora-coh-nfs.bash
 - chmod 750 backup-ora-coh-nfs.bash
 - chmod 750 sbackup-ora-coh-nfs.bash
@@ -10,7 +10,7 @@
 ## Backup scripts Description
 
 Both backup-ora-coh-nfs.bash and sbackup-ora-coh-nfs.bash can utilize mutiple mount points to backup Oracle databases. The backup files are in Oracle backupset format.
-It supports full, incremental, and archive logs backup options. It also supports recvoery catalog. backup-ora-coh-nfs.bash supports Linux and sbackup-ora-coh-nfs.bash supports Solaris.
+It supports full, incremental, and archive logs backup options. It also supports recvoery catalog. backup-ora-coh-nfs.bash supports Linux and sbackup-ora-coh-nfs.bash supports Solaris. backup-ora-coh-nfs-mount.bash file will mount the NFS share first before the backup and umount the share after the baskup is done.
 
 When run the script without any options, it displays the script usage
 
@@ -48,8 +48,4 @@ When run the script without any options, it displays the script usage
 ### Archive log backup example for RAC database
 ./backup-ora-coh-nfs.bash  -h orascan -o orarac -a yes -m /coh/ora -n 4 -p 2 -e 30
 
-Note
-RMAN "delete obsolete" command is used in this script to delete expired backups. Be default, it is commmented out. Please check Oracle Bug report and apply the necessary fixes before you uncomment that line.
-
-"Oracle Bug 29633753 delete obsolete removes backup created inside recovery window of read only datafiles in nocatalog mode"
 
