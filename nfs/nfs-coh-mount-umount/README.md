@@ -11,6 +11,7 @@
 - -y: Cohesity Cluster DNS name
 - -v: Cohesity View that is configured to be the target for Oracle backup
 - -p: Mount prefix (for example: if the mount is /coh/ora1, the prefix is /coh/ora)
+- -n : number of mounts
 - -m : yes means mount Cohesity view, no means umount Cohesity view
 
 ## nfs-coh-mount-umount.bash mount exmaple (requires user has sudo privilege to mount the filesystem)
