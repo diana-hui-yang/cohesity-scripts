@@ -15,7 +15,7 @@
 #################################################################
 
 function show_usage {
-echo "usage: nfs-coh-mount-umount.bash -f <vip file> -v <view> -p <mount-prefix> -n <number of mounts> -m <yes/no>"
+echo "usage: nfs-coh-mount-umount.bash -y <Cohesity Cluster> -v <view> -p <mount-prefix> -n <number of mounts> -m <yes/no>"
 echo " -y : Cohesity Cluster DNS name"
 echo " -v : Cohesity view"
 echo " -p : mount-prefix (like /coh/ora)"
