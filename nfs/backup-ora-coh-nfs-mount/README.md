@@ -3,6 +3,9 @@
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs-mount/backup-ora-coh-nfs-mount.bash
 - chmod 750 backup-ora-coh-nfs-mount.bash
 
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs-mount/aix-backup-ora-coh-nfs-mount.bash
+- chmod 750 aix-backup-ora-coh-nfs-mount.bash
+
 ## Backup scripts Description
 
 The backup scripts mount multiple Cohesity NFS shares before backing up Oracle databases. They umount the NFS shares after the backup is done and there is no more RMAN backup
