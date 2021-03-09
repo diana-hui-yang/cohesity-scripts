@@ -3,16 +3,7 @@
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs-mount/backup-ora-coh-nfs-mount.bash
 - chmod 750 backup-ora-coh-nfs-mount.bash
 
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs-mount/aix-backup-ora-coh-nfs-mount.bash
-- chmod 750 aix-backup-ora-coh-nfs-mount.bash
-
 ## Backup scripts Description
-
-The backup scripts mount multiple Cohesity NFS shares before backing up Oracle databases. They umount the NFS shares after the backup is done and there is no more RMAN backup
-using these scripts are running. It requires Oracle user to have mount and umount root privilege. 
-
-The backup files are in Oracle backupset format. It supports full, incremental, and archive logs backup options. It also supports recvoery catalog.
-
 When run the script without any options, it displays the script usage
 
  Required Parameters
