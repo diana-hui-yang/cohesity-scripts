@@ -1,8 +1,6 @@
 ## Download the script
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/backup-ora-coh-sbt/aix/aix-backup-ora-coh-sbt.bash
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/backup-ora-coh-sbt/aix/aix-backup-ora-coh-sbt.nulti.bash
 - chmod 750 aix-backup-ora-coh-dedup.bash
-- chmod 750 aix-backup-ora-coh-dedup.multi.bash
 
 ## Prerequisite
 GNU package: bash, gawk, python, mpfr
