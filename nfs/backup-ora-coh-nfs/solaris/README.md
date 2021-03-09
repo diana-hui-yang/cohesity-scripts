@@ -1,15 +1,9 @@
 ## Download the script
 
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs/backup-ora-coh-nfs.bash
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs/sbackup-ora-coh-nfs.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs/solaris/sbackup-ora-coh-nfs.bash
 - chmod 750 backup-ora-coh-nfs.bash
-- chmod 750 sbackup-ora-coh-nfs.bash
 
 ## Backup scripts Description
-
-Both backup-ora-coh-nfs.bash and sbackup-ora-coh-nfs.bash can utilize mutiple mount points to backup Oracle databases. The backup files are in Oracle backupset format.
-It supports full, incremental, and archive logs backup options. It also supports recvoery catalog. backup-ora-coh-nfs.bash supports Linux and sbackup-ora-coh-nfs.bash supports Solaris. backup-ora-coh-nfs-mount.bash file will mount the NFS share first before the backup and umount the share after the baskup is done.
-
 When run the script without any options, it displays the script usage
 
  Required Parameters
@@ -32,18 +26,18 @@ When run the script without any options, it displays the script usage
 
 ## backup-ora-coh-nfs.bash Backup Example
 ### Full backup example
-./backup-ora-coh-nfs.bash -o orcl -a no -i 0 -m /coh/ora -n 4 -p 6 -e 30
+./sbackup-ora-coh-nfs.bash -o orcl -a no -i 0 -m /coh/ora -n 4 -p 6 -e 30
 ### Cumulative backup example
-./backup-ora-coh-nfs.bash -o orcl -a no -i 1 -m /coh/ora -n 4 -p 3 -e 30
+./sbackup-ora-coh-nfs.bash -o orcl -a no -i 1 -m /coh/ora -n 4 -p 3 -e 30
 ### Archive log backup example
-./backup-ora-coh-nfs.bash -o orcl -a yes -m /coh/ora -n 4 -p 2 -e 30
+./sbackup-ora-coh-nfs.bash -o orcl -a yes -m /coh/ora -n 4 -p 2 -e 30
 
 ## Backup-ora-coh-nfs.bash RAC database backup Example
 ### Full backup example for RAC database
-./backup-ora-coh-nfs.bash -h orascan -o orarac -a no -i 0 -m /coh/ora -n 4 -p 6 -e 30
+./sbackup-ora-coh-nfs.bash -h orascan -o orarac -a no -i 0 -m /coh/ora -n 4 -p 6 -e 30
 ### Cumulative backup example for RAC database
-./backup-ora-coh-nfs.bash  -h orascan -o orarac -a no -i 1 -m /coh/ora -n 4 -p 3 -e 30
+./sbackup-ora-coh-nfs.bash  -h orascan -o orarac -a no -i 1 -m /coh/ora -n 4 -p 3 -e 30
 ### Archive log backup example for RAC database
-./backup-ora-coh-nfs.bash  -h orascan -o orarac -a yes -m /coh/ora -n 4 -p 2 -e 30
+./sbackup-ora-coh-nfs.bash  -h orascan -o orarac -a yes -m /coh/ora -n 4 -p 2 -e 30
 
 
