@@ -1,7 +1,5 @@
 ## Download the script
 
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/nfs-coh-mount-umount/nfs-coh-mount-umount.bash
-- chmod 750 nfs-coh-mount-umount.bash
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/nfs-coh-mount-umount/aix-nfs-coh-mount-umount.bash
 - chmod 750 aix-nfs-coh-mount-umount.bash
 
@@ -15,7 +13,7 @@
 - -m : yes means mount Cohesity view, no means umount Cohesity view
 
 ## nfs-coh-mount-umount.bash mount exmaple (requires user has sudo privilege to mount the filesystem)
-./nfs-coh-mount-umount.bash -y cohesity1  -v ora -p /coh/ora -m yes
+./aix-nfs-coh-mount-umount.bash -y cohesity1  -v ora -p /coh/ora -m yes
 
 ## nfs-coh-mount-umount.bash umount exmaple (requires user has sudo privilege to umount the filesystem)
-./nfs-coh-mount-umount.bash -y cohesity1  -v ora -p /coh/ora -m no
+./aix-nfs-coh-mount-umount.bash -y cohesity1  -v ora -p /coh/ora -m no
