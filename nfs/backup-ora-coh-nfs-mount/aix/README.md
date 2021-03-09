@@ -1,18 +1,9 @@
 ## Download the script
 
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs-mount/backup-ora-coh-nfs-mount.bash
-- chmod 750 backup-ora-coh-nfs-mount.bash
-
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs-mount/aix-backup-ora-coh-nfs-mount.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs-mount/aix/aix-backup-ora-coh-nfs-mount.bash
 - chmod 750 aix-backup-ora-coh-nfs-mount.bash
 
 ## Backup scripts Description
-
-The backup scripts mount multiple Cohesity NFS shares before backing up Oracle databases. They umount the NFS shares after the backup is done and there is no more RMAN backup
-using these scripts are running. It requires Oracle user to have mount and umount root privilege. 
-
-The backup files are in Oracle backupset format. It supports full, incremental, and archive logs backup options. It also supports recvoery catalog.
-
 When run the script without any options, it displays the script usage
 
  Required Parameters
@@ -38,18 +29,18 @@ When run the script without any options, it displays the script usage
 
 ## backup-ora-coh-nfs-mount.bash Backup Example
 ### Full backup example
-./backup-ora-coh-nfs-mount.bash -o orcl -a no -i 0 -y cohesity-o1 -v ora -m /coh/ora -p 6 -e 30
+./aix-backup-ora-coh-nfs-mount.bash -o orcl -a no -i 0 -y cohesity-o1 -v ora -m /coh/ora -p 6 -e 30
 ### Cumulative backup example
-./backup-ora-coh-nfs-mount.bash -o orcl -a no -i 1 -y cohesity-o1 -v ora -m /coh/ora -p 3 -e 30
+./aix-backup-ora-coh-nfs-mount.bash -o orcl -a no -i 1 -y cohesity-o1 -v ora -m /coh/ora -p 3 -e 30
 ### Archive log backup example
-./backup-ora-coh-nfs-mount.bash -o orcl -a yes -y cohesity-o1 -v ora -m /coh/ora -p 2 -e 30
+./aix-backup-ora-coh-nfs-mount.bash -o orcl -a yes -y cohesity-o1 -v ora -m /coh/ora -p 2 -e 30
 
 ## Backup-ora-coh-nfs-mount.bash RAC database backup Example
 ### Full backup example for RAC database
-./backup-ora-coh-nfs-mount.bash -h orascan -o orarac -a no -i 0 -y cohesity-o1 -v ora -m /coh/ora -p 6 -e 30
+./aix-backup-ora-coh-nfs-mount.bash -h orascan -o orarac -a no -i 0 -y cohesity-o1 -v ora -m /coh/ora -p 6 -e 30
 ### Cumulative backup example for RAC database
-./backup-ora-coh-nfs-mount.bash  -h orascan -o orarac -a no -i 1 -y cohesity-o1 -v ora -m /coh/ora -p 3 -e 30
+./aix-backup-ora-coh-nfs-mount.bash  -h orascan -o orarac -a no -i 1 -y cohesity-o1 -v ora -m /coh/ora -p 3 -e 30
 ### Archive log backup example for RAC database
-./backup-ora-coh-nfs-mount.bash  -h orascan -o orarac -a yes -y cohesity-o1 -v ora -m /coh/ora -p 2 -e 30
+./aix-backup-ora-coh-nfs-mount.bash  -h orascan -o orarac -a yes -y cohesity-o1 -v ora -m /coh/ora -p 2 -e 30
 
 
