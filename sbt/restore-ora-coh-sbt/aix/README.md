@@ -1,6 +1,6 @@
 ## Download the script
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/restore-ora-coh-sbt/aix/aix-restore-ora-coh-sbt.bash
-- chmod 750 restore-ora-coh-sbt.bash
+- chmod 750 aix-restore-ora-coh-sbt.bash
 
 ## Description
 The scripts restores database uses Cohesity Source-side dedup library, and from the backup files created by script aix-backup-ora-coh-sbt.bash
