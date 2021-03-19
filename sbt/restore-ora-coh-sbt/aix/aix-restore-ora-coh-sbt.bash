@@ -175,7 +175,7 @@ if [[ -z $cohesityname ]]; then
 else
   vipfile=${DIR}/config/${oraclesid}-vip-list
   echo "Cohesity Cluster name is $cohesityname. VIPS will be collected and stored in $vipfile"
-  nslookup $cohesityname | grep -i address | tail -n +2 | /opt/freeware/bin/gawk '{print $2}' > $vipfiletemp
+  nslookup $cohesityname | grep -i address | tail -n +2 | /opt/freeware/bin/gawk '{print $2}' > $vipfile
   
   if [[ ! -s $vipfile ]]; then
      echo "Cohesity Cluster name $cohesityname provided here is not in DNS"
