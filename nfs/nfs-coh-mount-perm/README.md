@@ -8,7 +8,8 @@
 
 - -y: Cohesity Cluster DNS name
 - -v: Cohesity View that is configured to be the target for Oracle backup
-- -m: Mount prefix (for example: if the mount is /coh/ora1, the prefix is /coh/ora)
+- -p: Mount prefix (for example: if the mount is /coh/ora1, the prefix is /coh/ora)
+- -n: number of mounts
 
 ## nfs-coh-mount-perm.bash exmaple (requires root privilege)
-./nfs-coh-mount-perm.bash -y cohesity1  -v ora -m /coh/ora
+./nfs-coh-mount-perm.bash -y cohesity1  -v ora -p /coh/ora -n 4
