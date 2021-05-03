@@ -1,6 +1,6 @@
 ## Download the script
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/backup-ora-coh-sbt/linux/backup-ora-coh-sbt.bash
-- chmod 750 backup-ora-coh-dedup.bash
+- chmod 750 backup-ora-coh-sbt.bash
 
 ## Description
 When run the script without any options, it displays the script usage
