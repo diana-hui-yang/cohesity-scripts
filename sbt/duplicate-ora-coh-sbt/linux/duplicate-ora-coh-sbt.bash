@@ -134,7 +134,7 @@ if [[ $shost = $thost ]]; then
    if [[ -z `grep -i DB_CREATE_ONLINE_LOG_DEST_ $dbpfile` ]]; then
       if [[ -z ${ora_pfile} || -z `grep -i db_create_file_dest $dbpfile` ]]; then
        	 echo "db_create_file_dest and DB_CREATE_ONLINE_LOG_DEST_n are not defined in init file $dbpfile"
-	 echo "and new database files location is not defined in a file which is defined by -f option, example as the following"
+	 echo "and new database files location is not defined in a file which is defined by -l option, example as the following"
 	 echo "set newname for database to '+DATAR';"
 	 echo "There may be convert option in the init file. It is still okay to continue if you are certain the init file is correct"
 		
