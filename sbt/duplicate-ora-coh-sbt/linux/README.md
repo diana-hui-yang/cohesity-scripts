@@ -13,7 +13,7 @@ Required parameters
 - -b : backup host
 - -d : Source Oracle_DB_Name, If Source is not a RAC database, it is the same as Instance name. If it is RAC, it is DB name, not instance name
 - -t : Target Oracle instance name. If it is not RAC, it is the same as DB name. If it is RAC, it is the instance name like cohcdba2
-- -f : File contains duplicate setting, example: set until time "to_date("'2020-08-09 19:30:00','YYYY/MM/DD HH24:MI:SS'")";
+- -l : File contains duplicate setting, example: set until time "to_date("'2020-08-09 19:30:00','YYYY/MM/DD HH24:MI:SS'")";
 - -v : Cohesity view
 
 Optional Parameters
@@ -26,6 +26,7 @@ Optional Parameters
 - -s : Cohesity SBT library name including directoy or just directory (default name is libsbt_6_and_7_linux-x86_64.so, default directory is lib)
 - -o : ORACLE_HOME (default is current environment), optional
 - -c : Source pluggable database (if this input is empty, it is standardalone or CDB database restore)
+- -f : yes means force. It will refresh the target database without prompt
 - -w : yes means preview rman backup scripts 
 
 ## file contains duplicate setting
@@ -35,14 +36,14 @@ set until time \"to_date("'2020-08-09 19:30:00','YYYY/MM/DD HH24:MI:SS'")\";
 ## duplicate exmaple
 
 ### duplidate none CDB database example when sbt library is in lib directory under the script directory
-- ./duplicate-ora-coh-sbt.bash -r "user/password@orawest2:/w2sigb" -b orawest2 -d w2sigb -t w2sigc -y cohesity -v ora_sbt -f dup-set-w2sigc.ora
+- ./duplicate-ora-coh-sbt.bash -r "user/password@orawest2:/w2sigb" -b orawest2 -d w2sigb -t w2sigc -y cohesity -v ora_sbt -l dup-set-w2sigc.ora
 ### duplidate PDB database when sbt library is in lib directory under the script directory
-- ./duplicate-ora-coh-sbt.bash -r "user/password@orawest2:/cohcdbb" -b orawest2 -d cohcdbb -t cohcdbc -c orapdb1 -e orapdb1c -y cohesity -v ora_sbt -f dup-set-cohcdbc.ora
+- ./duplicate-ora-coh-sbt.bash -r "user/password@orawest2:/cohcdbb" -b orawest2 -d cohcdbb -t cohcdbc -c orapdb1 -e orapdb1c -y cohesity -v ora_sbt -l dup-set-cohcdbc.ora
   
 ## duplicate exmaple from directory "orawest/orcl" under view "orasbt1" exmaple
 The following example uses the directory "orawest/orcl" (host is orawest, the database is orcl) under view "orasbt1". You can mount the view to a Unix server to verify the backup files are in this directory.
 
 ### duplidate none CDB database example when sbt library is in lib directory under the script directory
-- ./duplicate-ora-coh-sbt.bash -e "user/password@orawest2:/catalog" -b orawest2 -d w2sigb -t w2sigc -y cohesity -v ora_sbt/orawest/orcl -f dup-set-w2sigc.ora
+- ./duplicate-ora-coh-sbt.bash -e "user/password@orawest2:/catalog" -b orawest2 -d w2sigb -t w2sigc -y cohesity -v ora_sbt/orawest/orcl -l dup-set-w2sigc.ora
 ### duplidate PDB database example when sbt library is in lib directory under the script directory
-- ./duplicate-ora-coh-sbt.bash -r "user/password@orawest2:/cohcdbb" -b orawest2 -d cohcdbb -t cohcdbc -c orapdb1 -e orapdb1c -y cohesity -v ora_sbt/orawest/orcl -f dup-set-cohcdbc.ora
+- ./duplicate-ora-coh-sbt.bash -r "user/password@orawest2:/cohcdbb" -b orawest2 -d cohcdbb -t cohcdbc -c orapdb1 -e orapdb1c -y cohesity -v ora_sbt/orawest/orcl -l dup-set-cohcdbc.ora
