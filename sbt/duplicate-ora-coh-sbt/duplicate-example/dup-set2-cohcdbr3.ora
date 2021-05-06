@@ -1,0 +1,5 @@
+DB_FILE_NAME_CONVERT=('/oradata/cohcdbr1','/oradata/restore/cohcdbr3')
+LOGFILE
+GROUP 1 ('/oradata/restore/cohcdbr3/fra/redo01a.log','/oradata/restore/cohcdbr3/fra/redo01b.log') SIZE 1000M REUSE,
+GROUP 2 ('/oradata/restore/cohcdbr3/fra/redo02a.log','/oradata/restore/cohcdbr3/fra/redo02b.log') SIZE 1000M REUSE,
+GROUP 3 ('/oradata/restore/cohcdbr3/fra/redo03a.log','/oradata/restore/cohcdbr3/fra/redo03b.log') SIZE 1000M REUSE;
