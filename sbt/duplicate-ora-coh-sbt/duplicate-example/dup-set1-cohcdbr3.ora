@@ -1,0 +1,3 @@
+# Setting
+
+set until time \"sysdate - 1/24\";

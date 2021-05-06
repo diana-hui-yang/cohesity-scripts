@@ -1,5 +1,0 @@
-# Setting
-
-set newname for database to "'+DATAR';"
-set until time \"to_date("'2020-08-23 11:30:00','YYYY/MM/DD HH24:MI:SS'")\";
-#set until sequence 15 thread 1;
