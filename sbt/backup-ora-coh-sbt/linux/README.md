@@ -44,7 +44,7 @@ The directory needs to created first by mounting the view "orasbt1" on a Unix se
 ### Cumulative backup example when sbt library is in lib directory under the script directory
 ./backup-ora-coh-sbt.bash -o orcl -i 1 -y cohesity_name -v orasbt1/orawest/orcl -p 3 -e 30
 ### Archive log backup example when sbt library is in directory /u01/app/cohesity
-./backup-ora-coh-sbt.bash -o orcl -a yes -y cohesity_name -v orasbt1/orawest/orcl -p 2 -e 30 -s /u01/app/coheisty
+./backup-ora-coh-sbt.bash -o orcl -a yes -y cohesity_name -v orasbt1/orawest/orcl -p 2 -e 30 -s /u01/app/cohesity
 
 
 ## Note
