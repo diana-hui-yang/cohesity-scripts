@@ -1,7 +1,7 @@
 ## Download the script
 
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs-mount/aix/aix-backup-ora-coh-nfs-mount.bash
-- chmod 750 aix-backup-ora-coh-nfs-mount.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs/aix/aix-backup-ora-coh-nfs.bash
+- chmod 750 aix-backup-ora-coh-nfs.bash
 
 ## Backup scripts Description
 When run the script without any options, it displays the script usage
