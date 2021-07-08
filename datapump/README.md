@@ -4,7 +4,7 @@ Warning: this code is provided on a best effort basis and is not in any way offi
 
 ## Download the script
 
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/datapump/export-ora-coh-nfs/export-ora-coh-nfs.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/datapump/export-ora-coh-nfs/export-ora-coh-nfs-mount.bash
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/nfs-coh-mount-perm/nfs-coh-mount-perm.bash
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/nfs-coh-mount-umount/linux/nfs-coh-mount-umount.bash
-- chmod 750 export-ora-coh-nfs.bash
+- chmod 750 export-ora-coh-nfs-mount.bash
