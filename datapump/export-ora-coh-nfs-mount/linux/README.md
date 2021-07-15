@@ -17,11 +17,14 @@ When run the script without any options, it displays the script usage
 
  Optional Parameters
 - -s : Sqlplus connection (example: "<dbuser>/<dbpass>@<database connection string>", optional if it is local)
+- -d : ORACLE PDB database
 - -n : number of mounts
 - -p : number of parallel (Optional, default is 4)
+- -a : yes means leave Cohesity NFS mount on server, default is umount all NFS mount after export is successful
 - -x : ORACLE_HOME (default is /etc/oratab, optional.)
 - -z : file size in GB (Optional, default is 58G)
-= -w : yes means preview rman backup scripts
+- -c : Export option chosen by DBA. It can be table level or schema level. example "schemas=soe1" The default is full
+- -w : yes means preview Oracle export scripts
 
 
 ## export-ora-coh-nfs-mount.bash Backup Example
