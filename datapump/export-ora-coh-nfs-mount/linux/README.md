@@ -16,7 +16,7 @@ When run the script without any options, it displays the script usage
 
 
  Optional Parameters
-- -s : Sqlplus connection (example: "<dbuser>/<dbpass>@<database connection string>", optional if it is local)
+- -s : Sqlplus connection (example: \"<dbuser>/<dbpass>@<database connection string>\", optional if it is local)
 - -d : ORACLE PDB database
 - -n : number of mounts
 - -p : number of parallel (Optional, default is 4)
