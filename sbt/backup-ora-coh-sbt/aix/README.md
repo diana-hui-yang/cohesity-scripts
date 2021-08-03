@@ -56,5 +56,7 @@ RMAN "delete obsolete" command is used in this script to delete expired backups.
 "Oracle Bug 29633753  delete obsolete removes backup created inside recovery window of read only datafiles in nocatalog mode"
 
 
-The other option to control retention is by using NFS mount. 
+The other option to control retention is by using NFS mount. The bash script can be download from 
+https://github.com/diana-hui-yang/rman-cohesity/tree/master/sbt/delete-ora-expired
+
 
