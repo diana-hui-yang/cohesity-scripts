@@ -14,5 +14,5 @@ usage: delete-ora-expired.bash -h <host> -a <yes/no> -s <matching pattern> -d <B
 - -r : specified day
 - -f : yes/no (yes means expired files will be deleted, no means list only
 
-The -r (The specified day) input should be RMAN retention policy plus days between two full backup. For example if RMAN retenton is 14 days, and DBA runs full backup on weekend and incremental
-on week day, the -r input should be 21 days. 
+The -r (The specified day) input should be RMAN retention policy plus days between two full backup. For example if RMAN retenton is 14 days, and DBA runs full
+backup on weekend and incremental on week day, the -r input should be 21 days. 
