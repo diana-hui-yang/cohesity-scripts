@@ -24,7 +24,7 @@ echo "  -a : yes/no (yes means all databases, no means individual database)"
 echo "  -s : Search pattern"
 echo "  -d : Backup Files Directory, NFS mount from Cohesity"
 echo "  -r : specified day" 
-echo "  -f : yes/no (yes means expired files will be deleted, no means list only"
+echo "  -f : yes/no (yes means expired files will be deleted, no means list only)"
 }
 
 
