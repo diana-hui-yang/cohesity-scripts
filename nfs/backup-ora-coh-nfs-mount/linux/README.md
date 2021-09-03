@@ -3,6 +3,12 @@
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs-mount/linux/backup-ora-coh-nfs-mount.bash
 - chmod 750 backup-ora-coh-nfs-mount.bash
 
+## requirement
+The oracle user needs to have sudo privilege to  mount, umount, mkdir, and chown 
+Edit /etc/sudoers and add the following to the file
+
+oracle1 ALL=(ALL) NOPASSWD:/bin/mount,/bin/umount,/bin/mkdir,/bin/chown
+
 ## Backup scripts Description
 When run the script without any options, it displays the script usage
 
