@@ -25,6 +25,10 @@ Optional parameters
 - -l : Archive logs retain days (days to retain the local archivelogs before deleting them. default is 1 day)
 - -m : ORACLE_HOME (provide ORACLE_HOME if the database is not in /etc/oratab. Otherwise, it is optional.)
 - -z : section size in GB (Optional, default is no section size)
+- -t : RMAN TAG
+- -g : yes means encryption-in-flight is used. The default is no
+- -j : encryption certificate file directory, default directory is lib
+- -x : yes means gRPC is used. no means SunRPC is used. The default is yes
 - -w : yes means print rman backup scripts only. The RMAN script is not executed
 
 ## Backup to Cohesity view "orasbt1" exmaple
