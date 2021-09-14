@@ -29,6 +29,7 @@ Optional parameters
 - -g : yes means encryption-in-flight is used. The default is no
 - -j : encryption certificate file directory, default directory is lib
 - -x : yes means gRPC is used. no means SunRPC is used. The default is yes
+- -d : yes means source side dedup is used. The default is yes
 - -w : yes means print rman backup scripts only. The RMAN script is not executed
 
 ## Backup to Cohesity view "orasbt1" exmaple
