@@ -1,5 +1,5 @@
 mkdir rman
-mkdir rman/config rman/lib
+mkdir rman/config rman/lib rman/tools
 cd rman
 curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/backup-ora-coh-sbt/linux/backup-ora-coh-sbt.bash
 curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/duplicate-ora-coh-sbt/linux/duplicate-ora-coh-sbt.bash
