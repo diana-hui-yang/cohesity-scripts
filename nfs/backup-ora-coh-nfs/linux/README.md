@@ -13,7 +13,7 @@ When run the script without any options, it displays the script usage
 - -i : If not archive only, it is full or incremental backup. 0 is full backup, and 1 is cumulative incremental backup
 - -m : mount-prefix (like /mnt/ora)
 - -n : number of mounts
-- -e : Retention time (days to retain the backups, apply only after uncomment "Delete obsolete" in this script)
+- -e : Retention time
 
  Optional Parameters
 - -r : Target connection (example: "dbuser/dbpass@'target connection string' as sysbackup", optional if it is local backup)
