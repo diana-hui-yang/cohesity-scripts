@@ -13,7 +13,8 @@ Required parameters
 - -a : archivelog only backup (yes means archivelog backup only, no means database backup plus archivelog backup, default is no)
 - -i : If not archivelog only backup, it is full or incremental backup. 0 is full backup, and 1 is cumulative incremental backup
 - -v : Cohesity View that is configured to be the target for Oracle backup
-- -e : Retention time (days to retain the backups, apply only after uncomment "Delete obsolete" in this script)
+- -u : Retention time (days to retain the backups, expired file are deleted by SBT)
+- -e : Retention time (days to retain the backups, expired file are deleted by Oracle. Apply only after uncomment "Delete obsolete" in this script)
 
 Optional parameters
 - -r : Target connection (example: "dbuser/dbpass@target connection string as sysbackup", optional if it is local backup)
@@ -22,7 +23,7 @@ Optional parameters
 - -p : number of channels (Optional, default is 4)
 - -f : The file lists Cohesity Cluster VIPs (default name is vip-list and default directory is config)
 - -s : Cohesity SBT library name including directoy or just directory (default name is libsbt_6_and_7_linux-x86_64.so, default directory is lib)
-- -l : Archive logs retain days (days to retain the local archivelogs before deleting them. default is 1 day)
+- -l : Archive logs retain days (days to retain the local archivelogs before deleting them. default is 1 day, "no" means not deleting local archivelogs on disk)
 - -m : ORACLE_HOME (provide ORACLE_HOME if the database is not in /etc/oratab. Otherwise, it is optional.)
 - -z : section size in GB (Optional, default is no section size)
 - -t : RMAN TAG
