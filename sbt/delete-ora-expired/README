@@ -6,7 +6,7 @@
 - chmod 750 delete-ora-expired.bash
 - chmod 750 aix-delete-ora-expired.bash
 
-usage: delete-ora-expired.bash -h <host> -a <yes/no> -s <matching pattern> -d <Backup Files Directory> -r <specified day> -f <yes/no>
+usage: list-del-ora-agedfile.bash -h <host> -a <yes/no> -s <matching pattern> -d <Backup Files Directory> -r <specified day> -f <yes/no>
 - -h : host (optional)
 - -a : yes/no (yes means all databases, no means individual database)
 - -s : Search pattern
