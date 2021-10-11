@@ -5,7 +5,8 @@
 ## Description
 When run the script without any options, it displays the script usage
 
-## usage: list-del-ora-agedfile.bash -h <host> -a <yes/no> -s <matching pattern> -d <Backup Files Directory> -r <specified day> -f <yes/no>
+Parameters
+
 - -h : host (optional)
 - -a : yes/no (yes means all databases, no means individual database)
 - -s : Search pattern
