@@ -2,7 +2,7 @@
 ## Download the script
 
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/delete-ora-expired/list-del-ora-agedfile.bash
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/delete-ora-expired/aix-list-del-ora-agedfil.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/delete-ora-expired/aix-list-del-ora-agedfile.bash
 - chmod 750 delete-ora-expired.bash
 - chmod 750 aix-delete-ora-expired.bash
 
