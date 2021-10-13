@@ -14,8 +14,8 @@ chmod 750 restore-ora-coh-oim.bash
 cd python
 curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/pyhesity.py
 curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/cloneDirectory/cloneDirectory.py
-curl -O https://github.com/bseltz-cohesity/scripts/tree/master/python/storePassword
+curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/storePassword/storePassword.py
 chmod 750 cloneDirectory.py
-chmod 750 storePassword
+chmod 750 storePassword.py
 cd ..
 
