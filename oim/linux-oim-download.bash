@@ -1,6 +1,10 @@
-mkdir rman
+if [[ ! -d rman ]]; then
+   mkdir rman
+fi
 cd rman
-mkdir python
+if [[ ! -n python ]]; then
+   mkdir python
+fi
 curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oim/backup-ora-coh-oim/linux/backup-ora-coh-oim.bash
 curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oim/duplicate-ora-coh-oim/duplicate-ora-coh-oim.bash
 curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oim/restore-ora-coh-oim/restore-ora-coh-oim.bash
