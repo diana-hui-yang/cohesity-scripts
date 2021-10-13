@@ -16,6 +16,6 @@ curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/
 curl -O https://raw.githubusercontent.com/bseltz-cohesity/scripts/master/python/cloneDirectory/cloneDirectory.py
 curl -O https://github.com/bseltz-cohesity/scripts/tree/master/python/storePassword
 chmod 750 cloneDirectory.py
-chmod 750 storePassword.py
+chmod 750 storePassword
 cd ..
 
