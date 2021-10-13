@@ -15,18 +15,30 @@ When run the script without any options, it displays the script usage
 - -o : ORACLE_DB_NAME (Need to have an entry of this database in /etc/oratab. If it is RAC, it is db_unique_name)
 - -t : backup type: Full or Incre
 - -a : yes (yes means archivelog backup only, no means database backup plus archivelog backup, no is optional)
+- -y : Cohesity Cluster DNS name
+- -v : Cohesity View that is configured to be the target for Oracle backup
+- -u : Cohesity Oracle User. The user should have access permission on the view
+- -g : Active Directory Domain of the Cohesity Oracle user. If the user ic created on Cohesity, use local as the input
 - -m : mount-prefix (like /mnt/ora)
 - -n : number of mounts
 - -e : Retention time (days to retain the backups, apply only after uncomment "Delete obsolete" in this script)
 
  Optional Parameters
 - -r : RMAN login (example: "rman target /", optional)
+- -c : Catalog connection (example: "<dbuser>/<dbpass>@<catalog connection string>", optional)
+- -d : Rac nodes connectons strings that will be used to do backup (example: "<rac1-node connection string,ora2-node connection string>")
 - -p : number of channels (Optional, default is 4)
+- -s : CloneDirectory.py directory (default directory is <current script directory>/python)
 - -l : Archive logs retain days (days to retain the local archivelogs before deleting them. default is 1 day)
+- -f : Number of times backing Archive logs (default is 1.)
 - -b : ORACLE_HOME (default is /etc/oratab, optional.)
 - -w : yes means preview rman backup scripts
+
 
 ## backup-ora-coh-oim.bash Backup Example
 
 ### Incremental merge backup example (incremental backup and the result is full backup)
-./backup-ora-coh-oim.bash -o orcl -a no -t incre -m /coh/ora -n 4 -p 3 -e 3 -y cohesity1 -v ora_oim -u oraadmin -g sa.com 
+./backup-ora-coh-oim.bash -o orcl -t incre -m /coh/ora -n 4 -p 3 -e 3 -y cohesity1 -v ora_oim -u oraadmin -g sa.com 
+ 
+ ### Log backup example
+./backup-ora-coh-oim.bash -o orcl -a yes -m /coh/ora -n 4 -p 3 -e 3
