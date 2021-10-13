@@ -1,4 +1,6 @@
-mkdir rman
+if [[ ! -d rman ]]; then
+  mkdir rman
+fi
 cd rman
 curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs/linux/backup-ora-coh-nfs.bash
 curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/duplicate-ora-coh-nfs/linux/duplicate-ora-coh-nfs.bash
