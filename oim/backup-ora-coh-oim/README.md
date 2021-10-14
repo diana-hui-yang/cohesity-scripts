@@ -6,4 +6,4 @@
 
 ## prerequisite
 - Download Brian Seltz's python scripts. These scripts are in https://github.com/diana-hui-yang/rman-cohesity/blob/master/oim/linux-oim-download.bash
-- Run storePassword.py script before run Oracle backup script listed in this page. The syntax is on https://github.com/bseltz-cohesity/scripts/tree/master/python/storePassword
+- Run storePassword.py script before run Oracle backup script listed on this page. The syntax is on https://github.com/bseltz-cohesity/scripts/tree/master/python/storePassword
