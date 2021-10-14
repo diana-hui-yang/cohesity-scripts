@@ -4,3 +4,6 @@
 - chmod 750 backup-ora-coh-oim.bash
 - chmod 750 sbackup-ora-coh-oim.bash
 
+## prerequisite
+- Download Brian Seltz's python scripts. These scripts are in https://github.com/diana-hui-yang/rman-cohesity/blob/master/oim/linux-oim-download.bash
+- Run storePassword.py script before run Oracle backup script listed in this page. The syntax is on https://github.com/bseltz-cohesity/scripts/tree/master/python/storePassword
