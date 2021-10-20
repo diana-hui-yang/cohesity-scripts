@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Name:         backup-ora-coh-oim.bash
+# Name:         sbackup-ora-coh-oim.bash
 #
 # Function:     This script backup oracle using Oracle Incremental Merge
 #               using nfs mount. It can do incremental backup and use Oracle
@@ -26,7 +26,7 @@
 #################################################################
 
 function show_usage {
-echo "usage: backup-ora-coh-oim.bash -r <Target connection> -c <Catalog connection> -h <host> -d <rac-node1-conn,rac-node2-conn,...> -o <Oracle_DB_Name> -t <backup type> -a <archive only> -y <Cohesity-cluster> -v <view> -u <Cohesity Oracle User> -g <AD Domain> -m <mount-prefix> -n <number of mounts> -p <number of channels> -e <retention> -s <python script directory> -l <archive log keep days> -b <ORACLE_HOME> -f <number of archive logs> -w <yes/no>" 
+echo "usage: sbackup-ora-coh-oim.bash -r <Target connection> -c <Catalog connection> -h <host> -d <rac-node1-conn,rac-node2-conn,...> -o <Oracle_DB_Name> -t <backup type> -a <archive only> -y <Cohesity-cluster> -v <view> -u <Cohesity Oracle User> -g <AD Domain> -m <mount-prefix> -n <number of mounts> -p <number of channels> -e <retention> -s <python script directory> -l <archive log keep days> -b <ORACLE_HOME> -f <number of archive logs> -w <yes/no>" 
 echo " "
 echo " Required Parameters"
 echo " -h : host (scanname is required if it is RAC. optional if it is standalone.)"
