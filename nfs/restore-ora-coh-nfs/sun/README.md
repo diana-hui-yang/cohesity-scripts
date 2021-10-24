@@ -1,6 +1,6 @@
 ## Download the script
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/restore-ora-coh-nfs/sun/sun-restore-ora-coh-nfs.bash
-- chmod 750 restore-ora-coh-nfs.bash
+- chmod 750 sun-restore-ora-coh-nfs.bash
 
 ## Description
 The scripts restores database from the backup files created by script sbackup-ora-coh-nfs.bash and sbackup-ora-oim.bash
