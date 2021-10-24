@@ -1,4 +1,3 @@
 ## Download the script
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/restore-ora-coh-nfs/restore-ora-coh-nfs.bash
-- chmod 750 restore-ora-coh-nfs.bash
-
+restore script is the same as the nfs restore
+https://github.com/diana-hui-yang/rman-cohesity/tree/master/nfs/restore-ora-coh-nfs
