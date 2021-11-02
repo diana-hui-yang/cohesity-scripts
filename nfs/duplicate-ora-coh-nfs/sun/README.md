@@ -37,13 +37,13 @@ set until time \"to_date("'2020-07-03 21:40:00','YYYY/MM/DD HH24:MI:SS'")\";
 ## sun-duplicate-ora-coh-nfs.bash Backup Example
 Note: before running this commaand, several prepare steps should be done first. init file should be created.
 ### Duplicate a traditional Oracle database or CDB database example without connecting to Oracle database that the backup was taking
-./sun-duplicate-ora-coh-nfs.bash  -b oracle-01 -s cdb1 -t cdb1res -f ora_file -m  /coh/oranfs -n 4
+./sun-duplicate-ora-coh-nfs.bash  -b oracle-01 -s cdb1 -t cdb1res -l ora_file -m  /coh/oranfs -n 4
 
 ### Duplicate a PDB database (cohpdb1) from CDB database cdb1 to a CDB staging database cdb2 example without connecting to Oracle database that the backup was taking
-./sun-duplicate-ora-coh-nfs.bash -b oracle-01 -s cdb1 -t cdb2 -f ora_file -m  /coh/oranfs -n 4 -c cohpdb1
+./sun-duplicate-ora-coh-nfs.bash -b oracle-01 -s cdb1 -t cdb2 -l ora_file -m  /coh/oranfs -n 4 -c cohpdb1
 
 ### duplidate a traditional Oracle database or CDB database example
-./sun-duplicate-ora-coh-nfs.bash -r "user/password@oracle-01:/cdb1" -b oracle-01 -s cdb1 -t cdb1res -f ora_file -m  /coh/oranfs -n 4
+./sun-duplicate-ora-coh-nfs.bash -r "user/password@oracle-01:/cdb1" -b oracle-01 -s cdb1 -t cdb1res -l ora_file -m  /coh/oranfs -n 4
   
 ###  PDB database (cohpdb1) from CDB database cdb1 to a CDB staging database cdb2 example
-./sun-duplicate-ora-coh-nfs.bash -r "user/password@oracle-01:/cdb1" -b oracle-01 -s cdb1 -t cdb2 -f ora_file -m  /coh/oranfs -n 4 -c cohpdb1 -l dup-set-cohpdb1-cdb2.ora
+./sun-duplicate-ora-coh-nfs.bash -r "user/password@oracle-01:/cdb1" -b oracle-01 -s cdb1 -t cdb2 -l ora_file -m  /coh/oranfs -n 4 -c cohpdb1 -l dup-set-cohpdb1-cdb2.ora
