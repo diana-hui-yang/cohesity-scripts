@@ -16,7 +16,7 @@ Basic parameter
 
 Optional Parameter
 
-- -h : backup host
+- -h : Oracle database host that the backup was run.
 - -d : Oracle database name. only required for RAC. If it is RAC, it is the database name like cohcdba
 - -b : File contains restore location setting, example: set newname for database to '/oradata/restore/orcl/%b';
 - -t : Point in Time (format example: "2019-01-27 13:00:00"), optional
