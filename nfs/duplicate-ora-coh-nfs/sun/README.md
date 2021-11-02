@@ -11,7 +11,7 @@ When run the script without any options, it displays the script usage
 sun-duplicate-ora-coh-nfs.bash basic parameter
 
 Required Parameters
-- -b : backup host
+- -b : Oracle database host that the backup was run.
 - -d : Source Oracle_DB_Name, If Source is not a RAC database, it is the same as Instance name. If it is RAC, it is DB name, not instance name
 - -t : Target Oracle instance name. If it is not RAC, it is the same as DB name. If it is RAC, it is the instance name like cohcdba2
 - -l : File contains duplicate settting, example: set newname for database to '/oradata/restore/orcl/%b'; Provide full path
