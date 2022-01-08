@@ -32,6 +32,7 @@ When run the script without any options, it displays the script usage
 - -l : Archive logs retain days (days to retain the local archivelogs before deleting them. default is 1 day)
 - -f : Number of times backing Archive logs (default is 1.)
 - -b : ORACLE_HOME (default is /etc/oratab, optional.)
+- -x : Maximum throughput (default is no limit. Unit is MB/sec. Archivelog backup throughput will be 20% of max throughput if database backup is running)
 - -w : yes means preview rman backup scripts
 
 
