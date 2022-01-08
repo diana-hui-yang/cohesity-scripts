@@ -12,7 +12,7 @@ When run the script without any options, it displays the script usage
 
  Required Parameters
 - -h : host (scanname is required if it is RAC. optional if it is standalone.)
-- -o : ORACLE_DB_NAME (Need to have an entry of this database in /etc/oratab. If it is RAC, it is db_unique_name)
+- -o : ORACLE_DB_NAME (Need to have an entry of this database in /var/opt/oracle/oratab. If it is RAC, it is db_unique_name)
 - -t : backup type: Full or Incre
 - -a : yes (yes means archivelog backup only, no means database backup plus archivelog backup, no is optional)
 - -y : Cohesity Cluster DNS name
