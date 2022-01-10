@@ -1,5 +1,5 @@
 ## Download the script
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oim/backup-ora-coh-oim/aix/aix-backup-ora-coh-oim.bash
+- /opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oim/backup-ora-coh-oim/aix/aix-backup-ora-coh-oim.bash
 - chmod 750 backup-ora-coh-oim.bash
 
 
