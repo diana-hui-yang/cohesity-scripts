@@ -1,8 +1,10 @@
 ## Download the script
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oim/backup-ora-coh-oim/linux/backup-ora-coh-oim.bash
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oim/backup-ora-coh-oim/sun/sbackup-ora-coh-oim.bash
+- /opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oim/backup-ora-coh-oim/aix/aix-backup-ora-coh-oim.bash
 - chmod 750 backup-ora-coh-oim.bash
 - chmod 750 sbackup-ora-coh-oim.bash
+- chmod 750 aix-backup-ora-coh-oim.bash
 
 ## prerequisite
 - Download Brian Seltz's python scripts. These scripts are in https://github.com/diana-hui-yang/rman-cohesity/blob/master/oim/linux-oim-download.bash or https://github.com/diana-hui-yang/rman-cohesity/blob/master/oim/sun-oim-download.bash
