@@ -19,7 +19,7 @@ Required Parameters
 - -n : number of mounts
 
 Optional Parameters
-- -r : Target connection (example: "<dbuser>/<dbpass>@<target db connection>")
+- -r : Source Oracle connection (example: "<dbuser>/<dbpass>@<target db connection>")
 - -e : Catalog connection (example: "<dbuser>/<dbpass>@<catalog connection string>", optional)
 - -a : target host (Optional, default is localhost)
 - -p : number of channels (Optional, default is same as the number of mounts4)
