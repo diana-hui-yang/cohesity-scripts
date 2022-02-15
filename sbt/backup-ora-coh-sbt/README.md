@@ -5,5 +5,5 @@
 - chmod 750 aix-backup-ora-coh-dedup.bash
 
 ## Description
-The scripts uses Cohesity Source-side dedup library to backup Oracle databases. The backup format is backupset. backup-ora-coh-dedup.bash has full, incremental, and archive logs backup options. Cohesity Remote adapter will run Cohesity snapshot after the backup is done. The script can be launched from a central server and also supports recvoery catalog. 
+The scripts uses Cohesity Source-side dedup library (please contact Cohesity support to get the library download link) to backup Oracle databases. The backup format is backupset. backup-ora-coh-dedup.bash has full, incremental, and archive logs backup options. Cohesity Remote adapter will run Cohesity snapshot after the backup is done. The script can be launched from a central server and also supports recvoery catalog. 
 
