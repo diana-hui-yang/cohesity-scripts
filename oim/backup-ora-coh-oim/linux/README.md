@@ -33,6 +33,7 @@ When run the script without any options, it displays the script usage
 - -f : Number of times backing Archive logs (default is 1.)
 - -b : ORACLE_HOME (default is /etc/oratab, optional.)
 - -x : Maximum throughput (default is no limit. Unit is MB/sec. Archivelog backup throughput will be 20% of max throughput if database backup is running)
+- -i : yes means using Cohesity API Key, no means using Cohesity user/password. Default is no
 - -w : yes means preview rman backup scripts
 
 
