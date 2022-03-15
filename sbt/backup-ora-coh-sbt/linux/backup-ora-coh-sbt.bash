@@ -623,7 +623,7 @@ while [ $j -lt $parallel ]; do
 	if [[ -n $ip ]]; then
            lastip=$ip
 	   
-           if [[ $j -eq 1 ]]; then
+           if [[ $j -eq 0 ]]; then
 	      if [[ $encryption = [Yy]* ]]; then
 	         if [[ -n $cohesityname ]]; then
 	            if [[ $sdedup = [Yy]* && $grpctype = [Yy]* ]]; then
