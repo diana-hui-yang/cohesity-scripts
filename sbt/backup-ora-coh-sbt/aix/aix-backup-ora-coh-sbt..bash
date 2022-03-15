@@ -561,7 +561,7 @@ while [ $j -lt $parallel ]; do
     ip=`echo $ip | xargs`    	
     if [[ -n $ip ]]; then
 
-       if [[ $j -eq 1 ]]; then
+       if [[ $j -eq 0 ]]; then
 	  if [[ -n $cohesityname ]]; then
 	     echo "CONFIGURE CHANNEL DEVICE TYPE 'SBT_TAPE' PARMS 'SBT_LIBRARY=$sbtname,SBT_PARMS=(mount_path=$cohesityname:/$view,vips=$cohesityname)' format './$host/$dbname/%d_%T_%U';;" >> $rmanfiled
 	  else
