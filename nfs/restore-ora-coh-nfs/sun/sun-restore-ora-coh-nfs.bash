@@ -63,7 +63,7 @@ while getopts ":h:c:i:d:b:t:l:m:n:p:o:f:w:" opt; do
   esac
 done
 
-echo $oraclesid, $mount, $shost, $num
+#echo $oraclesid, $mount, $shost, $num
 
 # Check required parameters
 #if test $shost && test $dbname && test $mount && test $numm
