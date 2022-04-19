@@ -10,19 +10,21 @@ When run the script without any options, it displays the script usage
 Basic parameter
 
 - -i : Oracle instance name. If it is not RAC, it is the same as DB name. If it is RAC, it is the instance name like cohcdba2
+- -d : Oracle database name. only required for RAC. If it is RAC, it is the database name like cohcdba
 - -m : mount-prefix (like /coh/ora)
 - -n : number of mounts
 - -f : yes means force. It will restore Oracle database. Without it, it will just run RMAN validate (Optional)
 
+
 Optional Parameter
 
 - -h : Oracle database host that the backup was run.
-- -d : Oracle database name. only required for RAC. If it is RAC, it is the database name like cohcdba
+- -c : Catalog connection (example: "<dbuser>/<dbpass>@<catalog connection string>", optional)
 - -b : File contains restore location setting, example: set newname for database to '/oradata/restore/orcl/%b';
-- -t : Point in Time (format example: "2019-01-27 13:00:00"), optional
+- -t : Point in Time (format example: 2019-01-27 13:00:00), the time should be based on source server timezone, optional
 - -l : yes means complete restore including control file, no means not restoring controlfile
-- -p : number of channels (default is 4), optional
-- -o : ORACLE_HOME (default is current environment), optional
+- -p : number of channels (Optional, default is same as the number of mounts4)
+- -o : ORACLE_HOME (Optional, default is current environment)
 - -w : yes means preview rman backup scripts
 
 ## Restore exmaple
