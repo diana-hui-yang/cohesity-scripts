@@ -11,15 +11,15 @@ When run the script without any options, it displays the script usage
 duplicate-ora-coh-nfs.bash basic parameter
 
 Required Parameters
-- -b : Source host - Oracle database host that the backup was run.
-- -d : Source Oracle_DB_Name (database backup was taken). If it is not RAC, it is the same as DB name. If it is RAC, it is the instance name like cohcdba2
-- -t : Target Oracle instance name (Oracle duplicate database)
+- -r : Target connection (example: "<dbuser>/<dbpass>@<target db connection>")
+- -b : Oracle database host that the backup was run.
+- -d : Source Oracle_DB_Name, If Source is not a RAC database, it is the same as Instance name. If it is RAC, it is DB name, not instance name
+- -t : Target Oracle instance name. If it is not RAC, it is the same as DB name. If it is RAC, it is the instance name like cohcdba2
 - -l : File contains duplicate settting, example: set newname for database to '/oradata/restore/orcl/%b'; Provide full path
 - -m : mount-prefix (like /coh/ora)
 - -n : number of mounts
 
 Optional Parameters
-- -r : Source Oracle connection (example: "<dbuser>/<dbpass>@<target db connection>")
 - -e : Catalog connection (example: "<dbuser>/<dbpass>@<catalog connection string>", optional)
 - -a : target host (Optional, default is localhost)
 - -p : number of channels (Optional, default is same as the number of mounts4)
