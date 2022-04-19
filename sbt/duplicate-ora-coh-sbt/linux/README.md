@@ -36,7 +36,6 @@ Optional Parameters
 
 ## file contains duplicate setting
 set newname for database to "'+DATA';"
-set until time \"to_date("'2020-08-09 19:30:00','YYYY/MM/DD HH24:MI:SS'")\";
 
 ## duplicate exmaple
 
