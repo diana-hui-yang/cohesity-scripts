@@ -9,25 +9,30 @@ When run the script without any options, it displays the script usage
 
 Required parameters
 
-- -r : Target connection (example: "dbuser/dbpass@target db connection")
-- -b : backup host
-- -d : Source Oracle_DB_Name, If Source is not a RAC database, it is the same as Instance name. If it is RAC, it is DB name, not instance name
-- -t : Target Oracle instance name. If it is not RAC, it is the same as DB name. If it is RAC, it is the instance name like cohcdba2
-- -l : File contains duplicate setting, example: set until time "to_date("'2020-08-09 19:30:00','YYYY/MM/DD HH24:MI:SS'")";
+- -i : Target Oracle instance name (Oracle duplicate database)
+- -r : Source Oracle connection (example: "<dbuser>/<dbpass>@<target db connection>")
+- -h : Source host - Oracle database host that the backup was run.
+- -d : Source Oracle_DB_Name (database backup was taken). It is DB name, not instance name if it is RAC or DataGuard
+- -t : Point in Time (format example: "2019-01-27 13:00:00")
+- -e : Sequence
+- -y : Cohesity Cluster DNS name
 - -v : Cohesity view
 
 Optional Parameters
-
-- -e : Catalog connection (example: "dbuser/dbpass@catalog connection string", optional)
-- -a : target host (Optional, default is localhost)
-- -i : File contains new setting to spfile. example: SET DB_CREATE_FILE_DEST +DGROUP3"
+  
+- -c : Catalog connection (example: "<dbuser>/<dbpass>@<catalog connection string>", optional)
+- -b : File contains restore location setting, example: set newname for database to '/oradata/restore/orcl/%b';
 - -p : number of channels (default is 4), optional
 - -j : The file lists Cohesity Cluster VIPs (default name is vip-list and default directory is config)
 - -s : Cohesity SBT library name including directoy or just directory (default name is libsbt_6_and_7_linux-x86_64.so, default directory is lib)
 - -o : ORACLE_HOME (default is current environment), optional
-- -c : Source pluggable database (if this input is empty, it is standardalone or CDB database restore)
+- -u : Source pluggable database (if this input is empty, it is standardalone or CDB database restore)
 - -f : yes means force. It will refresh the target database without prompt
-- -w : yes means preview rman backup scripts 
+- -g : yes means encryption-in-flight is used. The default is no
+- -k : encryption certificate file directory, default directory is lib
+- -x : yes means gRPC is used. no means SunRPC is used. The default is yes
+- -w : yes means preview rman duplicate scripts
+ 
 
 ## file contains duplicate setting
 set newname for database to "'+DATA';"
@@ -36,14 +41,6 @@ set until time \"to_date("'2020-08-09 19:30:00','YYYY/MM/DD HH24:MI:SS'")\";
 ## duplicate exmaple
 
 ### duplidate none CDB database example when sbt library is in lib directory under the script directory
-- ./duplicate-ora-coh-sbt.bash -r "user/password@orawest2:/w2sigb" -b orawest2 -d w2sigb -t w2sigc -y cohesity -v ora_sbt -l dup-set-w2sigc.ora
+- ./duplicate-ora-coh-sbt.bash -r "user/password@orawest2:/w2sigb" -h orawest2 -d w2sigb -i w2sigc -y cohesity -v ora_sbt
 ### duplidate PDB database when sbt library is in lib directory under the script directory
-- ./duplicate-ora-coh-sbt.bash -r "user/password@orawest2:/cohcdbb" -b orawest2 -d cohcdbb -t cohcdbc -c orapdb1 -e orapdb1c -y cohesity -v ora_sbt -l dup-set-cohcdbc.ora
-  
-## duplicate exmaple from directory "orawest/orcl" under view "orasbt1" exmaple
-The following example uses the directory "orawest/orcl" (host is orawest, the database is orcl) under view "orasbt1". You can mount the view to a Unix server to verify the backup files are in this directory.
-
-### duplidate none CDB database example when sbt library is in lib directory under the script directory
-- ./duplicate-ora-coh-sbt.bash -e "user/password@orawest2:/catalog" -b orawest2 -d w2sigb -t w2sigc -y cohesity -v ora_sbt/orawest/orcl -l dup-set-w2sigc.ora
-### duplidate PDB database example when sbt library is in lib directory under the script directory
-- ./duplicate-ora-coh-sbt.bash -r "user/password@orawest2:/cohcdbb" -b orawest2 -d cohcdbb -t cohcdbc -c orapdb1 -e orapdb1c -y cohesity -v ora_sbt/orawest/orcl -l dup-set-cohcdbc.ora
+- ./duplicate-ora-coh-sbt.bash -r "user/password@orawest2:/cohcdbb" -h orawest2 -d cohcdbb -i cohcdbc -u orapdb1  -y cohesity -v ora_sbt 
