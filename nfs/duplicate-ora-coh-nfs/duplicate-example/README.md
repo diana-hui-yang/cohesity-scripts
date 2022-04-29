@@ -4,8 +4,8 @@ https://docs.oracle.com/database/121/BRADV/rcmdupad.htm#BRADV99994
 ## dup-cohcdbr1-cohcdbr2.bash
 This script will duplicate database cohcdbr1 to database cohcdbr2 connecting to source database.
 
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/duplicate-ora-coh-nfs/duplicate-example/dup-cohcdbr1-cohcdbr3.bash
-- chmod 750 dup-cohcdbr1-cohcdbr3.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/duplicate-ora-coh-nfs/duplicate-example/dup-cohcdbr1-cohcdbr2.bash
+- chmod 750 dup-cohcdbr1-cohcdbr2.bash
 
 ## dup-cohcdbr1-cohcdbr3.bash
 This script will duplicate database cohcdbr1 to database cohcdbr3 without connection to source database
