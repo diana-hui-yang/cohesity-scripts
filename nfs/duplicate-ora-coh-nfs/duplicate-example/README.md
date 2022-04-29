@@ -2,7 +2,7 @@ When duplicating a database to a new database especially on the same server, the
 https://docs.oracle.com/database/121/BRADV/rcmdupad.htm#BRADV99994
 
 ## dup-cohcdbr1-cohcdbr2.bash
-This script will duplicate database cohcdbr1 to database cohcdbr2.
+This script will duplicate database cohcdbr1 to database cohcdbr3.
 
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/duplicate-ora-coh-nfs/duplicate-example/dup-cohcdbr1-cohcdbr3.bash
 - chmod 750 dup-cohcdbr1-cohcdbr3.bash
