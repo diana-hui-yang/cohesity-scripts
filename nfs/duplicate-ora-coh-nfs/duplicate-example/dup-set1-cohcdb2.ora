@@ -1,0 +1,3 @@
+# Setting
+
+set newname for database to "'+DATAR';"
