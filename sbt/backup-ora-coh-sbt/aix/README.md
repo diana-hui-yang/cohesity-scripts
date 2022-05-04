@@ -3,7 +3,7 @@
 - chmod 750 aix-backup-ora-coh-dedup.bash
 
 ## Prerequisite
-GNU package: bash, gawk, mpfr
+GNU package: bash, gawk, mpfr. 
 Here is link to AIX open source https://www.ibm.com/support/pages/aix-toolbox-open-source-software-downloads-alpha
 
 ## Description
