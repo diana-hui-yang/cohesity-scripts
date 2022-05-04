@@ -5,7 +5,7 @@ Warning: this code is provided on a best effort basis and is not in any way offi
 Check individual script link
 
 ## AIX Prerequisite 
-GNU package: bash, gawk, python, mpfr, findutils
+GNU package: bash, gawk, python, mpfr, findutils. Here is link to AIX open source https://www.ibm.com/support/pages/aix-toolbox-open-source-software-downloads-alpha
 
 ## Download all SBT related scripts
 ### Linux
