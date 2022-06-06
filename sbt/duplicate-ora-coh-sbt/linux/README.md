@@ -28,6 +28,7 @@ Optional Parameters
 - -o : ORACLE_HOME (default is current environment), optional
 - -u : Source pluggable database (if this input is empty, it is standardalone or CDB database restore)
 - -f : yes means force. It will refresh the target database without prompt
+- -m : yes mean Oracle duplicate use noresume, default is no
 - -g : yes means encryption-in-flight is used. The default is no
 - -k : encryption certificate file directory, default directory is lib
 - -x : yes means gRPC is used. no means SunRPC is used. The default is yes
