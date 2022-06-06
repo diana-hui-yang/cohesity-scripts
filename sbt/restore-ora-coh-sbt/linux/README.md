@@ -39,7 +39,7 @@ Optional Parameters
 - ./restore-ora-coh-sbt.bash -i orcl -y cohesity -v orasbt1 -s /u01/app/coheisty -f yes
 ### Restore controlfile, then database "orcl" on the original Oracle server "orawest".  The database will be over-written.
 - ./restore-ora-coh-sbt.bash  -i orcl -t "2020-08-02 12:00:00" -l yes -y cohesity -v orasbt1 -f yes
-### Restore controlfile, then database on a new server "orawestdr". (the original Oracle server is "orawest")
+### Restore controlfile, then database "orcl" on a new server "orawestdr". (the original Oracle server is "orawest")
 Note: before running this commaand, several prepare steps should be done first.
 init file should be created, adump directory should be created. 
 Check the scripts example in restore-example directory for more details
