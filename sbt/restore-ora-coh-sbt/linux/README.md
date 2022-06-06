@@ -33,7 +33,7 @@ Optional Parameters
 
 ## Restore exmaple
 
-### Restore database "orcl" validate example when sbt library is in lib directory under the script directory. The database won't be over-written. 
+### Restore database validate example when sbt library is in lib directory under the script directory. The database name is "orcl". The database won't be over-written. 
 - ./restore-ora-coh-sbt.bash -i orcl -y cohesity -v orasbt1
 ### Restore database"orcl" assuming controlfile are still intact when sbt library is in directory /u01/app/cohesity. The database will be over-written.
 - ./restore-ora-coh-sbt.bash -i orcl -y cohesity -v orasbt1 -s /u01/app/coheisty -f yes
