@@ -666,7 +666,7 @@ for (( i=0; i < ${#allocate_archive[@]}; i++ )); do
    echo ${allocate_archive[$i]} >> $rmanfilea
 done
 
-if [[ $ttype = "full" || $type = "Full" || $ttype = "FULL" ]]; then
+if [[ $ttype = "full" || $ttype = "Full" || $ttype = "FULL" ]]; then
    echo "Full backup" 
    echo "Full backup" >> $runlog
    echo "
