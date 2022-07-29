@@ -8,3 +8,8 @@ Warning: this code is provided on a best effort basis and is not in any way offi
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/nfs-coh-mount-perm/nfs-coh-mount-perm.bash
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/nfs-coh-mount-umount/linux/nfs-coh-mount-umount.bash
 - chmod 750 export-ora-coh-nfs-mount.bash
+
+##Export scripts Description
+The export scripts mount multiple Cohesity NFS shares before exporting Oracle databases. They umount the NFS shares after the backup is done and when there is export scripts are running. It requires Oracle user to have mount and umount root privilege by adding the following line in /etc/sudoers file
+
+oracle1 ALL=(ALL) NOPASSWD:/bin/mount,/bin/umount,/bin/mkdir,/bin/chown
