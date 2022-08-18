@@ -21,7 +21,7 @@ SBT library needs to be downloaded from Cohesity support site.
 ### Linux
 The linux sbt library download link is (http://downloads.cohesity.com/oracle_sbt/RPC-Library/6.5.1/linux/). When you click it first, it may ask you to login. Once you login, click this link again. Download the library libsbt_linux_x86_64.so and copy this sbt library file to the lib directory in the script directory on the Oracle server (\<top directory\>/rman/lib). There are two useful toos (sbt_list and sbt_perf_test) in tools directory. Download them amd copy them to toos directory in the script directory on the Oracle server (\<top directory\>/rman/tools)
 ### AIX
-The AIX sbt installer script link is http://downloads.cohesity.com/oracle_sbt/RPC-Library/6.5.1/AIX. The installation command is
+The AIX sbt installer script link is (http://downloads.cohesity.com/oracle_sbt/RPC-Library/6.5.1/aix/). The installation command is
 
 - cohesity_plugin_sbt_0.0.0-master_aix_powerpc_installer -- -d \<top directory\>/rman/lib
 
