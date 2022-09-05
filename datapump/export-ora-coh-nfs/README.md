@@ -12,4 +12,4 @@ Warning: this code is provided on a best effort basis and is not in any way offi
 The scripts in this folder can utilize mutiple mount points to export Oracle databases to NFS mounts. It has the following assumption
 - The last charactor of the mount should be a numerical digit. 
 - The last charactor of the first mount should be 1
-- The next charactor of the rest of mounts should be increased by 1 by 1
+- The last charactor of the rest of mounts should be increased 1 by 1
