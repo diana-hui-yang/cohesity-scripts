@@ -1,15 +1,31 @@
-# Cohesity Sybase dump Sample Script using NFS
-
-Warning: this code is provided on a best effort basis and is not in any way officially supported or sanctioned by Cohesity. The code in this repository is provided as-is and the author accepts no liability for damages resulting from its use.
-
 ## Download the script
 
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/datapump/export-ora-coh-nfs/linux/export-ora-coh-nfs.bash
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/nfs-coh-mount-perm/nfs-coh-mount-perm.bash
-- chmod 750 export-ora-coh-nfs.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/dump/dump-sybase-coh-nfs/linux/dump-sybase-coh-nfs.bash
+- chmod 750 dump-sybase-coh-nfs.bash
 
-## Export script Description
-The scripts in this folder can utilize mutiple mount points to export Oracle databases to NFS mounts. It has the following assumption
-- The last charactor of the mount should be a numerical digit. 
-- The last charactor of the first mount should be 1
-- The last charactor of the rest of mounts should be increased 1 by 1
+## Export scripts Description
+When run the script without any options, it displays the script usage
+
+ Required Parameters
+- -h : host (scanname is required if it is RAC. optional if it is standalone.)
+- -o : ORACLE_DB_NAME (Need to have an entry of this database in /etc/oratab. If it is RAC, it is db_unique_name)
+- -m : mount-prefix (like /mnt/ora)
+- -n : number of mounts
+- -e : Retention time (days to retain the exports)
+
+
+ Optional Parameters
+- -s : Sqlplus connection (example: "dbuser/dbpass@'database connection string'", optional if it is local)
+- -d : ORACLE PDB database
+- -p : number of parallel (Optional, default is 4)
+- -x : ORACLE_HOME (default is /etc/oratab, optional.)
+- -z : file size in GB (Optional, default is 58G)
+- -c : Export option chosen by DBA. It can be table level or schema level. example "schemas=soe1" The default is full
+- -w : yes means preview Oracle export scripts
+
+
+## export-ora-coh-nfs.bash Backup Example
+### Full database export example
+./export-ora-coh-nfs.bash -o orcl -m /coh/ora -n 3 -p 6 -e 30
+### Create Full database export script only example
+./export-ora-coh-nfs.bash -o orcl -m /coh/ora -n 3 -p 6 -e 30 -w yes
