@@ -4,8 +4,8 @@ Warning: this code is provided on a best effort basis and is not in any way offi
 
 ## Download the script
 
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/sybase/dump-ora-coh-nfs/linux/dump-ora-coh-nfs.bash
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/sybase/dump-ora-coh-nfs/aix/aix-dump-ora-coh-nfs.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/sybase/dump-sybase-coh-nfs/linux/dump-sybase-coh-nfs.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/sybase/dump-sybase-coh-nfs/aix/aix-dump-sybase-coh-nfs.bash
 - chmod 750 dump-sybase-coh-nfs.bash
 - chmod 750 aix-dump-sybase-coh-nfs.bash
 
