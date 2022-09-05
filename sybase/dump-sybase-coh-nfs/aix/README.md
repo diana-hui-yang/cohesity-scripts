@@ -3,6 +3,10 @@
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/sybase/dump-sybase-coh-nfs/aix/aix-dump-sybase-coh-nfs.bash
 - chmod 750 aix-dump-sybase-coh-nfs.bash
 
+## Prerequisite
+GNU package: bash, gawk, mpfr, find, rm
+Here is link to AIX open source https://www.ibm.com/support/pages/aix-toolbox-open-source-software-downloads-alpha
+
 ## Export scripts Description
 When run the script without any options, it displays the script usage
 
