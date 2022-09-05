@@ -4,9 +4,10 @@ Warning: this code is provided on a best effort basis and is not in any way offi
 
 ## Download the script
 
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/datapump/export-ora-coh-nfs/linux/export-ora-coh-nfs.bash
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/nfs-coh-mount-perm/nfs-coh-mount-perm.bash
-- chmod 750 export-ora-coh-nfs.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/sybase/dump-ora-coh-nfs/linux/dump-ora-coh-nfs.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/sybase/dump-ora-coh-nfs/aix/aix-dump-ora-coh-nfs.bash
+- chmod 750 dump-sybase-coh-nfs.bash
+- chmod 750 aix-dump-sybase-coh-nfs.bash
 
 ## Export script Description
 The scripts in this folder can utilize mutiple mount points to dump Sybase databases to NFS mounts. It has the following assumption
