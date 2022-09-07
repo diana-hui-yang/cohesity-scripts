@@ -1,7 +1,7 @@
 ## Download the script
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/backup-ora-coh-sbt/linux/backup-ora-coh-sbt.bash
 - chmod 750 backup-ora-coh-dedup.bash
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/backup-ora-coh-sbt/aix/aix-backup-ora-coh-sbt.bash
+- /opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/backup-ora-coh-sbt/aix/aix-backup-ora-coh-sbt.bash
 - chmod 750 aix-backup-ora-coh-dedup.bash
 
 ## Description
