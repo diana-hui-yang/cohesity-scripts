@@ -3,7 +3,11 @@
 - /opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/db2/backup-db2-coh-nfs/aix/aix-backup-db2-coh-nfs.bash
 - chmod 750 aix-backup-db2-coh-nfs.bash
 
-## Export scripts Description
+## Prerequisite
+GNU package: bash, gawk, mpfr, find, rm
+Here is link to AIX open source https://www.ibm.com/support/pages/aix-toolbox-open-source-software-downloads-alpha
+
+## Backup scripts Description
 When run the script without any options, it displays the script usage
 
 
