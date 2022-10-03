@@ -3,7 +3,7 @@
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/db2/backup-db2-coh-nfs/linux/backup-db2-coh-nfs.bash
 - chmod 750 backup-db2-coh-nfs.bash
 
-## Export scripts Description
+## Backup scripts Description
 When run the script without any options, it displays the script usage
 
 
