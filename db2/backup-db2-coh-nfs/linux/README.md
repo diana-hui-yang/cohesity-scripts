@@ -22,7 +22,7 @@ When run the script without any options, it displays the script usage
 
 
 ## backup-db2-coh-nfs.bash Backup Example
-### Full database dump example
+### Full database backup example
 ./backup-db2-nfs.bash -d test -t full -m /coh/db2nfs -n 3 -p 6
-### Incremental database dump example
+### Incremental database backup example
 ./backup-db2-nfs.bash -d test -t incre -m /coh/db2nfs -n 3 -p 6
