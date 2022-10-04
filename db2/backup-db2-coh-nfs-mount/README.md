@@ -22,4 +22,4 @@ The backup scripts mount multiple Cohesity NFS shares before backing up DB2 data
 - db2inst1 ALL=(ALL) NOPASSWD:/bin/mount,/bin/umount,/bin/mkdir,/bin/chown
 
 ### AIX option
-db2inst1 ALL=(ALL) NOPASSWD:/usr/sbin/mount,/usr/sbin/umount,/usr/bin/mkdir,/usr/bin/chown
+- db2inst1 ALL=(ALL) NOPASSWD:/usr/sbin/mount,/usr/sbin/umount,/usr/bin/mkdir,/usr/bin/chown
