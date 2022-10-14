@@ -15,10 +15,11 @@ When run the script without any options, it displays the script usage
 
 
  Optional Parameters
-- -s : Sqlplus connection (example: "dbuser/dbpass@'database connection string'", optional if it is local)
-- -d : ORACLE PDB database
-- -p : number of parallel (Optional, default is 4)
-- -x : ORACLE_HOME (default is /etc/oratab, optional.)
+- -s : sqlplus connection (example: "<dbuser>/<dbpass>@<database connection string>",  Database will exported to the host where this database is)
+- -r : remote database sqlplus connection (example: "<dbuser>/<dbpass>@<database connection string>", Database will exported to the host where the script is)
+- -d : number of export directories, default is 4
+- -p : number of parallel (Optional, default is 8)
+- -x : ORACLE_HOME (provide ORACLE_HOME if the database is not in /etc/oratab. Otherwise, it is optional.)
 - -z : file size in GB (Optional, default is 58G)
 - -c : Export option chosen by DBA. It can be table level or schema level. example "schemas=soe1" The default is full
 - -w : yes means preview Oracle export scripts
