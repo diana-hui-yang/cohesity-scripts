@@ -22,6 +22,10 @@ When run the script without any options, it displays the script usage
 - -p : number of channels (Optional, default is 4)
 - -l : Archive logs retain days (days to retain the local archivelogs before deleting them. default is 1 day)
 - -b : ORACLE_HOME (default is /etc/oratab, optional.)
+- -x : ORACLE_HOME (default is /etc/oratab, optional.)
+- -z : section size in GB (Optional, default is no section size)
+- -k : RMAN compression (Optional, yes means RMAN compression. no means no RMAN compression. default is no)
+- -t : RMAN TAG
 - -w : yes means preview rman backup scripts
 
 ## backup-ora-coh-nfs.bash Backup Example
