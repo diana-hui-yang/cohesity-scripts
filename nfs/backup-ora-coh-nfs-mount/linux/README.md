@@ -26,16 +26,12 @@ When run the script without any options, it displays the script usage
 - -r : Target connection (example: "dbuser/dbpass@'target connection string' as sysbackup", optional if it is local backup)
 - -c : Catalog connection (example: "dbuser/dbpass@'catalog connection string'", optional)
 - -d : Rac nodes connectons strings that will be used to do backup (example: "<rac1-node connection string,ora2-node connection string>")
- -n : number of mounts
- -p : number of channels (Optional, default is 4)
- -l : Archive logs retain days (days to retain the local archivelogs before deleting them. default is 1 day)
- -b : Number of times backing Archive logs (default is 1.)
- -x : ORACLE_HOME (default is /etc/oratab, optional.)
- -z : section size in GB (Optional, default is no section size)
- -k : RMAN compression (Optional, yes means RMAN compression. no means no RMAN compression. default is no)
- -t : RMAN TAG
- -w : yes means preview rman backup scripts
-ction size)
+- -n : number of mounts
+- -p : number of channels (Optional, default is 4)
+- -l : Archive logs retain days (days to retain the local archivelogs before deleting them. default is 1 day)
+- -b : Number of times backing Archive logs (default is 1.)
+- -x : ORACLE_HOME (default is /etc/oratab, optional.)
+- -z : section size in GB (Optional, default is no section size)
 - -k : RMAN compression (Optional, yes means RMAN compression. no means no RMAN compression. default is no)
 - -t : RMAN TAG
 - -w : yes means preview rman backup scripts
