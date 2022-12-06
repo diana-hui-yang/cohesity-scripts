@@ -27,6 +27,7 @@ Optional parameters
 - -m : ORACLE_HOME (provide ORACLE_HOME if the database is not in /etc/oratab. Otherwise, it is optional.)
 - -z : section size in GB (Optional, default is no section size)
 - -t : RMAN TAG
+- -k : RMAN compression (Optional, yes means RMAN compression. no means no RMAN compression. default is no)
 - -g : yes means encryption-in-flight is used. The default is no
 - -j : encryption certificate file directory, default directory is lib
 - -x : yes means gRPC is used. no means SunRPC is used. The default is yes
