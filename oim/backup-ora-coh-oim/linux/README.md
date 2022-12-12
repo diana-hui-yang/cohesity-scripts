@@ -24,13 +24,14 @@ When run the script without any options, it displays the script usage
 - -e : Retention time (days to retain the backups, apply only after uncomment "Delete obsolete" in this script)
 
  Optional Parameters
-- -r : RMAN login (example: "rman target /", optional)
+- -r : Target connection (example: "<dbuser>/<dbpass>@<target connection string> as sysbackup", optional if it is local backup)
 - -c : Catalog connection (example: "<dbuser>/<dbpass>@<catalog connection string>", optional)
 - -d : Rac nodes connectons strings that will be used to do backup (example: "<rac1-node connection string,ora2-node connection string>")
 - -p : number of channels (Optional, default is 4)
 - -s : CloneDirectory.py directory (default directory is <current script directory>/python)
 - -l : Archive logs retain days (days to retain the local archivelogs before deleting them. default is 1 day)
 - -f : Number of times backing Archive logs (default is 1.)
+- -z : section size in GB (Optional, default is no section size)
 - -b : ORACLE_HOME (default is /etc/oratab, optional.)
 - -x : Maximum throughput (default is no limit. Unit is MB/sec. Archivelog backup throughput will be 20% of max throughput if database backup is running)
 - -i : yes means using Cohesity API Key, no means using Cohesity user/password. Default is no
