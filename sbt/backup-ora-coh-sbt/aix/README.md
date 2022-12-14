@@ -40,16 +40,6 @@ Optional parameters
 ### Archive log backup example when sbt library is in lib directory under the script directory
 ./aix-backup-ora-coh-sbt.bash -o orcl -a yes -y cohesity_name -v orasbt1 -p 2 -e 30
 
-## Backup to directory "orawest/orcl" under view "orasbt1" exmaple
-The directory needs to created first by mounting the view "orasbt1" on a Unix server through nfs. The following example uses the directory "orawest/orcl" (host is orawest, the database is orcl) under view "orasbt1". 
-
-### Full backup example when sbt library is in lib directory under the script directory
-./aix-backup-ora-coh-sbt.bash -o orcl -i 0 -y cohesity_name -v orasbt1/orawest/orcl -p 4 -e 30
-### Cumulative backup example when sbt library is in lib directory under the script directory
-./aix-backup-ora-coh-sbt.bash -o orcl -i 1 -y cohesity_name -v orasbt1/orawest/orcl -p 3 -e 30
-### Archive log backup example when sbt library is in directory /u01/app/cohesity
-./aix-backup-ora-coh-sbt.bash -o orcl -a yes -y cohesity_name -v orasbt1/orawest/orcl -p 2 -e 30 -s /u01/app/coheisty
-
 
 ## Note
 RMAN "delete obsolete" command is used in this script to delete expired backups. Be default, it is commmented out. Please check Oracle Bug report and apply the necessary fixes before you uncomment that line. 
