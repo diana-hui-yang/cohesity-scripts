@@ -3,7 +3,7 @@
 host=`uname -n`
 oracle_database=w2sigb
 incremental_level=0
-view=ora_sbt/$host/$oracle_database
+view=ora_sbt
 retention=7
 cohesity_name="cohesity"
 
