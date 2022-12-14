@@ -8,4 +8,4 @@ retention=7
 cohesity_name="cohesity"
 
 
-/home/oracle/scripts/sbt/rman/backup-ora-coh-sbt.bash -h $scanname -o $oracle_database -a $archive_backup_only -y "${cohesity_name}" -v $view/$scanname/$oracle_database -e $retention
+/home/oracle/scripts/sbt/rman/backup-ora-coh-sbt.bash -h $scanname -o $oracle_database -a $archive_backup_only -y "${cohesity_name}" -v $view -e $retention
