@@ -4,7 +4,7 @@ host=`uname -n`
 oracle_database=w2sigb
 archive_backup_only=yes
 vip_file=/home/oracle1/scripts/sbt/vip-list
-view=ora_sbt/$host/$oracle_database
+view=ora_sbt
 sbt_code=/u01/app/cohesity
 retention=7
 
