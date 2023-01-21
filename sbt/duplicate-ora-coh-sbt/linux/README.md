@@ -25,6 +25,7 @@ Optional Parameters
 - -o : ORACLE_HOME (default is current environment), optional
 - -u : Source pluggable database (if this input is empty, it is standardalone or CDB database restore)
 - -n : Destination pluggable database
+- -l : yes means plugging the pdb database with copy option. The default is nocopy which means the database file structure will not be moved from auxiliary database to target database
 - -a : Auxiliary database to restore pluggable database
 - -f : yes means force. It will refresh the target database without prompt
 - -m : yes mean Oracle duplicate use noresume, default is no
@@ -44,4 +45,4 @@ set newname for database to "'+DATA';"
 ### duplidate PDB database when sbt library is in lib directory under the script directory
 - ./duplicate-ora-coh-sbt.bash -r "user/password@orawest2:/cohcdbb" -i cohcdbc -u orapdb1  -y cohesity -v ora_sbt 
 ### duplidate PDB database using a auxiliary database while target database is up running
-- ./duplicate-ora-coh-sbt.bash -r "user/password@orawest2:/cohcdbb" -i cohcdbc -u orapdb1 -n orares1 -y cohesity -v ora_sbt 
+- ./duplicate-ora-coh-sbt.bash -r "user/password@orawest2:/cohcdbb" -i cohcdbc -u orapdb1 -n orares1 -y cohesity -v ora_sbt -a proxydb1
