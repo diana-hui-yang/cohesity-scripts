@@ -13,8 +13,6 @@ Required parameters
 - -a : archivelog only backup (yes means archivelog backup only, no means database backup plus archivelog backup, default is no)
 - -i : If not archivelog only backup, it is full or incremental backup. 0 is full backup, and 1 is cumulative incremental backup
 - -v : Cohesity View that is configured to be the target for Oracle backup
-- -u : Retention time (days to retain the backups, expired file are deleted by SBT. It is only required if -e option is not used)
-- -e : Retention time (days to retain the backups, expired file are deleted by Oracle. Apply only after uncomment "Delete obsolete" in this script. It is only required if -u option is not used)
 
 Optional parameters
 - -r : Target connection (example: "dbuser/dbpass@target connection string as sysbackup", optional if it is local backup)
@@ -32,6 +30,9 @@ Optional parameters
 - -j : encryption certificate file directory, default directory is lib
 - -x : yes means gRPC is used. no means SunRPC is used. The default is yes
 - -d : yes means source side dedup is used. The default is yes
+- -u : Retention time (days to retain the backups, expired file are deleted by SBT. It is only required if -e option is not used or Cohesity policy is not used)
+- -e : Retention time (days to retain the backups, expired file are deleted by Oracle. It is only required if retention is managed by oracle only)
+- -q : yes means sbt activity record are recorded in sbtio.log. no means only errors are recorded in sbtio.log. The default is yes
 - -w : yes means print rman backup scripts only. The RMAN script is not executed
 
 ## Backup to Cohesity view "orasbt1" exmaple
@@ -43,14 +44,4 @@ Optional parameters
 ### Archive log backup example when sbt library is in lib directory under the script directory
 ./backup-ora-coh-sbt.bash -o orcl -a yes -y cohesity_name -v orasbt1 -p 2 -e 30
 
-
-
-## Note
-RMAN "delete obsolete" command is used in this script to delete expired backups. Be default, it is commmented out. Please check Oracle Bug report and apply the necessary fixes before you uncomment that line. 
-
-"Oracle Bug 29633753  delete obsolete removes backup created inside recovery window of read only datafiles in nocatalog mode"
-
-
-The other option to control retention is by using NFS mount. The bash script can be download from 
-https://github.com/diana-hui-yang/rman-cohesity/tree/master/sbt/delete-ora-expired
 
