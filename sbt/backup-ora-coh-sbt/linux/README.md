@@ -13,6 +13,8 @@ Required parameters
 - -a : archivelog only backup (yes means archivelog backup only, no means database backup plus archivelog backup, default is no)
 - -i : If not archivelog only backup, it is full or incremental backup. 0 is full backup, and 1 is cumulative incremental backup, offline is offline full backup
 - -v : Cohesity View that is configured to be the target for Oracle backup
+- -u : Retention time (days to retain the backups, expired file are deleted by SBT. It is only required if -e option is not used or Cohesity policy is not used)
+- -e : Retention time (days to retain the backups, expired file are deleted by Oracle. It is only required if retention is managed by oracle only)
 
 Optional parameters
 - -r : Target connection (example: "dbuser/dbpass@target connection string as sysbackup", optional if it is local backup)
@@ -30,8 +32,6 @@ Optional parameters
 - -j : encryption certificate file directory, default directory is lib
 - -x : yes means gRPC is used. no means SunRPC is used. The default is yes
 - -d : yes means source side dedup is used. The default is yes
-- -u : Retention time (days to retain the backups, expired file are deleted by SBT. It is only required if -e option is not used or Cohesity policy is not used)
-- -e : Retention time (days to retain the backups, expired file are deleted by Oracle. It is only required if retention is managed by oracle only)
 - -q : yes means sbt activity record are recorded in sbtio.log. no means only errors are recorded in sbtio.log. The default is yes
 - -w : yes means print rman backup scripts only. The RMAN script is not executed
 
