@@ -3,8 +3,8 @@
 - chmod 750 backup-ora-coh-oim.bash
 
 ## Prerequisite
-GNU package: bash, gawk, mpfr. find. rm
-Here is link to AIX open source https://www.ibm.com/support/pages/aix-toolbox-open-source-software-downloads-alpha
+- GNU package: bash, gawk, mpfr. find. rm
+- Here is link to AIX open source https://www.ibm.com/support/pages/aix-toolbox-open-source-software-downloads-alpha
 
 
 ## Backup scripts Description
