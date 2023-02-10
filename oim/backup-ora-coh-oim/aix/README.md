@@ -2,6 +2,10 @@
 - /opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oim/backup-ora-coh-oim/aix/aix-backup-ora-coh-oim.bash
 - chmod 750 backup-ora-coh-oim.bash
 
+## Prerequisite
+GNU package: bash, gawk, mpfr. find. rm
+Here is link to AIX open source https://www.ibm.com/support/pages/aix-toolbox-open-source-software-downloads-alpha
+
 
 ## Backup scripts Description
 
