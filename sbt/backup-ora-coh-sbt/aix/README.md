@@ -3,8 +3,8 @@
 - chmod 750 aix-backup-ora-coh-dedup.bash
 
 ## Prerequisite
-GNU package: bash, gawk, mpfr. 
-Here is link to AIX open source https://www.ibm.com/support/pages/aix-toolbox-open-source-software-downloads-alpha
+- GNU package: bash, gawk, mpfr. 
+- Here is link to AIX open source https://www.ibm.com/support/pages/aix-toolbox-open-source-software-downloads-alpha
 
 ## Description
 When run the script without any options, it displays the script usage
