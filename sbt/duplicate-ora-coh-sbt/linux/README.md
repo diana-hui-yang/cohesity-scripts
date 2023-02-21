@@ -10,6 +10,7 @@ When run the script without any options, it displays the script usage
 Required parameters
 - -i : Target Oracle instance name (Oracle duplicate database)
 - -r : Source Oracle connection (example: "sys/<password>@<target db connection>" or "<dbuser>/<dbpass>@<target connection string> as sysbackup")
+- -h : Source host - Oracle database host that the backup was run.
 - -y : Cohesity Cluster DNS name
 - -v : Cohesity view
 
