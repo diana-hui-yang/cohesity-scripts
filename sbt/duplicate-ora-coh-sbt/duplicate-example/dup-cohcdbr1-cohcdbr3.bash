@@ -3,7 +3,7 @@
 targetconnect="<user>/<passwd>@oracle-01/cohcdbr1"
 source_host=oracle-01
 target_oraclesid=cohcdbr3
-view=ora_sbt/orawest2/cohcdbr1
+view=ora_sbt
 cohesity_name="sac01-ftdcoh"
 #catalogconnect="rman/fr8shst8rt@orawest:/catalog"
 
