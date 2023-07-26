@@ -25,7 +25,7 @@ Optional parameters
 - -n : RAC nodes connectons strings that will be used to do backup (example: "rac1-node connection string,ora2-node connection string")
 - -p : number of channels (Optional, default is 4)
 - -f : The file lists Cohesity Cluster VIPs (default name is vip-list and default directory is config)
-- -s : Cohesity SBT library name including directoy or just directory (default name is libsbt_6_and_7_linux-x86_64.so, default directory is lib)
+- -s : Cohesity SBT library name including directoy or just directory (default name is libsbt_aix_powerpc.so, default directory is lib)
 - -l : Archive logs retain days (days to retain the local archivelogs before deleting them. default is 1 day)
 - -m : ORACLE_HOME (provide ORACLE_HOME if the database is not in /etc/oratab. Otherwise, it is optional.)
 - -z : section size in GB (Optional, default is no section size)
