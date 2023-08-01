@@ -15,12 +15,12 @@ When run the script without any options, it displays the script usage
 - -d : database name
 - -t : backup type. full means database backup full, incre means database backup incre
 - -m : mount-prefix (like /coh/db2)
-- -n : number of mounts (only 1 is supported currently)
+- -n : number of mounts
 - -e : Retention time (days to retain the backups)
 
  Optional Parameters
 - -l : offline backup or online backup. off means offline backup. default is online backup
-- -p : number of stripes (Optional, only 1 is supported currently)
+- -p : number of stripes
 - -w : yes means preview db2 backup scripts
 
 
