@@ -44,7 +44,7 @@ echo " -u : Cohesity Oracle User. The user should have access permission on the 
 echo " -g : Active Directory Domain of the Cohesity Oracle user. If the user is created on Cohesity, use local as the input"
 echo " -m : mount-prefix (like /mnt/ora)"
 echo " -n : number of mounts"
-echo " -e : Retention time (days to retain the backups, apply only after uncomment \"Delete obsolete\" in this script)"
+echo " -e : Retention time (days to retain the backups)"
 echo " "
 echo " Optional Parameters"
 echo " -r : Target connection (example: \"<dbuser>/<dbpass>@<target connection string> as sysbackup\", optional if it is local backup)"
