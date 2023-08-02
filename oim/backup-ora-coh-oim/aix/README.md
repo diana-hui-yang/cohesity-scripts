@@ -25,7 +25,7 @@ When run the script without any options, it displays the script usage
 - -g : Active Directory Domain of the Cohesity Oracle user. If the user ic created on Cohesity, use local as the input
 - -m : mount-prefix (like /mnt/ora)
 - -n : number of mounts
-- -e : Retention time (days to retain the backups, apply only after uncomment "Delete obsolete" in this script)
+- -e : Retention time (days to retain the backups)
 
  Optional Parameters
 - -r : Target connection (example: "<dbuser>/<dbpass>@<target connection string> as sysbackup", optional if it is local backup)
