@@ -19,6 +19,7 @@ When run the script without any options, it displays the script usage
 - -e : Retention time (days to retain the backups)
 
  Optional Parameters
+- -f : DB2 profile path. The default is /home/db2inst1/sqllib/db2profile
 - -l : offline backup or online backup. off means offline backup. default is online backup
 - -p : number of stripes
 - -w : yes means preview db2 backup scripts
