@@ -89,7 +89,7 @@ while getopts ":r:c:h:n:o:a:i:y:f:v:s:p:e:l:b:z:k:m:t:w:" opt; do
     z ) sectionsize=$OPTARG;;
     m ) oracle_home=$OPTARG;;
     t ) TAG=$OPTARG;;
-	k ) compression=$OPTARG;;
+    k ) compression=$OPTARG;;
     w ) preview=$OPTARG;;
   esac
 done
