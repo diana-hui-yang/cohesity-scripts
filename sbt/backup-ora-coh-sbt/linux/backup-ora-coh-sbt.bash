@@ -1912,7 +1912,7 @@ else
     fi
     if [[ -n $sretday ]]; then
        delete_expired_file
-	   sync_oracle_record
+       sync_oracle_record
     fi
     if [[ -n $retday ]]; then
        del_obsolete_record 
