@@ -5,4 +5,6 @@
 ## Download the script
 
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/adapter/restore-tablespace-agent//restore-tablespace-agent.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/adapter/restore-datafile-agent/restore-datafile-agent.bash
 - chmod 750 restore-tablespace-agent.bash
+- chmod 750 restore-datafile-agent.bash
