@@ -1,6 +1,6 @@
 ## Download the script
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/adapter/restore-datafile-agent/restore-datafile-agent.bash
-- chmod 750 restore-datafile-agent.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/adapter/restore-datafile/restore-datafile.bash
+- chmod 750 restore-datafile.bash
 
 ## Description
 When run the script without any options, it displays the script usage
