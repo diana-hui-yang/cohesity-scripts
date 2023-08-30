@@ -1435,7 +1435,7 @@ else
     echo direcory "${mount}1/$host/$dbname" exist >> $runlog
     if [[ -d ${mount}1/$host/$dbname/datafile ]]; then
        gfind ${mount}1/$host/$dbname/datafile/* -type f -mtime +1 | grep -v D-${dbname^^} >> ${filelist}
-	   gfind ${mount}1/$host/$dbname/datafile/* -type f -mtime +30 -exec /bin/rm -v {} \; >> $runlog
+       gfind ${mount}1/$host/$dbname/datafile/* -type f -mtime +30 -exec /bin/rm -v {} \; >> $runlog
     fi
     gfind ${mount}1/$host/$dbname/archivelog/* -type f -mtime +$retnewday  -exec /bin/rm -v {} \; >> $runlog
     gfind ${mount}1/$host/$dbname/controlfile/* -type f -mtime +$retnewday  -exec /bin/rm -v {} \; >> $runlog
