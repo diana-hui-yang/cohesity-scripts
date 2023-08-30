@@ -1,5 +1,5 @@
 ## Download the script
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/adapter/restore-datafile/restore-datafile.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/granular/restore-datafile/restore-datafile.bash
 - chmod 750 restore-datafile.bash
 
 ## Description
