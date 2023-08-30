@@ -1,6 +1,6 @@
-## Download the script
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/adapter/restore-tablespace-agent/restore-tablespace-agent.bash
-- chmod 750 restore-tablespace-agent.bash
+e## Download the script
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/granular/restore-tablespace/restore-tablespace.bash
+- chmod 750 restore-tablespace.bash
 
 ## Description
 When run the script without any options, it displays the script usage
