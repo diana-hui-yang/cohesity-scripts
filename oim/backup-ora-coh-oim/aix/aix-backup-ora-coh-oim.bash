@@ -1479,7 +1479,7 @@ else
 	echo direcory "${mount}1/$host/$dbname" exist >> $runlog
     if [[ -d ${mount}1/$host/$dbname/datafile ]]; then
        /opt/freeware/bin/find ${mount}1/$host/$dbname/datafile/* -type f -mtime +1 | grep -v D-${dbname^^} >> ${filelist}
-	   /opt/freeware/bin/find ${mount}1/$host/$dbname/datafile/* -type f -mtime +30 -exec  /opt/freeware/bin/rm -v {} \; >> $runlog
+       /opt/freeware/bin/find ${mount}1/$host/$dbname/datafile/* -type f -mtime +30 -exec  /opt/freeware/bin/rm -v {} \; >> $runlog
     fi
     /opt/freeware/bin/find ${mount}1/$host/$dbname/archivelog/* -type f -mtime +$retnewday  -exec /opt/freeware/bin/rm -v {} \; >> $runlog
     /opt/freeware/bin/find ${mount}1/$host/$dbname/controlfile/* -type f -mtime +$retnewday  -exec /opt/freeware/bin/rm -v {} \; >> $runlog
