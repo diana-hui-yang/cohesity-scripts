@@ -6,5 +6,7 @@
 
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/granular/restore-tablespace/restore-tablespace.bash
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/granular/restore-datafile/restore-datafile.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/granular/import-tablespace/import-tablespace.bash
 - chmod 750 restore-tablespace.bash
 - chmod 750 restore-datafile.bash
+- chmod 750 import-tablespace.bash
