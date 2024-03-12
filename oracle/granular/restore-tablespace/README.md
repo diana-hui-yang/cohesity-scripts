@@ -1,4 +1,4 @@
-e## Download the script
+## Download the script
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/granular/restore-tablespace/restore-tablespace.bash
 - chmod 750 restore-tablespace.bash
 
