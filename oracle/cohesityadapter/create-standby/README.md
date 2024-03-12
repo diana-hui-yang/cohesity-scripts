@@ -3,7 +3,7 @@
 - chmod 750 create-standby-cohesityadapter.bash
 
 ## Description
-This script will instantiate an Oracle Data Guard Physical Standby from a Cohesity backup. A Cohesity Oracle recovery view needs to be created first. When running the script without any options, it displays the script usage. When using the "-w yes" parameter, the script builds a softlink of backup files in NFS mounts of the Cohesity view to a single directory under /tmp/ and creates RMAN commands without executing them. 
+This script will instantiate an Oracle Data Guard Physical Standby from a Cohesity backup. A Cohesity Oracle recovery view needs to be created first. When running the script without any options, it displays the script usage. When using the "-w yes" parameter, the script builds a softlink of backup files in NFS mounts of the Cohesity view to a single directory under /tmp/orarestore and creates RMAN commands without executing them.
 
 Required parameters
 
