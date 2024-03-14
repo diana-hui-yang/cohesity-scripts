@@ -2,10 +2,10 @@ if [[ ! -d rman ]]; then
   mkdir rman
 fi
 cd rman
-curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs/linux/backup-ora-coh-nfs.bash
-curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/duplicate-ora-coh-nfs/linux/duplicate-ora-coh-nfs.bash
-curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/restore-ora-coh-nfs/linux/restore-ora-coh-nfs.bash
-curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/list-del-ora-agedfile/linux/list-del-ora-agedfile.bash
+curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/nfs/backup-ora-coh-nfs/linux/backup-ora-coh-nfs.bash
+curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/nfs/duplicate-ora-coh-nfs/linux/duplicate-ora-coh-nfs.bash
+curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/nfs/restore-ora-coh-nfs/linux/restore-ora-coh-nfs.bash
+curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/nfs/list-del-ora-agedfile/linux/list-del-ora-agedfile.bash
 chmod 750 backup-ora-coh-nfs.bash
 chmod 750 duplicate-ora-coh-nfs.bash
 chmod 750 restore-ora-coh-nfs.bash
