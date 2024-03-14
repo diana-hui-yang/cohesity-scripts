@@ -5,9 +5,9 @@ cd rman
 if [[ ! -d python ]]; then
   mkdir python
 fi
-curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oim/backup-ora-coh-oim/sun/sbackup-ora-coh-oim.bash
-curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/duplicate-ora-coh-nfs/sun/sun-duplicate-ora-coh-nfs.bash
-curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/restore-ora-coh-nfs/sun/sun-restore-ora-coh-nfs.bash
+curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/oim/backup-ora-coh-oim/sun/sbackup-ora-coh-oim.bash
+curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/nfs/duplicate-ora-coh-nfs/sun/sun-duplicate-ora-coh-nfs.bash
+curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/nfs/restore-ora-coh-nfs/sun/sun-restore-ora-coh-nfs.bash
 chmod 750 sbackup-ora-coh-oim.bash
 chmod 750 sun-duplicate-ora-coh-nfs.bash
 chmod 750 sun-restore-ora-coh-nfs.bas
