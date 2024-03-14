@@ -2,10 +2,10 @@ if [[ ! -d rman ]]; then
   mkdir rman
 fi
 cd rman
-curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs-mount/aix/aix-backup-ora-coh-nfs.bash
-curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/restore-ora-coh-nfs/aix/aix-restore-ora-coh-nfs.bash
-curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/list-del-ora-agedfile/aix/aix-list-del-ora-agedfile.bash
-curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/nfs-coh-mount-umount/aix/aix-nfs-coh-mount-umount.bash
+curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/nfs/backup-ora-coh-nfs-mount/aix/aix-backup-ora-coh-nfs.bash
+curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/nfs/restore-ora-coh-nfs/aix/aix-restore-ora-coh-nfs.bash
+curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/nfs/list-del-ora-agedfile/aix/aix-list-del-ora-agedfile.bash
+curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/nfs/nfs-coh-mount-umount/aix/aix-nfs-coh-mount-umount.bash
 chmod 750 aix-backup-ora-coh-nfs-mount.bash
 chmod 750 aix-restore-ora-coh-nfs.bash
 chmod 750 aix-list-del-ora-agedfile.bash
