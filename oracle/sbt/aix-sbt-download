@@ -1,9 +1,9 @@
 mkdir rman
 mkdir rman/config rman/lib rman/tools
 cd rman
-/opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/backup-ora-coh-sbt/aix/aix-backup-ora-coh-sbt.bash
-/opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/duplicate-ora-coh-sbt/aix/aix-duplicate-ora-coh-sbt.bash
-/opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/sbt/restore-ora-coh-sbt/aix/aix-restore-ora-coh-sbt.bash
+/opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/sbt/backup-ora-coh-sbt/aix/aix-backup-ora-coh-sbt.bash
+/opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/sbt/duplicate-ora-coh-sbt/aix/aix-duplicate-ora-coh-sbt.bash
+/opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/sbt/restore-ora-coh-sbt/aix/aix-restore-ora-coh-sbt.bash
 chmod 750 aix-backup-ora-coh-sbt.bash
 chmod 750 aix-duplicate-ora-coh-sbt.bash
 chmod 750 aix-restore-ora-coh-sbt.bash
