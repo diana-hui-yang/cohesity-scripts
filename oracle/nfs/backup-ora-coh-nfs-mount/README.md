@@ -1,10 +1,5 @@
 ### ***Warning: this code is provided on a best effort basis and is not in any way officially supported or sanctioned by Cohesity. The code in this repository is provided as-is and the author accepts no liability for damages resulting from its use.***
 
-## Download the script
-
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/nfs/backup-ora-coh-nfs-mount/linux/backup-ora-coh-nfs-mount.bash
-- chmod 750 backup-ora-coh-nfs-mount.bash
-
 ## Backup scripts Description
 
 The backup scripts mount multiple Cohesity NFS shares before backing up Oracle databases. They umount the NFS shares after the backup is done and when there is RMAN backup scripts are running. It requires Oracle user to have mount and umount root privilege by adding the following line in /etc/sudoers file
