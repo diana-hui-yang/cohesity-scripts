@@ -1,6 +1,6 @@
 ## Download the script
 
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/nfs-coh-mount-umount/linux/nfs-coh-mount-umount.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/nfs/nfs-coh-mount-umount/linux/nfs-coh-mount-umount.bash
 - chmod 750 nfs-coh-mount-umount.bash
 
 ## NFS mount script Description
