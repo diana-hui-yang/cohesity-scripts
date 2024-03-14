@@ -1,6 +1,6 @@
 ## Download the script
 
-- /opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/duplicate-ora-coh-nfs/aix/aix-duplicate-ora-coh-nfs.bash
+- /opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/nfs/duplicate-ora-coh-nfs/aix/aix-duplicate-ora-coh-nfs.bash
 - chmod 750 aix-duplicate-ora-coh-nfs.bash
 
 ## Oracle duplicate scripts Description
