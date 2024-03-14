@@ -1,6 +1,6 @@
 ## Download the script
 
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/backup-ora-coh-nfs/linux/backup-ora-coh-nfs.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/nfs/backup-ora-coh-nfs/linux/backup-ora-coh-nfs.bash
 - chmod 750 backup-ora-coh-nfs.bash
 
 ## Backup scripts Description
