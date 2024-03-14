@@ -2,7 +2,7 @@
 
 ## Download the script
 
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/nfs-coh-mount-perm/nfs-coh-mount-perm.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/nfs/nfs-coh-mount-perm/nfs-coh-mount-perm.bash
 - chmod 750 nfs-coh-mount-perm.bash
 
 ## NFS mount script Description
