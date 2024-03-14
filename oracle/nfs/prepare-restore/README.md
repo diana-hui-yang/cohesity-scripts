@@ -2,7 +2,7 @@
 
 ## Download the script
 
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/nfs/prepare-restore/prepare-restore.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/nfs/prepare-restore/prepare-restore.bash
 - chmod 750 prepare-restore.bash
 
 ## prepare-restore.bash script Description
