@@ -4,6 +4,6 @@
 
 ## Download the script
 
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/datapump/export-ora-coh-nfs-mount/linux/export-ora-coh-nfs-mount.bash
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/datapump/export-ora-coh-nfs/linux/export-ora-coh-nfs.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/datapump/export-ora-coh-nfs-mount/linux/export-ora-coh-nfs-mount.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/datapump/export-ora-coh-nfs/linux/export-ora-coh-nfs.bash
 
