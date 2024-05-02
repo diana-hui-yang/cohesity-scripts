@@ -4,7 +4,7 @@
 #
 # Function:     This script duplicates an Oracle database from an Oracle backup 
 #               using backup-ora-coh-sbt-23.bash. This script requires recovery database or 
-#				source database to be available while running the duplication
+#		source database to be available while running the duplication
 #
 #
 # Show Usage: run the command to show the usage
