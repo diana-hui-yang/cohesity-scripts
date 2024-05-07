@@ -43,8 +43,8 @@ set newname for database to "'+DATA';"
 ## duplicate exmaple
 
 ### duplidate none CDB database example when sbt library is in lib directory under the script directory
-- ./duplicate-ora-coh-sbt-23.bash -r "user/password@orawest2:/w2sigb" -i w2sigc -y cohesity -v ora_sbt
+- ./duplicate-ora-coh-sbt-23.bash -r "user/password@orawest2:/w2sigb" -i w2sigc -y cohesity -v orasbt -q orasbt_catalog
 ### duplidate PDB database when sbt library is in lib directory under the script directory
-- ./duplicate-ora-coh-sbt-23.bash -r "user/password@orawest2:/cohcdbb" -i cohcdbc -u orapdb1  -y cohesity -v ora_sbt 
+- ./duplicate-ora-coh-sbt-23.bash -r "user/password@orawest2:/cohcdbb" -i cohcdbc -u orapdb1  -y cohesity -v orasbt_catalog 
 ### duplidate PDB database using a auxiliary database while target database is up running
-- ./duplicate-ora-coh-sbt-23.bash -r "user/password@orawest2:/cohcdbb" -i cohcdbc -u orapdb1 -n orares1 -y cohesity -v ora_sbt -a proxydb1
+- ./duplicate-ora-coh-sbt-23.bash -r "user/password@orawest2:/cohcdbb" -i cohcdbc -u orapdb1 -n orares1 -y cohesity -v ora_sbt -v orasbt_tatalog -a proxydb1
