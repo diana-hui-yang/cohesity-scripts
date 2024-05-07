@@ -36,11 +36,13 @@ Optional Parameters
 ## Restore exmaple
 
 ### Restore database validate example when sbt library is in lib directory under the script directory. The database name is "orcl". The database won't be over-written. 
-- ./restore-ora-coh-sbt-23.bash -i orcl -y cohesity -v orasbt1 -q orasbt1_cat
+- ./restore-ora-coh-sbt-23.bash -i orcl -y cohesity -v orasbt1 -q orasbt1_catalog
 ### Restore database"orcl" assuming controlfile are still intact when sbt library is in directory /u01/app/cohesity. The database will be over-written.
-- ./restore-ora-coh-sbt-23.bash -i orcl -y cohesity -v orasbt1 -q orasbt1_cat -s /u01/app/coheisty -f yes
+- ./restore-ora-coh-sbt-23.bash -i orcl -y cohesity -v orasbt1 -q orasbt1_catalog -s /u01/app/coheisty -f yes
 ### Restore controlfile, then database "orcl" on the original Oracle server "orawest".  The database will be over-written.
-- ./restore-ora-coh-sbt-23.bash  -i orcl -t "2020-08-02 12:00:00" -l yes -y cohesity -v orasbt1 -q orasbt1_cat -f yes
+- ./restore-ora-coh-sbt-23.bash  -i orcl -t "2020-08-02 12:00:00" -l yes -y cohesity -v orasbt1 -q orasbt1_catalog -f yes
 ### Restore controlfile, then database "orcl" on a new server "orawestdr". (the original Oracle server is "orawest")
 Note: before running this commaand, several prepare steps should be done first.
 init file should be created, adump directory should be created. 
+Check the scripts example in restore-example directory for more details
+- ./restore-ora-coh-sbt-23.bash -h orawest -i orcl -t "2020-08-02 12:00:00" -l yes -y cohesity -v orasbt1 -q orasbt1_catalog -f yes
