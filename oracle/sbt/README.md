@@ -9,16 +9,19 @@ GNU package: bash, gawk, python, mpfr, findutils. Here is link to AIX open sourc
 
 ## Download all SBT related scripts
 ### Linux
-linux-sbt-download script will download all RMAN shell scripts to run on Linux servers and Cohesity Python scripts that are necessary to do Oracle backup and restore using Cohesity sbt library. 
+linux-sbt-download script will download all RMAN shell scripts to run on Linux servers to do Oracle backup and restore using Cohesity sbt library and Cohesity standard view. 
+linux-sbt-23-download script will download all RMAN shell scripts to run on Linux servers to do Oracle backup and restore using Cohesity sbt library and Cohesity ZDLRA view. 
 ### AIX
 aix-sbt-download script will download all RMAN shell scripts to run on AIX servers and Cohesity Python scripts that are necessary to do Oracle backup and restore using Cohesity sbt library.
 
 ## Download SBT library
 SBT library needs to be downloaded from Cohesity support site. 
 ### Linux
-The linux sbt library download link is (http://downloads.cohesity.com/oracle_sbt/RPC-Library/6.5.1/linux/). When you click it first, it may ask you to login. Once you login, click this link again. Download the library libsbt_linux_x86_64.so and copy this sbt library file to the lib directory in the script directory on the Oracle server (\<top directory\>/rman/lib). There are two useful toos (sbt_list and sbt_perf_test) in tools directory. Download them amd copy them to toos directory in the script directory on the Oracle server (\<top directory\>/rman/tools)
-### AIX
-The AIX sbt installer script link is (http://downloads.cohesity.com/oracle_sbt/RPC-Library/6.5.1/aix/). The installation command is
+The linux sbt library download link is (http://downloads.cohesity.com/oracle_sbt/RPC-Library/6.5.1/linux/). Copy this link to another browser window. You may have to log in first. Once you log in, paste the copied link again. Download the library 'libsbt_linux_x86_64.so' and copy this sbt library file to the 'lib' directory in the script directory on the Oracle server (\<top directory\>/rman/lib). There are two useful toos 'sbt_list' and 'sbt_perf_test' in tools directory. Download them amd copy them to 'toos' directory in the script directory on the Oracle server (\<top directory\>/rman/tools)
 
-- cohesity_plugin_sbt_0.0.0-master_aix_powerpc_installer -- -d \<top directory\>/rman/lib
+When using the Cohesity ZDLRA view to perform Oracle backups and restores, it is important to download the Cohesity ZDLRA package. The link is (https://downloads.cohesity.com/oracle_sbt/RPC-Library/6.5.1/zdlra/). Copy this link to another browser window. You may have to log in first. Once you log in, paste the copied link again. Follow Cohesity document to install this package. Copy the sbt library file 'libsbt_linux_x86_64.so' from the ZDLRA package to the 'lib' directory in the script directory on the Oracle server.
+
+### AIX
+The AIX sbt library download link is (http://downloads.cohesity.com/oracle_sbt/RPC-Library/6.5.1/aix/). Copy this link to another browser window. You may have to log in first. Once you log in, paste the copied link again. Download the library 'libsbt_aix_powerpc.so' and copy this sbt library file to the 'lib' directory in the script directory on the Oracle server (\<top directory\>/rman/lib). There are two useful toos 'sbt_list' and 'sbt_perf_test' in tools directory. Download them amd copy them to 'toos' directory in the script directory on the Oracle server (\<top directory\>/rman/tools)
+
 
