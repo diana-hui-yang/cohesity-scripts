@@ -24,7 +24,7 @@ When run the script without any options, it displays the script usage
 
 
 
-## aix-backup-db2-coh-nfs-mount.bash Backup Example
+## aix-backup-db2-coh-nfs-mount.ksh Backup Example
 ### Full database backup example
 ./aix-backup-db2-coh-nfs-mount.ksh -d test -t full -y cohesity -v db2_nfs -m /coh/db2nfs -n 3 -p 6
 ### Incremental database backup example
