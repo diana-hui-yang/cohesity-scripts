@@ -1,7 +1,7 @@
 ## Download the script
 
-- /opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/nfs/nfs-coh-mount-umount/aix/aix-nfs-coh-mount-umount.bash
-- chmod 750 aix-nfs-coh-mount-umount.bash
+- /opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/nfs/nfs-coh-mount-umount/aix/aix-nfs-coh-mount-umount.ksh
+- chmod 750 aix-nfs-coh-mount-umount.ksh
 
 ## NFS mount script Description
 ### nfs-mount script parameter
