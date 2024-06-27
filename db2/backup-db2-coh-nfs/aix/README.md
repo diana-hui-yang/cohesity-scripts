@@ -1,11 +1,7 @@
 ## Download the script
 
-- /opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/db2/backup-db2-coh-nfs/aix/aix-backup-db2-coh-nfs.bash
-- chmod 750 aix-backup-db2-coh-nfs.bash
-
-## Prerequisite
-GNU package: bash, gawk, mpfr, find, rm
-Here is link to AIX open source https://www.ibm.com/support/pages/aix-toolbox-open-source-software-downloads-alpha
+- /opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/db2/backup-db2-coh-nfs/aix/aix-backup-db2-coh-nfs.ksh
+- chmod 750 aix-backup-db2-coh-nfs.ksh
 
 ## Backup scripts Description
 When run the script without any options, it displays the script usage
@@ -28,6 +24,6 @@ When run the script without any options, it displays the script usage
 
 ## aix-backup-db2-coh-nfs.bash Backup Example
 ### Full database backup example
-./aix-backup-db2-nfs.bash -d test -t full -m /coh/db2nfs -n 3 -p 6
+./aix-backup-db2-nfs.ksh -d test -t full -m /coh/db2nfs -n 3 -p 6
 ### Incremental database backup example
-./aix-backup-db2-nfs.bash -d test -t incre -m /coh/db2nfs -n 3 -p 6
+./aix-backup-db2-nfs.ksh -d test -t incre -m /coh/db2nfs -n 3 -p 6
