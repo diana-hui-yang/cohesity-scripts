@@ -12,7 +12,7 @@
 #################################################################
 
 function show_usage {
-echo "usage: aix-backup-db2-coh-nfs.ksh -d <database name> -t <full or incremental> -l <offline or online> -m <mount-prefix> -n <number of mounts> -p <number of sessions> -e <retention> -f <DB2 profile> -w <yes/no>"
+echo "usage: aix-backup-db2-coh-nfs.ksh -d <database name> -t <full or incremental or offline> -m <mount-prefix> -n <number of mounts> -p <number of sessions> -e <retention> -f <DB2 profile> -w <yes/no>"
 echo " "
 echo " Required Parameters"
 echo " -d : database name"
