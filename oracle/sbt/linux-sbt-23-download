@@ -1,6 +1,4 @@
-mkdir rman
-mkdir rman/config rman/lib rman/tools
-cd rman
+mkdir config lib bin
 curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/sbt/backup-ora-coh-sbt-23/linux/backup-ora-coh-sbt-23.bash
 curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/sbt/duplicate-ora-coh-sbt-23/linux/duplicate-ora-coh-sbt-23.bash
 curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/sbt/restore-ora-coh-sbt-23/linux/restore-ora-coh-sbt-23.bash
