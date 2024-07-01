@@ -23,7 +23,7 @@
 # 04/27/22 Diana Yang   Add noresume option 
 # 01/15/23 Diana Yang   Add new option to allow new PDB name during duplication
 # 01/15/23 Diana Yang   Remove the requirement for -h and -d
-# 06/28/23 Diana Yang	Change it to work with Cohesity ZDLRA package																						  
+# 06/28/24 Diana Yang	Change it to work with Cohesity ZDLRA package																						  
 #
 #################################################################
 
