@@ -1,5 +1,5 @@
 ## Download the script
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/granular/restore-tablespace/restore-tablespace.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/granular/restore-tablespace/restore-tablespace.bash
 - chmod 750 restore-tablespace.bash
 
 ## Description
