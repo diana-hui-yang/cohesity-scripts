@@ -4,8 +4,8 @@
 
 ## Download the script
 
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/datapump/export-ora-coh-nfs/linux/export-ora-coh-nfs.bash
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/nfs/nfs-coh-mount-perm/nfs-coh-mount-perm.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/datapump/export-ora-coh-nfs/linux/export-ora-coh-nfs.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/nfs/nfs-coh-mount-perm/nfs-coh-mount-perm.bash
 - chmod 750 export-ora-coh-nfs.bash
 
 ## Export script Description
