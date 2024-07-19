@@ -1,6 +1,6 @@
 ## Download the script
 
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/datapump/export-ora-coh-nfs/linux/export-ora-coh-nfs.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/datapump/export-ora-coh-nfs/linux/export-ora-coh-nfs.bash
 - chmod 750 export-ora-coh-nfs.bash
 
 ## Export scripts Description
