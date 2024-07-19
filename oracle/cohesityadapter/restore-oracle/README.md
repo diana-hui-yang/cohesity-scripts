@@ -2,4 +2,4 @@
 
 
 ## Description
-This script will instantiate an Oracle Data Guard Physical Standby from a Cohesity backup. A Cohesity Oracle recovery view needs to be created first. When running the script without any options, it displays the script usage. When using the "-w yes" parameter, the script builds a softlink of backup files in NFS mounts of the Cohesity view to a single directory under /tmp/orarestore and creates RMAN commands without executing them.
+This script is a wrapper that calls a Python Oracle restore script to create a new database from the backup of another database using the Cohesity Oracle adapter 'Alternate restore' option. This operation is commonly used by Oracle DBAs to refresh their Test/Dev environments using backups of production databases. The script cleans /etc/oratab and drops the Test/Dev databases before running the Python script restoreOracle-v2.py.
