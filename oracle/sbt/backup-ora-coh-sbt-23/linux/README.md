@@ -1,5 +1,5 @@
 ## Download the script
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/sbt/backup-ora-coh-sbt-23/linux/backup-ora-coh-sbt-23.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/sbt/backup-ora-coh-sbt-23/linux/backup-ora-coh-sbt-23.bash
 - chmod 750 backup-ora-coh-sbt-23.bash
 
 ## Description
