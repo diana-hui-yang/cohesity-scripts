@@ -1,5 +1,5 @@
 ## Download the script
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/cohesityadapter/create-standby/linux/create-standby-cohesityadapter.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/cohesityadapter/create-standby/linux/create-standby-cohesityadapter.bash
 - chmod 750 create-standby-cohesityadapter.bash
 
 ## Description
