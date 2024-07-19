@@ -1,5 +1,5 @@
 ## Download the script
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/granular/import-tablespace/import-tablespace.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/granular/import-tablespace/import-tablespace.bash
 - chmod 750 import-tablespace.bash
 
 ## Description
