@@ -1,18 +1,12 @@
 ## Download the script
-
-```bash
-# download commands
-curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/cohesityadapter/restore-oracle/restore-ora-cohesityadapter.bash
-curl -O https://raw.githubusercontent.com/cohesity/community-automation-samples/main/oracle/python/restoreOracle-v2/restoreOracle-v2.py
-curl -O https://raw.githubusercontent.com/cohesity/community-automation-samples/main/python/pyhesity.py
-chmod 750 restore-ora-cohesityadapter.bash
-chmod 750 restoreOracle-v2.py
-# end download commands
-```
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/rman-cohesity/master/oracle/cohesityadapter/restore-oracle/restore-ora-cohesityadapter.bash
+- curl -O https://raw.githubusercontent.com/cohesity/community-automation-samples/main/oracle/python/restoreOracle-v2/restoreOracle-v2.py
+- curl -O https://raw.githubusercontent.com/cohesity/community-automation-samples/main/python/pyhesity.py
+- chmod 750 restore-ora-cohesityadapter.bash
+- chmod 750 restoreOracle-v2.py
 
 ## Description
-This script is a wrapper that calls a Python Oracle restore script to create a new database from the backup of another database using the Cohesity Oracle adapter 'Alternate restore' option. This operation is commonly used by Oracle DBAs to refresh their Test/Dev environments using backups of production databases. The script cleans /etc/oratab and drops the Test/Dev databases before running the Python script.
+This script is a wrapper that calls a Python Oracle restore script to create a new database from the backup of another database using the Cohesity Oracle adapter 'Alternate restore' option. This operation is commonly used by Oracle DBAs to refresh their Test/Dev environments using backups of production databases. The script cleans /etc/oratab and drops the Test/Dev databases before running the Python script restoreOracle-v2.py. Click [restoreOracle-v2.py ](https://github.com/bseltz-cohesity/scripts/tree/master/oracle/python/restoreOracle-v2) link to learn how to use it.
 
 Required parameters
 
