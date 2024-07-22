@@ -1,6 +1,6 @@
 ## Download the script
 
-- /opt/freeware/bin/curl -O https://github.com/diana-hui-yang/cohesity-scripts/blob/master/db2/backup-db2-coh-nfs-mount/aix/backup-db2-coh-nfs-mount.bash
+- /opt/freeware/bin/curl -O https://github.com/diana-hui-yang/cohesity-scripts/blob/master/db2/backup-db2-coh-nfs-mount/aix/aix-backup-db2-coh-nfs-mount.bash
 - chmod 750 aix-backup-db2-coh-nfs-mount.ksh
 
 ## Backup scripts Description
