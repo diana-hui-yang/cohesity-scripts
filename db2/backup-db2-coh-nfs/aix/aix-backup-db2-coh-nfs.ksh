@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ksh
 #
 # Name:         aix-backup-db2-coh-nfs.ksh
 #
