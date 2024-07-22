@@ -7,7 +7,7 @@ Warning: this code is provided on a best effort basis and is not in any way offi
 ## Download the script
 
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/db2/backup-db2-coh-nfs-mount/linux/backup-db2-coh-nfs-mount.bash
-- /opt/freeware/bin/curl -O https://github.com/diana-hui-yang/cohesity-scripts/blob/master/db2/backup-db2-coh-nfs-mount/aix/backup-db2-coh-nfs-mount.bash
+- /opt/freeware/bin/curl -O https://github.com/diana-hui-yang/cohesity-scripts/blob/master/db2/backup-db2-coh-nfs-mount/aix/aix-backup-db2-coh-nfs-mount.bash
 - chmod 750 backup-db2-coh-nfs-mount.bash
 - chmod 750 aix-backup-db2-coh-nfs-mount.ksh
 
