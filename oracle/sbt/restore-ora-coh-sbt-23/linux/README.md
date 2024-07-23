@@ -44,5 +44,9 @@ Optional Parameters
 ### Restore controlfile, then database "orcl" on a new server "orawestdr". (the original Oracle server is "orawest")
 Note: before running this commaand, several prepare steps should be done first.
 init file should be created, adump directory should be created. 
-Check the scripts example in restore-example directory for more details
 - ./restore-ora-coh-sbt-23.bash -h orawest -i orcl -t "2020-08-02 12:00:00" -l yes -y cohesity -v orasbt1 -q orasbt1_catalog -f yes
+### Restore controlfile, then RAC databases 'raccdbn" using both RAC nodes
+Note: before running this commaand, several prepare steps should be done first.
+init file should be created, adump directory should be created. 
+- ./restore-ora-coh-sbt-23.bash -i raccdbn1 -d raccdbn -y ftdve712 -v orasbt1 -q orasbt1_catalog -r "sys/<password>@orascan1/raccdbn" -n "orarac1/raccdbn,orarac3/raccdbn" -t "2024-07-16 01:00:00" -l yes -f yes
+
