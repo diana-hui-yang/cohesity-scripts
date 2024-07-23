@@ -48,6 +48,6 @@ init file should be created, adump directory should be created.
 ### Restore controlfile, then RAC databases 'raccdbn" using both RAC nodes
 Note: before running this commaand, several prepare steps should be done first.
 init file should be created, adump directory should be created. 
-Oracle instance: raccdbn1, Oracle database: raccdbn, database login string: "orascan1/raccdbn", Instaance login string: "orarac1/raccdbn" and "orarac3/racdbn"
+Oracle instance: raccdbn1, Oracle database: raccdbn, database login string: "orascan1/raccdbn", Instance login string: "orarac1/raccdbn" and "orarac3/racdbn"
 - ./restore-ora-coh-sbt-23.bash -i raccdbn1 -d raccdbn -y ftdve712 -v orasbt1 -q orasbt1_catalog -r "sys/<password>@orascan1/raccdbn" -n "orarac1/raccdbn,orarac3/raccdbn" -t "2024-07-16 01:00:00" -l yes -f yes
 
