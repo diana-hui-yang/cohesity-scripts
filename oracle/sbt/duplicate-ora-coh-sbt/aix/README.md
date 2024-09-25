@@ -1,6 +1,6 @@
 ## Download the script
-- /opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/sbt/duplicate-ora-coh-sbt/aix/aix-duplicate-ora-coh-sbt.bash
-- chmod 750 aix-duplicate-ora-coh-sbt.bash
+- /opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/sbt/duplicate-ora-coh-sbt/aix/aix-duplicate-ora-coh-sbt.ksh
+- chmod 750 aix-duplicate-ora-coh-sbt.ksh
 
 ## Description
 The scripts clone database uses Cohesity Source-side dedup library, and from the backup files created by script backup-ora-coh-sbt.bash
@@ -40,6 +40,6 @@ set newname for database to "'+DATA';"
 ## duplicate exmaple
 
 ### duplidate none CDB database example when sbt library is in lib directory under the script directory
-- ./aix-duplicate-ora-coh-sbt.bash -r "user/password@orawest2:/w2sigb" -h orawest2 -d w2sigb -i w2sigc -y cohesity -v ora_sbt
+- ./aix-duplicate-ora-coh-sbt.ksh -r "user/password@orawest2:/w2sigb" -h orawest2 -d w2sigb -i w2sigc -y cohesity -v ora_sbt
 ### duplidate PDB database when sbt library is in lib directory under the script directory
-- ./aix-duplicate-ora-coh-sbt.bash -r "user/password@orawest2:/cohcdbb" -h orawest2 -d cohcdbb -i cohcdbc -u orapdb1  -y cohesity -v ora_sbt 
+- ./aix-duplicate-ora-coh-sbt.ksh -r "user/password@orawest2:/cohcdbb" -h orawest2 -d cohcdbb -i cohcdbc -u orapdb1  -y cohesity -v ora_sbt 
