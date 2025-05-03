@@ -1,7 +1,3 @@
-if [[ ! -d rman ]]; then
-   mkdir rman
-fi
-cd rman
 if [[ ! -d python ]]; then
    mkdir python
 fi
