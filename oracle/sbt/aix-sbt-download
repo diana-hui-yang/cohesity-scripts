@@ -1,6 +1,4 @@
-mkdir rman
-mkdir rman/config rman/lib rman/tools
-cd rman
+mkdir config lib tools
 /opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/sbt/backup-ora-coh-sbt/aix/aix-backup-ora-coh-sbt.ksh
 /opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/sbt/duplicate-ora-coh-sbt/aix/aix-duplicate-ora-coh-sbt.ksh
 /opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/sbt/restore-ora-coh-sbt/aix/aix-restore-ora-coh-sbt.ksh
