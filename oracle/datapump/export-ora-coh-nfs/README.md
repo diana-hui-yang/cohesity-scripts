@@ -5,8 +5,11 @@
 ## Download the script
 
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/datapump/export-ora-coh-nfs/linux/export-ora-coh-nfs.bash
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/datapump/export-ora-coh-nfs/sun/sun-export-ora-coh-nfs.bash
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/nfs/nfs-coh-mount-perm/nfs-coh-mount-perm.bash
 - chmod 750 export-ora-coh-nfs.bash
+- chmod 750 sun-export-ora-coh-nfs.bash
+- chmod 750 nfs-coh-mount-perm.bash
 
 ## Export script Description
 The scripts in this folder can utilize mutiple mount points to export Oracle databases to NFS mounts. It has the following assumption
