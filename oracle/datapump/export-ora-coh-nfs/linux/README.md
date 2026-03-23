@@ -30,9 +30,9 @@ When run the script without any options, it displays the script usage
 ./export-ora-coh-nfs.bash -o orcl -m /coh/ora -n 3 -p 6 -e 30
 
 In this example, the mount points on the server are the following. The mount point suffix must start with 1.
-/coh/ora1
-/coh/ora2
-/coh/ora3
+- /coh/ora1
+- /coh/ora2
+- /coh/ora3
 
 ### Create Full database export script only example
 ./export-ora-coh-nfs.bash -o orcl -m /coh/ora -n 3 -p 6 -e 30 -w yes
