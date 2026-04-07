@@ -6,7 +6,7 @@
 - chmod 750 restoreOracle-v2.py
 
 ## Description
-This script is a wrapper that calls a Python Oracle restore script to create a new database from the backup of another database using the Cohesity Oracle adapter 'Alternate restore' option. This operation is commonly used by Oracle DBAs to refresh their Test/Dev environments using backups of production databases. The script cleans /etc/oratab and drops the Test/Dev databases before running the Python script restoreOracle-v2.py. Click [restoreOracle-v2.py ](https://github.com/bseltz-cohesity/scripts/tree/master/oracle/python/restoreOracle-v2) link to learn how to use it.
+This script is a wrapper that calls a Python Oracle restore script to create a new database from the backup of another database using the Cohesity Oracle adapter 'Alternate Restore' option. This operation is commonly used by Oracle DBAs to refresh Test/Dev environments using production database backups. The script cleans /etc/oratab and drops the Test/Dev database before running the Python script restoreOracle-v2.py. Click [restoreOracle-v2.py ](https://github.com/bseltz-cohesity/scripts/tree/master/oracle/python/restoreOracle-v2) link to learn how to use it.
 
 Required parameters
 
@@ -17,5 +17,7 @@ Required parameters
 - -d : yes means the database which needs to be refreshed can be dropped first without prompting, the default is no
 
 ## Example
+
+### This example refreshes database restore1 on server oraserver1 from the Cohesity Oracle adapter backup of the standalone database orcl1 on server oraserver2. It also adds the following pfile parameters: "CONTROL_FILES='+DATA1','+FRA'", "DB_RECOVERY_FILE_DEST='+FRA'", and "SGA_TARGET=14125M".
 ./restore-ora-cohesityadapter.bash -b "/home/oracle1/scripts/oracle-agent/github/restoreOracle-v2.py -v cohesity-cluster -u oraadmin -i -ss oraserver2 -ts oraserver1 -sd orcl1 -td restore1 -oh /u01/app/oracle1/product/19.3.0/dbhome_1 -ob /u01/app/oracle1 -od +DATA1 -ch 2 -l -pf "CONTROL_FILES='+DATA1','+FRA'" -pf "DB_RECOVERY_F
 ILE_DEST='+FRA'" -pf "SGA_TARGET=14125M" -w" -f yes -d yes
