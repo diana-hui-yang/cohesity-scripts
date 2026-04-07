@@ -21,3 +21,6 @@ Required parameters
 ### This example refreshes database restore1 on server oraserver1 from the Cohesity Oracle adapter backup of the standalone database orcl1 on server oraserver2. It also adds the following pfile parameters: "CONTROL_FILES='+DATA1','+FRA'", "DB_RECOVERY_FILE_DEST='+FRA'", and "SGA_TARGET=14125M".
 ./restore-ora-cohesityadapter.bash -b "/home/oracle1/scripts/oracle-agent/github/restoreOracle-v2.py -v cohesity-cluster -u oraadmin -i -ss oraserver2 -ts oraserver1 -sd orcl1 -td restore1 -oh /u01/app/oracle1/product/19.3.0/dbhome_1 -ob /u01/app/oracle1 -od +DATA1 -ch 2 -l -pf "CONTROL_FILES='+DATA1','+FRA'" -pf "DB_RECOVERY_F
 ILE_DEST='+FRA'" -pf "SGA_TARGET=14125M" -w" -f yes -d yes
+
+### This example refreshes the CDB database restore2 with PDB database PDB4 on server oraserver1 from the Cohesity Oracle adapter backup of CDB database cohcdb4 on server oraserver2. It uses the existing pfile initrestore2.ora and the RMAN parameter nofilenamecheck.
+.restore-ora-cohesityadapter.bash -b "/home/oracle1/scripts/oracle-agent/github/restoreOracle-v2.py -v cohesity-cluster -u oraadmin -i -ss oraserver2 -ts oraserver1 -sd cohcdb4 -td restore2 -pn PDB4 -oh /u01/app/oracle1/product/19.3.0/dbhome_1 -ob /u01/app/oracle1 -od +DATA1 -ch 2 -l -cpf -pl /home/oracle1/scripts/oracle-agent/pfiles/initrestore2.ora -nf" -f yes -d yes
