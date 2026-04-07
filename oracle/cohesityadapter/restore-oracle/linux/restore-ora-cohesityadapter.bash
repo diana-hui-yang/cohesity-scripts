@@ -39,11 +39,11 @@ if [[ -z $pycom ]]; then
   exit 1
 fi
 
-echo " "
-echo "python script is"
-echo " "
-echo $pycom
-echo " "
+#echo " "
+#echo "python script is"
+#echo " "
+#echo $pycom
+#echo " "
 
 pyscript=`echo $pycom | awk '{print $1}'`
 
