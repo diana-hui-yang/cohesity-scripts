@@ -1,4 +1,4 @@
-## Download the script
+## Download the scripts to the target Oracle server
 - curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/cohesityadapter/restore-oracle/linux/restore-ora-cohesityadapter.bash
 - curl -O https://raw.githubusercontent.com/cohesity/community-automation-samples/main/oracle/python/restoreOracle-v2/restoreOracle-v2.py
 - curl -O https://raw.githubusercontent.com/cohesity/community-automation-samples/main/python/pyhesity.py
