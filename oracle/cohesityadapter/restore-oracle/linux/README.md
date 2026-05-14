@@ -6,7 +6,7 @@
 - chmod 750 restoreOracle-v2.py
 
 ## Description
-This script is a wrapper that calls a Python Oracle restore script to create a new database from the backup of another database using the Cohesity Oracle adapter 'Alternate Restore' option. This operation is commonly used by Oracle DBAs to refresh Test/Dev environments using production database backups. The script cleans /etc/oratab and drops the Test/Dev database before running the Python script restoreOracle-v2.py. Click [restoreOracle-v2.py ](https://github.com/bseltz-cohesity/scripts/tree/master/oracle/python/restoreOracle-v2) link to learn how to use it.
+This script is a wrapper that calls a Python Oracle restore script to create a new database or refresh an existing database from another database's backup, using the Cohesity Oracle adapter's 'Alternate Restore' option. This operation is commonly used by Oracle DBAs to refresh Test/Dev environments with production database backups. Before running the Python script restoreOracle-v2.py, this script cleans up /etc/oratab and drops the target Test/Dev database. Click [restoreOracle-v2.py ](https://github.com/bseltz-cohesity/scripts/tree/master/oracle/python/restoreOracle-v2) link to learn how to use it.
 
 Required parameters
 
