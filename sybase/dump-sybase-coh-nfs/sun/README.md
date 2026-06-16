@@ -1,7 +1,7 @@
 ## Download the script
 
-- /opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/sybase/dump-sybase-coh-nfs/aix/aix-dump-sybase-coh-nfs.ksh
-- chmod 750 aix-dump-sybase-coh-nfs.ksh
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/sybase/dump-sybase-coh-nfs/sun/sun-dump-sybase-coh-nfs.ksh
+- chmod 750 sun-dump-sybase-coh-nfs.ksh
 
 ## Export scripts Description
 When run the script without any options, it displays the script usage
@@ -25,8 +25,8 @@ When run the script without any options, it displays the script usage
 
 
 
-## aix-dump-sybase-coh-nfs.bash Backup Example
+## sun-dump-sybase-coh-nfs.bash Backup Example
 ### Full database dump example
-./dump-sybase-nfs.ksh -d db1 -m /coh/sybkp -n 3 -p 6 -e 30 -k key -t db -X
+./sun-dump-sybase-nfs.ksh -d db1 -m /coh/sybkp -n 3 -p 6 -e 30 -k key -t db -X
 ### Create database log dump script only example
-./dump-sybase-coh-nfs.ksh -d db1 -m /coh/sybkp -n 3 -p 6 -e 30 -X -w yes -U sybase -P *** -S SYBASEASELX -t log
+./sun-dump-sybase-coh-nfs.ksh -d db1 -m /coh/sybkp -n 3 -p 6 -e 30 -X -w yes -U sybase -P *** -S SYBASEASELX -t log
