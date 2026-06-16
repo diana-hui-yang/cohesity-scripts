@@ -1,6 +1,6 @@
 ## Download the script
 
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/sybase/dump-sybase-coh-nfs/aix/aix-dump-sybase-coh-nfs.ksh
+- /opt/freeware/bin/curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/sybase/dump-sybase-coh-nfs/aix/aix-dump-sybase-coh-nfs.ksh
 - chmod 750 aix-dump-sybase-coh-nfs.ksh
 
 ## Export scripts Description
