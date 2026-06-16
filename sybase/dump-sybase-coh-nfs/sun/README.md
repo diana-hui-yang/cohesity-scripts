@@ -1,7 +1,7 @@
 ## Download the script
 
-- curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/sybase/dump-sybase-coh-nfs/sun/sun-dump-sybase-coh-nfs.ksh
-- chmod 750 sun-dump-sybase-coh-nfs.ksh
+- curl -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/sybase/dump-sybase-coh-nfs/sun/sun-dump-sybase-coh-nfs.bash
+- chmod 750 sun-dump-sybase-coh-nfs.bash
 
 ## Export scripts Description
 When run the script without any options, it displays the script usage
