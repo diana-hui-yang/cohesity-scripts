@@ -21,16 +21,16 @@ When run the script without any options, it displays the script usage.
 
 ### Required Parameters
 
-| Parameter | Alias | Description |
-|-----------|-------|-------------|
-| `-HostName` | `-h` | host (scanname is required if RAC, optional if standalone) |
-| `-DbName` | `-o` | ORACLE_DB_NAME (needs an entry in oratab. If RAC, it is db_name) |
-| `-CohesityName` | `-y` | Cohesity Cluster DNS name |
-| `-ArchiveOnly` | `-a` | archivelog only backup (yes = archivelog only, no = database + archivelog; default no) |
-| `-Level` | `-i` | full or incremental backup. 0 = full, 1 = cumulative incremental, offline = offline full backup |
-| `-View` | `-v` | Cohesity View configured as the target for Oracle backup |
-| `-OracleRetention` | `-e` | Retention time in days; expired files are deleted by Oracle |
-| `-OracleHome` | `-m` | ORACLE_HOME (the folder that contains the bin directory) |
+```text
+-HostName          (-h) : host (scanname is required if RAC, optional if standalone)
+-DbName            (-o) : ORACLE_DB_NAME (needs an entry in oratab. If RAC, it is db_name)
+-CohesityName      (-y) : Cohesity Cluster DNS name
+-ArchiveOnly       (-a) : archivelog only backup (default no)
+-Level             (-i) : 0 = full, 1 = cumulative incremental, offline = offline full backup
+-View              (-v) : Cohesity View configured as the target for Oracle backup
+-OracleRetention   (-e) : Retention time in days; expired files are deleted by Oracle
+-OracleHome        (-m) : ORACLE_HOME (the folder that contains the bin directory)
+```
 
 ### Optional Parameters
 - `-TargetConnect`     (-r) : Target connection (example: "<dbuser>/<dbpass>@<target connection string> as sysbackup"; optional if it is local backup)
