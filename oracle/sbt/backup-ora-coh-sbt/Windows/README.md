@@ -1,6 +1,7 @@
-## Download the script
-- curl.exe -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/sbt/backup-ora-coh-sbt/Windows/backup-ora-coh-sbt.ps1
-- curl.exe -O https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/sbt/backup-ora-coh-sbt/Windows/backup-ora-coh-sbt.bat
+## Download the script from powershell
+- [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/sbt/backup-ora-coh-sbt/Windows/backup-ora-coh-sbt.ps1' -OutFile 'backup-ora-coh-sbt.ps1'
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/sbt/backup-ora-coh-sbt/Windows/backup-ora-coh-sbt.bat' - OutFile 'backup-ora-coh-sbt.bat'
 
 ## Description
 When run the script without any options, it displays the script usage
