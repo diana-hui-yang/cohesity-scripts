@@ -5,6 +5,7 @@ source_host=oracle-01
 target_oraclesid=cohcdbr3
 view=ora_sbt
 cohesity_name="cluster1"
+#catalogconnect="<user>/<passwd>@oracle-01:/catalog"
 
 echo start Oracle duplication
 /home/oracle1/scripts/sbt/rman/duplicate-ora-coh-sbt.bash -r "${targetconnect}" -y "${cohesity_name}" -h ${source_host} -i ${target_oraclesid} -v $view -t "2023-04-21 13:00:00"
