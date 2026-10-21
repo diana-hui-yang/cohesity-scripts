@@ -987,17 +987,17 @@ if [[ -n $ora_pfile ]]; then
 fi
 
 if [[ -n $itime ]]; then
-   echo "Oracle recovery point-in-time is define. Set duplicate time until time $itime"
+   echo "Oracle recovery point-in-time is defined. Set duplicate time until time $itime"
    echo "SET UNTIL TIME \"to_date('$itime', ''YYYY/MM/DD HH24:MI:SS')\";"
    echo "set until time \"to_date('$itime','YYYY/MM/DD HH24:MI:SS')\";" >> $drmanfiled
 fi
 
 if [[ -n $sequence ]]; then
    if [[ -n $thread ]]; then
-       echo "Oracle recovery point-in-time is define. Set recover time until sequence $sequence thread $thread"
+       echo "Oracle recovery point-in-time is defined. Set recover time until sequence $sequence thread $thread"
        echo "set until sequence $sequence thread $thread;" >> $drmanfiled
    else
-      echo "Oracle recovery point-in-time is define. Set recover time until sequence $sequence thread 1"
+      echo "Oracle recovery point-in-time is defined. Set recover time until sequence $sequence thread 1"
       echo "set until sequence $sequence thread 1;" >> $drmanfiled
    fi
 fi
