@@ -24,4 +24,7 @@ When using the Cohesity ZDLRA view to perform Oracle backups and restores, it is
 ### AIX
 The AIX sbt library download link is (http://downloads.cohesity.com/oracle_sbt/RPC-Library/6.5.1/aix/). Copy this link to another browser window. You may have to log in first. Once you log in, paste the copied link again. Download the library ***'libsbt_aix_powerpc.so'*** and copy this sbt library file to the ***'lib'*** directory in the script directory on the Oracle server (\<top directory\>/rman/lib). There are two useful toos ***'sbt_list'*** and ***'sbt_perf_test'*** in tools directory. Download them amd copy them to 'toos' directory in the script directory on the Oracle server (\<top directory\>/rman/tools)
 
+### Window
+The Window sbt library download link is (http://downloads.cohesity.com/oracle_sbt/RPC-Library/6.5.1/windows/). Copy this link to another browser window. You may have to log in first. Once you log in, paste the copied link again. Download the library ***'cohesity_sbt.exe'***, ***'cohesity_sbt.dll'*** and copy this sbt library file to the ***'lib'*** directory in the script directory on the Oracle server (\<top directory\>\lib). This library is also in Cohesity Window agent
+
 
