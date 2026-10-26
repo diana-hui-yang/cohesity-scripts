@@ -18,14 +18,10 @@ Unblock-File .\duplicate-ora-coh-sbt.ps1
 When run the script without any options, it displays the script usage.
 
 ### Required Parameters
-- `-HostName`          (-h) : host (scanname is required if it is RAC, optional if it is standalone)
-- `-DbName`            (-o) : ORACLE_DB_NAME (needs an entry of this database in oratab. If it is RAC, it is db_name)
-- `-CohesityName`      (-y) : Cohesity Cluster DNS name
-- `-ArchiveOnly`       (-a) : archivelog only duplicate (yes = archivelog duplicate only, no = database duplicate plus archivelog duplicate; default is no)
-- `-Level`             (-i) : If not archivelog only duplicate, it is full or incremental duplicate. 0 is full duplicate, 1 is cumulative incremental duplicate, offline is offline full duplicate
-- `-View`              (-v) : Cohesity View that is configured to be the target for Oracle duplicate
-- `-OracleRetention`   (-e) : Retention time in days; expired files are deleted by Oracle
-- `-OracleHome`        (-m) : ORACLE_HOME (the folder that contains the bin directory)
+- -TargetSid         (-i) : Target Oracle instance name (the duplicate database)
+- -SourceConnect     (-r) : Source Oracle connection (example: "sys/<password>@<source connect string> as sysbackup")
+- -View              (-v) : Cohesity View that holds the backup
+- -OracleHome        (-o) : ORACLE_HOME (the folder that contains the bin directory)
 
 ### Optional Parameters
 - `-TargetConnect`     (-r) : Target connection (example: "<dbuser>/<dbpass>@<target connection string> as sysduplicate"; optional if it is local duplicate)
