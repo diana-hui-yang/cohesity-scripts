@@ -46,19 +46,12 @@ When run the script without any options, it displays the script usage.
 - `-NoResume`           (-m) : Switch (no value). Use Oracle duplicate `NORESUME`
 - `-Preview`            (-w) : Switch (no value). Print the generated RMAN duplicate script without running it
 
-## duplicate to Cohesity view "orasbt1" example
+## duplicate exmaple
 
-### Full duplicate example when sbt library is in lib directory under the script directory
-```bat
-duplicate-ora-coh-sbt.bat -o orcl -i 0 -y cohesity_name -v orasbt1 -p 4 -e 30
-```
+### duplidate CDB database (or standalone) `orawin1` to a target CDB database (or standalone) `orawin2` example
+- ./duplicate-ora-coh-sbt.ps1 -r "user/password@oraserver:/orawin1" -i orawin2 -y cohesity -v orasbt_win
+### duplidate a PDB database `orapdb1` in CDB database `orawin1` to a target CDB database `orawin2` which doesn't exist yet.
+- ./duplicate-ora-coh-sbt.ps1 -r "user/password@oraserver:/orawin1" -i orawin2 -u orapdb1  -y cohesity -v orasbt_win
+### duplidate a PDB database `orapdb1` in CDB database `orawin1` to an exisinng target CDB database `orawin2` with a new PDB name orares1 using a auxiliary database `oraaux`
+- ./duplicate-ora-coh-sbt.ps1 -r "user/password@oraserver:/orawin1 -i orawin2 -u orapdb1 -n orares1 -y cohesity -v ora_sbt -a oraaux
 
-### Cumulative duplicate example when sbt library is in directory d:\oracle\cohesity\lib
-```bat
-duplicate-ora-coh-sbt.bat -o orcl -i 1 -y cohesity_name -v orasbt1 -p 3 -e 30 -s d:\oracle\cohesity\lib
-```
-
-### Archive log duplicate example when sbt library is in lib directory under the script directory
-```bat
-duplicate-ora-coh-sbt.bat -o orcl -a yes -y cohesity_name -v orasbt1 -p 2 -e 30
-```
