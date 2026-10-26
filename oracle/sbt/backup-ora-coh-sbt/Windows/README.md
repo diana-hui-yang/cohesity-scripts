@@ -16,7 +16,7 @@ Unblock-File .\backup-ora-coh-sbt.bat
 ```
 
 ## Description
-
+The bat script backup-ora-coh-sbt.bat runs the powershell script backup-ora-coh-sbt.ps1
 When run the script without any options, it displays the script usage.
 
 ### Required Parameters
