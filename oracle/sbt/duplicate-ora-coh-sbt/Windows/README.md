@@ -18,10 +18,10 @@ Unblock-File .\duplicate-ora-coh-sbt.ps1
 When run the script without any options, it displays the script usage.
 
 ### Required Parameters
-- -TargetSid         (-i) : Target Oracle instance name (the duplicate database)
-- -SourceConnect     (-r) : Source Oracle connection (example: "sys/<password>@<source connect string> as sysbackup")
-- -View              (-v) : Cohesity View that holds the backup
-- -OracleHome        (-o) : ORACLE_HOME (the folder that contains the bin directory)
+- `-TargetSid`         (-i) : Target Oracle instance name (the duplicate database)
+- `-SourceConnect`     (-r) : Source Oracle connection (example: "sys/<password>@<source connect string> as sysbackup")
+- `-View`              (-v) : Cohesity View that holds the backup
+- `-OracleHome`        (-o) : ORACLE_HOME (the folder that contains the bin directory)
 
 ### Optional Parameters
 - `-TargetConnect`     (-r) : Target connection (example: "<dbuser>/<dbpass>@<target connection string> as sysduplicate"; optional if it is local duplicate)
