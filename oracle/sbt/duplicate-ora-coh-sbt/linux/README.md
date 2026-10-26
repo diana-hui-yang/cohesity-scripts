@@ -36,9 +36,6 @@ Optional Parameters
 - -w : yes means preview rman duplicate scripts
  
 
-## file contains duplicate setting
-set newname for database to "'+DATA';"
-
 ## duplicate exmaple
 
 ### duplidate none CDB database example when sbt library is in lib directory under the script directory
