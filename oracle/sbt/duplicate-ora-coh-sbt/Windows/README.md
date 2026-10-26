@@ -24,23 +24,27 @@ When run the script without any options, it displays the script usage.
 - `-OracleHome`        (-o) : ORACLE_HOME (the folder that contains the bin directory)
 
 ### Optional Parameters
-- `-TargetConnect`     (-r) : Target connection (example: "<dbuser>/<dbpass>@<target connection string> as sysduplicate"; optional if it is local duplicate)
-- `-CatalogConnect`    (-c) : Catalog connection (example: "<dbuser>/<dbpass>@<catalog connection string>"; optional)
-- `-LongRetention`          : Long Term Retention time (days to retain this particular duplicate; needs an RMAN catalog database and works only with -OracleRetention. No single-letter alias.)
-- `-Parallel`          (-p) : number of channels (optional, default is 4)
-- `-VipFile`           (-f) : The file lists Cohesity Cluster VIPs (default name is vip-list and default directory is config)
-- `-SbtLibrary`        (-s) : Cohesity SBT library name including directory, or just directory (default directory is lib)
-- `-ArchiveLogKeepDays`(-l) : Archive logs retain days (days to retain local archivelogs before deleting them. default is 1 day, "no" means not deleting local archivelogs on disk)
-- `-ArchiveCopies`     (-b) : Number of times backing up Archive logs (default is 1)
-- `-SectionSize`       (-z) : section size in GB (optional, default is no section size)
-- `-Tag`               (-t) : RMAN TAG
-- `-Compression`       (-k) : RMAN compression (yes = RMAN compression, no = no RMAN compression; default is no)
-- `-Encryption`        (-g) : yes means encryption-in-flight is used. Default is no
-- `-EncryptionCertFile`(-j) : encryption certificate file; default directory is lib if full path is not provided
-- `-Grpc`              (-x) : yes means gRPC is used, no means SunRPC is used. Default is yes
-- `-SourceDedup`       (-d) : yes means source side dedup is used. Default is yes
-- `-SbtIoLog`          (-q) : yes means SBT activity is recorded in sbtio.log, no means only errors are recorded. Default is yes
-- `-Preview`           (-w) : switch (no value). Include -Preview to print the generated RMAN scripts without running the duplicate.
+- `-TargetConnect`      (-r) : Target connection (example: `"<dbuser>/<dbpass>@<target connection string> as sysduplicate"`; optional if it is local duplicate)
+- `-CatalogConnect`     (-c) : RMAN Catalog connection (example: `"<dbuser>/<dbpass>@<catalog connection string>"`)
+- `-SourceHost`         (-h) : Source host - the Oracle database host the backup was run on
+- `-SourceDbName`       (-d) : Deprecated - the source DB name is derived from `-SourceConnect`
+- `-PointInTime`        (-t) : Point in Time (format example: `"2026-01-27 13:00:00"`)
+- `-Sequence`           (-e) : Log sequence number of thread 1 (use either `-PointInTime` or `-Sequence`, not both)
+- `-RestoreSettingFile` (-b) : File with RMAN restore-location settings (e.g. `set newname for database to 'D:\dup\%b';`)
+- `-CohesityName`       (-y) : Cohesity Cluster DNS name (VIPs resolved automatically)
+- `-VipFile`            (-j) : File listing Cohesity Cluster VIPs (default name `vip-list`, default dir `config`)
+- `-SbtLibrary`         (-s) : Cohesity SBT library name including directory or just directory (default dir `lib`)
+- `-Parallel`           (-p) : Number of channels (default is 4)
+- `-SourcePdb`          (-u) : Source pluggable database (omit for standalone/CDB duplication)
+- `-NewPdb`             (-n) : Destination pluggable database name (needs `-AuxiliaryDb`)
+- `-PdbCopy`            (-l) : `yes` = plug PDB with COPY; default `nocopy`
+- `-AuxiliaryDb`        (-a) : Temporary auxiliary CDB for restoring a PDB into an existing target CDB
+- `-Encryption`         (-g) : `yes` means encryption-in-flight is used. Default is `no`
+- `-EncryptionCertFile` (-k) : Encryption certificate file, default directory is `lib` if full path not provided
+- `-Grpc`               (-x) : `yes` means gRPC is used, `no` means SunRPC is used. Default is `yes`
+- `-Force`              (-f) : Switch (no value). Refresh/overwrite the target database without prompting
+- `-NoResume`           (-m) : Switch (no value). Use Oracle duplicate `NORESUME`
+- `-Preview`            (-w) : Switch (no value). Print the generated RMAN duplicate script without running it
 
 ## duplicate to Cohesity view "orasbt1" example
 
