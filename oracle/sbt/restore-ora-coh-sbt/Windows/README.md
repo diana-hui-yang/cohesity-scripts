@@ -42,9 +42,9 @@ When run the script without any options, it displays the script usage.
 ## restore exmaple
 
 ### Restore database validate example. The database name is "orcl". The database won't be over-written. 
-- ./restore-ora-coh-sbt.bash -i orawin1 -y cohesity -v orasbtwin
+- ./restore-ora-coh-sbt.bash -i orawin1 -y cohesity -v orasbtwin -o e:\oracle\oraclehome
 ### Restore database"orcl" assuming controlfile are still intact. The database will be over-written.
-- ./restore-ora-coh-sbt.bash -i orawin1 -y cohesity -v orasbtwin -s /u01/app/coheisty -f
+- ./restore-ora-coh-sbt.bash -i orawin1 -y cohesity -v orasbtwin -s /u01/app/coheisty -f -o e:\oracle\oraclehome
 ### Restore controlfile, then database "orcl" on the original Oracle server "orawest".  The database will be over-written.
-- ./restore-ora-coh-sbt.bash  -i orawin1 -t "2020-08-02 12:00:00" -l -y cohesity -v orasbtwin -f
+- ./restore-ora-coh-sbt.bash  -i orawin1 -t "2020-08-02 12:00:00" -l -y cohesity -v orasbtwin -f -o e:\oracle\oraclehome
 ### Restore controlfile, then database "orcl" on a new server "orawestdr". (the original Oracle server is "orawest")
