@@ -27,7 +27,7 @@ When run the script without any options, it displays the script usage.
 - `-BackupHost`         (-h) : Oracle database host that the backup was run on (default is current host)
 - `-CatalogConnect`     (-c) : Catalog connection (example: "<dbuser>/<dbpass>@<catalog connection string>")
 - `-PointInTime`        (-t) : Point in Time (format example: "2026-01-27 13:00:00")
-- `-ControlfileBackup`  (-b) : Controlfile backup piece name (example: ORCL_c-1234567890-20260127-00). Required with -RestoreControlfile when no catalog is used. The DBID is taken from it.
+- `-ControlfileBackup`  (-b) : Controlfile backup piece name (example: orawin1_c-1234567890-20260127-00). Required with -RestoreControlfile when no catalog is used. The DBID is taken from it.
 - `-Dbid`               (-e) : Source DBID. Required with -RestoreControlfile and -CatalogConnect if -ControlfileBackup is not given.
 - `-CohesityName`       (-y) : Cohesity Cluster DNS name (VIPs are resolved automatically)
 - `-VipFile`            (-j) : The file lists Cohesity Cluster VIPs (default name is vip-list, default directory is config)
@@ -41,10 +41,14 @@ When run the script without any options, it displays the script usage.
 - `-Preview`            (-w) : Switch (no value). Include it to print the generated RMAN scripts without restoring.
 ## restore exmaple
 
-### Restore database validate example. The database name is "orcl". The database won't be over-written. 
-- ./restore-ora-coh-sbt.bash -i orawin1 -y cohesity -v orasbtwin -o e:\oracle\oraclehome
-### Restore database"orcl" assuming controlfile are still intact. The database will be over-written.
-- ./restore-ora-coh-sbt.bash -i orawin1 -y cohesity -v orasbtwin -s /u01/app/coheisty -f -o e:\oracle\oraclehome
-### Restore controlfile, then database "orcl" on the original Oracle server "orawest".  The database will be over-written.
-- ./restore-ora-coh-sbt.bash  -i orawin1 -t "2020-08-02 12:00:00" -l -y cohesity -v orasbtwin -f -o e:\oracle\oraclehome
-### Restore controlfile, then database "orcl" on a new server "orawestdr". (the original Oracle server is "orawest")
+### Restore database validate example. The database name is "orawin1". The database won't be over-written. 
+- ./restore-ora-coh-sbt.ps1 -i orawin1 -y cohesity -v orasbtwin -o e:\oracle\oraclehome
+### Restore database"orawin1" assuming controlfile are still intact. The database will be over-written.
+- ./restore-ora-coh-sbt.ps1 -i orawin1 -y cohesity -v orasbtwin -s /u01/app/coheisty -f -o e:\oracle\oraclehome
+### Restore controlfile, then database "orawin1" on the original Oracle server "orawest".  The database will be over-written.
+- ./restore-ora-coh-sbt.ps1  -i orawin1 -t "2020-08-02 12:00:00" -l -y cohesity -v orasbtwin -f -o e:\oracle\oraclehome -b <controlfile backup>
+### Restore controlfile, then database "orawin1" on a new server "orawestdr". (the original Oracle server is "orawest")
+Note: before running this commaand, several prepare steps should be done first.
+init file should be created, adump directory should be created. 
+Check the scripts example in restore-example directory for more details
+- ./restore-ora-coh-sbt.ps1 -h orawest -i orawin1 -t "2020-08-02 12:00:00" -l -y cohesity -v orasbtwin -f -c "catalog login" -e <dbid>
