@@ -41,10 +41,10 @@ When run the script without any options, it displays the script usage.
 - `-Preview`            (-w) : Switch (no value). Include it to print the generated RMAN scripts without restoring.
 ## restore exmaple
 
-### duplidate CDB database (or standalone) `orawin1` to a target CDB database (or standalone) `orawin2` example
-- ./restore-ora-coh-sbt.ps1 -r "user/password@oraserver:/orawin1" -i orawin2 -y cohesity -v orasbt_win
-### duplidate a PDB database `orapdb1` in CDB database `orawin1` to a target CDB database `orawin2` which doesn't exist yet.
-- ./restore-ora-coh-sbt.ps1 -r "user/password@oraserver:/orawin1" -i orawin2 -u orapdb1  -y cohesity -v orasbt_win
-### duplidate a PDB database `orapdb1` in CDB database `orawin1` to an exisinng target CDB database `orawin2` with a new PDB name orares1 using a auxiliary database `oraaux`
-- ./restore-ora-coh-sbt.ps1 -r "user/password@oraserver:/orawin1 -i orawin2 -u orapdb1 -n orares1 -y cohesity -v ora_sbt -a oraaux
-
+### Restore database validate example. The database name is "orcl". The database won't be over-written. 
+- ./restore-ora-coh-sbt.bash -i orawin1 -y cohesity -v orasbtwin
+### Restore database"orcl" assuming controlfile are still intact. The database will be over-written.
+- ./restore-ora-coh-sbt.bash -i orawin1 -y cohesity -v orasbtwin -s /u01/app/coheisty -f
+### Restore controlfile, then database "orcl" on the original Oracle server "orawest".  The database will be over-written.
+- ./restore-ora-coh-sbt.bash  -i orawin1 -t "2020-08-02 12:00:00" -l -y cohesity -v orasbtwin -f
+### Restore controlfile, then database "orcl" on a new server "orawestdr". (the original Oracle server is "orawest")
