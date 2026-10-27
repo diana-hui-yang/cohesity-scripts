@@ -18,34 +18,27 @@ Unblock-File .\restore-ora-coh-sbt.ps1
 When run the script without any options, it displays the script usage.
 
 ### Required Parameters
-- `-TargetSid`         (-i) : Target Oracle instance name (the restore database)
-- `-SourceConnect`     (-r) : Source Oracle connection (example: "sys/<password>@<source connect string> as sysbackup")
-- `-View`              (-v) : Cohesity View that holds the backup
-- `-OracleHome`        (-o) : ORACLE_HOME (the folder that contains the bin directory)
+- `-OracleSid`          (-i) : Oracle instance name. If not RAC, it is the same as the DB name.
+- `-View`               (-v) : Cohesity View that holds the backup
+- `-OracleHome`         (-o) : ORACLE_HOME (the folder that contains the bin directory)
 
 ### Optional Parameters
-- `-TargetConnect`      (-r) : Target connection (example: `"<dbuser>/<dbpass>@<target connection string> as sysrestore"`; optional if it is local restore)
-- `-CatalogConnect`     (-c) : RMAN Catalog connection (example: `"<dbuser>/<dbpass>@<catalog connection string>"`)
-- `-SourceHost`         (-h) : Source host - the Oracle database host the backup was run on
-- `-SourceDbName`       (-d) : Deprecated - the source DB name is derived from `-SourceConnect`
-- `-PointInTime`        (-t) : Point in Time (format example: `"2026-01-27 13:00:00"`)
-- `-Sequence`           (-e) : Log sequence number of thread 1 (use either `-PointInTime` or `-Sequence`, not both)
-- `-RestoreSettingFile` (-b) : File with RMAN restore-location settings (e.g. `set newname for database to 'D:\dup\%b';`)
-- `-CohesityName`       (-y) : Cohesity Cluster DNS name (VIPs resolved automatically)
-- `-VipFile`            (-j) : File listing Cohesity Cluster VIPs (default name `vip-list`, default dir `config`)
-- `-SbtLibrary`         (-s) : Cohesity SBT library name including directory or just directory (default dir `lib`)
+- `-DbName`             (-d) : Source Oracle_DB_Name (DB name, not instance name). Defaults to -OracleSid.
+- `-BackupHost`         (-h) : Oracle database host that the backup was run on (default is current host)
+- `-CatalogConnect`     (-c) : Catalog connection (example: "<dbuser>/<dbpass>@<catalog connection string>")
+- `-PointInTime`        (-t) : Point in Time (format example: "2026-01-27 13:00:00")
+- `-ControlfileBackup`  (-b) : Controlfile backup piece name (example: ORCL_c-1234567890-20260127-00). Required with -RestoreControlfile when no catalog is used. The DBID is taken from it.
+- `-Dbid`               (-e) : Source DBID. Required with -RestoreControlfile and -CatalogConnect if -ControlfileBackup is not given.
+- `-CohesityName`       (-y) : Cohesity Cluster DNS name (VIPs are resolved automatically)
+- `-VipFile`            (-j) : The file lists Cohesity Cluster VIPs (default name is vip-list, default directory is config)
+- `-SbtLibrary`         (-s) : Cohesity SBT library name including directory or just directory (default directory is lib)
 - `-Parallel`           (-p) : Number of channels (default is 4)
-- `-SourcePdb`          (-u) : Source pluggable database (omit for standalone/CDB duplication)
-- `-NewPdb`             (-n) : Destination pluggable database name (needs `-AuxiliaryDb`)
-- `-PdbCopy`            (-l) : `yes` = plug PDB with COPY; default `nocopy`
-- `-AuxiliaryDb`        (-a) : Temporary auxiliary CDB for restoring a PDB into an existing target CDB
-- `-Encryption`         (-g) : `yes` means encryption-in-flight is used. Default is `no`
-- `-EncryptionCertFile` (-k) : Encryption certificate file, default directory is `lib` if full path not provided
-- `-Grpc`               (-x) : `yes` means gRPC is used, `no` means SunRPC is used. Default is `yes`
-- `-Force`              (-f) : Switch (no value). Refresh/overwrite the target database without prompting
-- `-NoResume`           (-m) : Switch (no value). Use Oracle restore `NORESUME`
-- `-Preview`            (-w) : Switch (no value). Print the generated RMAN restore script without running it
-
+- `-Encryption`         (-g) : yes means encryption-in-flight is used. Default is no
+- `-EncryptionCertFile` (-k) : Encryption certificate file, default directory is lib if full path is not provided
+- `-Grpc`               (-x) : yes means gRPC is used, no means SunRPC is used. Default is yes
+- `-RestoreControlfile` (-l) : Switch (no value). Include it for a complete restore including spfile and controlfile.
+- `-Force`              (-f) : Switch (no value). Include it to actually restore. Without it, only "restore database validate" runs.
+- `-Preview`            (-w) : Switch (no value). Include it to print the generated RMAN scripts without restoring.
 ## restore exmaple
 
 ### duplidate CDB database (or standalone) `orawin1` to a target CDB database (or standalone) `orawin2` example
