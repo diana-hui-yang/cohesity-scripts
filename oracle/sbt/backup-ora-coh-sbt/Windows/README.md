@@ -52,15 +52,15 @@ When run the script without any options, it displays the script usage.
 
 ### Full backup example when sbt library is in lib directory under the script directory
 ```bat
-backup-ora-coh-sbt.bat -o orcl -i 0 -y cohesity_name -v orasbt1 -p 4 -e 30
+backup-ora-coh-sbt.bat -o orcl -i 0 -y cohesity_name -v orasbt1 -p 4 -e 30 -m e:\oracle\oraclehome
 ```
 
 ### Cumulative backup example when sbt library is in directory d:\oracle\cohesity\lib
 ```bat
-backup-ora-coh-sbt.bat -o orcl -i 1 -y cohesity_name -v orasbt1 -p 3 -e 30 -s d:\oracle\cohesity\lib
+backup-ora-coh-sbt.bat -o orcl -i 1 -y cohesity_name -v orasbt1 -p 3 -e 30 -s d:\oracle\cohesity\lib -m e:\oracle\oraclehome
 ```
 
 ### Archive log backup example when sbt library is in lib directory under the script directory
 ```bat
-backup-ora-coh-sbt.bat -o orcl -a yes -y cohesity_name -v orasbt1 -p 2 -e 30
+backup-ora-coh-sbt.bat -o orcl -a yes -y cohesity_name -v orasbt1 -p 2 -e 30 -m e:\oracle\oraclehome
 ```
