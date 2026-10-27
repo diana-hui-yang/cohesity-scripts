@@ -49,9 +49,9 @@ When run the script without any options, it displays the script usage.
 ## duplicate exmaple
 
 ### duplidate CDB database (or standalone) `orawin1` to a target CDB database (or standalone) `orawin2` example
-- ./duplicate-ora-coh-sbt.ps1 -r "user/password@oraserver:/orawin1" -i orawin2 -y cohesity -v orasbt_win
+- ./duplicate-ora-coh-sbt.ps1 -r "user/password@oraserver:/orawin1" -i orawin2 -y cohesity -v orasbtwin -o e:\oracle\oraclehome
 ### duplidate a PDB database `orapdb1` in CDB database `orawin1` to a target CDB database `orawin2` which doesn't exist yet.
-- ./duplicate-ora-coh-sbt.ps1 -r "user/password@oraserver:/orawin1" -i orawin2 -u orapdb1  -y cohesity -v orasbt_win
+- ./duplicate-ora-coh-sbt.ps1 -r "user/password@oraserver:/orawin1" -i orawin2 -u orapdb1  -y cohesity -v orasbtwin -o e:\oracle\oraclehome
 ### duplidate a PDB database `orapdb1` in CDB database `orawin1` to an exisinng target CDB database `orawin2` with a new PDB name orares1 using a auxiliary database `oraaux`
-- ./duplicate-ora-coh-sbt.ps1 -r "user/password@oraserver:/orawin1 -i orawin2 -u orapdb1 -n orares1 -y cohesity -v ora_sbt -a oraaux
+- ./duplicate-ora-coh-sbt.ps1 -r "user/password@oraserver:/orawin1 -i orawin2 -u orapdb1 -n orares1 -y cohesity -v orasbtwin -a oraaux -o e:\oracle\oraclehome
 
