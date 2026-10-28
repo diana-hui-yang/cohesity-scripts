@@ -1,4 +1,4 @@
-mkdir config lib tools
+mkdir config lib
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/sbt/backup-ora-coh-sbt/Windows/backup-ora-coh-sbt.ps1' -OutFile 'backup-ora-coh-sbt.ps1'
