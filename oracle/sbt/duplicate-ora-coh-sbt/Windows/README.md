@@ -12,6 +12,15 @@ After downloading, unblock the files so Windows will run them:
 ```powershell
 Unblock-File .\duplicate-ora-coh-sbt.ps1
 ```
+## prerequisites for an RMAN DUPLICATE on Windows
+Please check Oracle document to find the prerequisites before running the Oracle RMAN duplication. Here is a simple list.
+
+- Same Oracle version and patch level as the source, with the same platform (Windows x64). The Oracle software must already be installed.
+- Windows service for the auxiliary instance. oradim creates it. Make sure it is running
+```oracle
+oradim -NEW -SID orawin2 -STARTMODE manual
+```
+- init file needs to be created
 
 ## Description
 
