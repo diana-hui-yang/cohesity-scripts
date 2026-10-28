@@ -1,17 +1,13 @@
 mkdir config lib tools
-```powershell
+
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/sbt/backup-ora-coh-sbt/Windows/backup-ora-coh-sbt.ps1' -OutFile 'backup-ora-coh-sbt.ps1'
 Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/sbt/backup-ora-coh-sbt/Windows/backup-ora-coh-sbt.bat' -OutFile 'backup-ora-coh-sbt.bat'
 Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/sbt/duplicate-ora-coh-sbt/Windows/duplicate-ora-coh-sbt.ps1' -OutFile 'duplicate-ora-coh-sbt.ps1'
 Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/diana-hui-yang/cohesity-scripts/master/oracle/sbt/restore-ora-coh-sbt/Windows/restore-ora-coh-sbt.ps1' -OutFile 'restore-ora-coh-sbt.ps1'
-```
 
-After downloading, unblock the files so Windows will run them:
-
-```powershell
 Unblock-File .\backup-ora-coh-sbt.ps1
 Unblock-File .\backup-ora-coh-sbt.bat
 Unblock-File .\duplicate-ora-coh-sbt.ps1
 Unblock-File .\restore-ora-coh-sbt.ps1
-```
+
