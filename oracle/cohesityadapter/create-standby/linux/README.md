@@ -9,7 +9,7 @@ Required parameters
 
 - -i : Standby instance name
 - -d : Oracle_DB_Name (database backup was taken). It is DB name, not instance name
-- -m : mount-prefix (like /coh/ora)
+- -m : mount-prefix (like /opt/cohesity/mount_paths/nfs_oracle_mounts/restore/oracle_182652_2_path)
 - -n : number of mounts
  
  Optional Parameters
