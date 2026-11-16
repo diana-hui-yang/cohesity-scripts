@@ -13,7 +13,7 @@ Required parameters
 - -n : number of mounts
  
  Optional Parameters
-- -p : number of channels (Optional, default is same as the number of mounts4)
+- -p : number of channels (Optional, default is same as the number of mounts)
 - -o : ORACLE_HOME (Optional, default is current environment)
 - -f : yes means force. It will refresh the target database without prompt
 - -s : yes mean Oracle duplicate use noresume, default is no
